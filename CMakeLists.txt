@@ -8,5 +8,11 @@ add_executable(OpenGLProject main.cpp
         src/Application.cpp
         include/Application.h
         src/Window.cpp
-        include/Window.h)
+        include/Window.h
+        src/Renderer.cpp
+        include/Renderer.h
+        src/Shader.cpp
+        include/Shader.h
+        src/FileParser.cpp
+        include/FileParser.h)
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

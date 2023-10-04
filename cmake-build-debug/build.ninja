@@ -67,6 +67,24 @@ build CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: CXX_COMPILER__OpenGLProject
   OBJECT_DIR = CMakeFiles/OpenGLProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
 
+build CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: CXX_COMPILER__OpenGLProject_unscanned_Debug /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Renderer.cpp || cmake_object_order_depends_target_OpenGLProject
+  DEP_FILE = CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/OpenGLProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
+
+build CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o: CXX_COMPILER__OpenGLProject_unscanned_Debug /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Shader.cpp || cmake_object_order_depends_target_OpenGLProject
+  DEP_FILE = CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/OpenGLProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
+
+build CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o: CXX_COMPILER__OpenGLProject_unscanned_Debug /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp || cmake_object_order_depends_target_OpenGLProject
+  DEP_FILE = CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/OpenGLProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target OpenGLProject
@@ -75,7 +93,7 @@ build CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: CXX_COMPILER__OpenGLProject
 #############################################
 # Link the executable OpenGLProject
 
-build OpenGLProject: CXX_EXECUTABLE_LINKER__OpenGLProject_Debug CMakeFiles/OpenGLProject.dir/main.cpp.o CMakeFiles/OpenGLProject.dir/src/Application.cpp.o CMakeFiles/OpenGLProject.dir/src/Window.cpp.o
+build OpenGLProject: CXX_EXECUTABLE_LINKER__OpenGLProject_Debug CMakeFiles/OpenGLProject.dir/main.cpp.o CMakeFiles/OpenGLProject.dir/src/Application.cpp.o CMakeFiles/OpenGLProject.dir/src/Window.cpp.o CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lGL  -lglfw  -lGLEW
   OBJECT_DIR = CMakeFiles/OpenGLProject.dir

@@ -15,9 +15,18 @@ Application::~Application() {
 }
 
 void Application::bindWindow(Window& window_to_bind) {
+    // setup context
     window = &window_to_bind;
     glfwMakeContextCurrent(window->getWindowRef());
     glfwSwapInterval(1);
+
+    // init glew
+    if (glewInit() != GLEW_OK) {
+        std::cerr << "GLEW could not be initialized" << std::endl;
+        exit(1);
+    }
+
+    std::cout << "GLEW initialized successfully" << std::endl;
 }
 
 void Application::showWindow() {
