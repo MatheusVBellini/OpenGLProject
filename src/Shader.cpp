@@ -71,6 +71,10 @@ void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float
     glUniformMatrix4fv(getUniform(name),1,GL_TRUE,matrix.data());
 }
 
+void Shader::unbind() const {
+    glUseProgram(0);
+}
+
 
 
 

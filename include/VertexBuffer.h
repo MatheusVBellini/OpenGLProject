@@ -5,6 +5,8 @@
 #include <vector>
 #include <iostream>
 
+typedef struct { float x,y,z; } uv;
+
 class VertexBuffer {
 private:
     typedef enum {VERTEX, INDEX} BUFFER_TYPE;
@@ -13,11 +15,11 @@ private:
     BUFFER_TYPE type;
 
 public:
-    explicit VertexBuffer();
+    explicit VertexBuffer(const std::vector<uv>& data);
+    explicit VertexBuffer(const std::vector<unsigned>& data);
     ~VertexBuffer();
 
-    void genIndexBuffer(const std::vector<float>& data);
-    void genVertexBuffer(const std::vector<float>& data);
     void bind();
+    void unbind();
 
 };

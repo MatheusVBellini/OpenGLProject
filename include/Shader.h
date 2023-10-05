@@ -18,6 +18,7 @@ public:
 
     void compile(const std::string& filename);
     void bind() const;
+    void unbind() const;
     void setUniformMatrix4fv(const std::string& name, const std::array<float,16>& matrix);
 
 };
