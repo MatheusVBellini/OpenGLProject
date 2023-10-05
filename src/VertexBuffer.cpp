@@ -1,4 +1,4 @@
-#include "VertexBuffer.h"
+#include "../include/VertexBuffer.h"
 
 VertexBuffer::VertexBuffer(BUFFER_TYPE type) {
     id = 0;

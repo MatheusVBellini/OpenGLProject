@@ -18,6 +18,6 @@ add_executable(OpenGLProject main.cpp
         src/VertexArray.cpp
         include/VertexArray.h
         src/VertexBuffer.cpp
-        src/VertexBuffer.h
+        include/VertexBuffer.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})
