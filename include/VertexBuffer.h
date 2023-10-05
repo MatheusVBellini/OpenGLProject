@@ -13,11 +13,11 @@ private:
     BUFFER_TYPE type;
 
 public:
-    explicit VertexBuffer(BUFFER_TYPE type);
+    explicit VertexBuffer();
     ~VertexBuffer();
 
-    void generate(const std::vector<float>& data);
-    void generate(const std::vector<int>& data);
+    void genIndexBuffer(const std::vector<float>& data);
+    void genVertexBuffer(const std::vector<float>& data);
     void bind();
 
 };

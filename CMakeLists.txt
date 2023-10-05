@@ -15,8 +15,6 @@ add_executable(OpenGLProject main.cpp
         include/Shader.h
         src/FileParser.cpp
         include/FileParser.h
-        src/VertexArray.cpp
-        include/VertexArray.h
         src/VertexBuffer.cpp
         include/VertexBuffer.h
 )
