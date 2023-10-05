@@ -58,3 +58,19 @@ void Shader::validateShader(unsigned shader) {
         exit(1);
     }
 }
+
+void Shader::bind() const {
+    glUseProgram(program);
+}
+
+int Shader::getUniform(const std::string &name) const {
+    return glGetUniformLocation(program, name.c_str());
+}
+
+void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float, 16>& matrix) {
+    glUniformMatrix4fv(getUniform(name),1,GL_TRUE,matrix.data());
+}
+
+
+
+

@@ -14,5 +14,10 @@ add_executable(OpenGLProject main.cpp
         src/Shader.cpp
         include/Shader.h
         src/FileParser.cpp
-        include/FileParser.h)
+        include/FileParser.h
+        src/VertexArray.cpp
+        include/VertexArray.h
+        src/VertexBuffer.cpp
+        src/VertexBuffer.h
+)
 target_link_libraries(OpenGLProject ${OpenGlLinkers})
