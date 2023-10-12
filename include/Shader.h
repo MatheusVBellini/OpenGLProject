@@ -27,4 +27,7 @@ public:
     void setUniform4f(const std::string& name, const std::array<float,4>& array);
     Shader copy() const;
 
+    //remove
+    int getProgram();
+
 };

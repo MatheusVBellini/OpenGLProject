@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <iostream>
 #include "Shader.h"
+#include "GObject.h"
 
 class Renderer {
 private:
@@ -19,6 +20,8 @@ public:
     ~Renderer();
 
     void compileShaders();
+    void registerObject(GObject& object);
+    void draw(GObject& object);
 
 };
 

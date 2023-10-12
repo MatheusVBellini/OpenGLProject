@@ -1,4 +1,6 @@
 #include "../include/Application.h"
+#include "../include/VertexBuffer.h"
+#include "../include/GObject.h"
 
 Application &Application::getInstance() {
     static Application instance;
@@ -22,11 +24,11 @@ void Application::bindWindow(Window& window_to_bind) {
 
     // init glew
     if (glewInit() != GLEW_OK) {
-        std::cerr << "GLEW could not be initialized" << std::endl;
+        std::cerr << "ERROR:: GLEW could not be initialized" << std::endl;
         exit(1);
     }
 
-    std::cout << "GLEW initialized successfully" << std::endl;
+    std::cout << "<Application> GLEW initialized successfully!" << std::endl;
 }
 
 void Application::showWindow() {
@@ -34,6 +36,7 @@ void Application::showWindow() {
 }
 
 void Application::init() {
+
     while(!window->shouldClose()) {
 
         // scene preparation
@@ -50,6 +53,7 @@ void Application::init() {
         // event handler
         glfwPollEvents();
     }
+
 }
 
 

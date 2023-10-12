@@ -6,9 +6,7 @@ Shader::Shader() {
     program = 0;
 }
 
-Shader::~Shader() {
-    glDeleteProgram(program);
-}
+Shader::~Shader() = default;
 
 void Shader::compile(const std::string &filename) {
     FileParser fp;
@@ -93,6 +91,10 @@ Shader::Shader(unsigned int program) {
 
 Shader Shader::copy() const {
     return Shader(program);
+}
+
+int Shader::getProgram() {
+    return program;
 }
 
 

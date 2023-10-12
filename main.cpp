@@ -20,22 +20,48 @@ int main() {
     ren.compileShaders();
 
     // drawing a triangle
-    shader.bind();
+    GObject object;
     VertexBuffer vb;
     vb.attachVertexData({
         {-0.5,-0.5, 0},
         {0, 0.5, 0},
         {0.5,-0.5, 0}
     });
-    VertexBuffer iv;
-    iv.attachIndexData({0, 1, 2});
+    VertexBuffer ib;
+    ib.attachIndexData({0, 1, 2});
     shader.bindBuffers();
+    //object.attachVertexBuffer(vb);
+    //object.attachIndexBuffer(ib);
+    //object.linkShader("simple");
+    //ren.registerObject(object);
+    //object.linkShader("default");
+    //ren.registerObject(object);
 
+    shader.bind();
     vb.bind();
-    iv.bind();
+    ib.bind();
     shader.setUniform4f("color", {1,0,1,1});
 
-    app.init();
+
+    // teste
+    while(!window.shouldClose()) {
+
+        // scene preparation
+        glClearColor(1.0,1.0,1.0,1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // drawing
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+
+        // swap front and back buffers
+        glfwSwapBuffers(window.getWindowRef());
+
+        // event handler
+        glfwPollEvents();
+    }
+
+    //app.init();
 
     return 0;
 }
