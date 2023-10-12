@@ -1,5 +1,6 @@
 #include "../include/Shader.h"
 #include "../include/FileParser.h"
+#include "../include/CustomStructs.h"
 
 Shader::Shader() {
     program = 0;
@@ -67,12 +68,23 @@ int Shader::getUniform(const std::string &name) const {
     return glGetUniformLocation(program, name.c_str());
 }
 
+void Shader::unbind() const {
+    glUseProgram(0);
+}
+
+void Shader::bindBuffers() const {
+    glUseProgram(program);
+    int loc = glGetAttribLocation(program, "position");
+    glEnableVertexAttribArray(loc);
+    glVertexAttribPointer(loc, 3, GL_FLOAT, GL_FALSE, sizeof(uv), (void*) 0);
+}
+
 void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float, 16>& matrix) {
     glUniformMatrix4fv(getUniform(name),1,GL_TRUE,matrix.data());
 }
 
-void Shader::unbind() const {
-    glUseProgram(0);
+void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &array) {
+    glUniform4f(getUniform(name), array.at(0), array.at(1), array.at(2), array.at(3));
 }
 
 

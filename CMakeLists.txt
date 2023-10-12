@@ -17,5 +17,6 @@ add_executable(OpenGLProject main.cpp
         include/FileParser.h
         src/VertexBuffer.cpp
         include/VertexBuffer.h
+        include/CustomStructs.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

@@ -85,12 +85,6 @@ build CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o: CXX_COMPILER__OpenGLPro
   OBJECT_DIR = CMakeFiles/OpenGLProject.dir
   OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
 
-build CMakeFiles/OpenGLProject.dir/src/VertexArray.cpp.o: CXX_COMPILER__OpenGLProject_unscanned_Debug /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/VertexArray.cpp || cmake_object_order_depends_target_OpenGLProject
-  DEP_FILE = CMakeFiles/OpenGLProject.dir/src/VertexArray.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/OpenGLProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/OpenGLProject.dir/src
-
 build CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o: CXX_COMPILER__OpenGLProject_unscanned_Debug /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/VertexBuffer.cpp || cmake_object_order_depends_target_OpenGLProject
   DEP_FILE = CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
@@ -105,7 +99,7 @@ build CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o: CXX_COMPILER__OpenGLP
 #############################################
 # Link the executable OpenGLProject
 
-build OpenGLProject: CXX_EXECUTABLE_LINKER__OpenGLProject_Debug CMakeFiles/OpenGLProject.dir/main.cpp.o CMakeFiles/OpenGLProject.dir/src/Application.cpp.o CMakeFiles/OpenGLProject.dir/src/Window.cpp.o CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o CMakeFiles/OpenGLProject.dir/src/VertexArray.cpp.o CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o
+build OpenGLProject: CXX_EXECUTABLE_LINKER__OpenGLProject_Debug CMakeFiles/OpenGLProject.dir/main.cpp.o CMakeFiles/OpenGLProject.dir/src/Application.cpp.o CMakeFiles/OpenGLProject.dir/src/Window.cpp.o CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lGL  -lglfw  -lGLEW
   OBJECT_DIR = CMakeFiles/OpenGLProject.dir

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "include/Application.h"
 #include "include/Shader.h"
+#include "include/VertexBuffer.h"
 
 int main() {
     // boot-up
@@ -11,7 +12,23 @@ int main() {
 
     // shader
     Shader shader;
-    shader.compile("default");
+    shader.compile("simple");
+
+    // drawing a triangle
+    shader.bind();
+    VertexBuffer vb;
+    vb.attachVertexData({
+        {-0.5,-0.5, 0},
+        {0, 0.5, 0},
+        {0.5,-0.5, 0}
+    });
+    VertexBuffer iv;
+    iv.attachIndexData({0, 1, 2});
+    shader.bindBuffers();
+
+    vb.bind();
+    iv.bind();
+    shader.setUniform4f("color", {1,0,1,1});
 
     app.init();
 
