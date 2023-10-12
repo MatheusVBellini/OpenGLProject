@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 22,
+				"line" : 25,
 				"parent" : 0
 			}
 		]
@@ -62,7 +62,8 @@
 				5,
 				7,
 				9,
-				11
+				11,
+				15
 			]
 		}
 	],
@@ -116,7 +117,8 @@
 				5,
 				7,
 				9,
-				11
+				11,
+				15
 			]
 		},
 		{
@@ -129,7 +131,8 @@
 				8,
 				10,
 				12,
-				13
+				13,
+				14
 			]
 		}
 	],
@@ -209,8 +212,19 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/CustomStructs.h",
+			"path" : "include/UVstruct.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/GObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GObject.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

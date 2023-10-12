@@ -2,6 +2,7 @@
 #include "include/Application.h"
 #include "include/Shader.h"
 #include "include/VertexBuffer.h"
+#include "include/Renderer.h"
 
 int main() {
     // boot-up
@@ -13,6 +14,10 @@ int main() {
     // shader
     Shader shader;
     shader.compile("simple");
+
+    // Renderer test
+    Renderer ren;
+    ren.compileShaders();
 
     // drawing a triangle
     shader.bind();

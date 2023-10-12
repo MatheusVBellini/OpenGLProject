@@ -1,6 +1,6 @@
 #include "../include/Shader.h"
 #include "../include/FileParser.h"
-#include "../include/CustomStructs.h"
+#include "../include/UVstruct.h"
 
 Shader::Shader() {
     program = 0;
@@ -86,6 +86,17 @@ void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float
 void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &array) {
     glUniform4f(getUniform(name), array.at(0), array.at(1), array.at(2), array.at(3));
 }
+
+Shader::Shader(unsigned int program) {
+    this->program = program;
+}
+
+Shader Shader::copy() const {
+    return Shader(program);
+}
+
+
+
 
 
 

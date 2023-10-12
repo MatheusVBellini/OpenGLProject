@@ -4,7 +4,7 @@
 #include <GLFW/glfw3.h>
 #include <vector>
 #include <iostream>
-#include "CustomStructs.h"
+#include "UVstruct.h"
 
 class VertexBuffer {
 private:

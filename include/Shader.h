@@ -12,6 +12,9 @@ private:
     void validateShader(unsigned shader);
     int getUniform(const std::string& name) const;
 
+    // constructor for copies
+    explicit Shader(unsigned program);
+
 public:
     explicit Shader();
     ~Shader();
@@ -22,5 +25,6 @@ public:
     void bindBuffers() const;
     void setUniformMatrix4fv(const std::string& name, const std::array<float,16>& matrix);
     void setUniform4f(const std::string& name, const std::array<float,4>& array);
+    Shader copy() const;
 
 };
