@@ -8,11 +8,12 @@ int main() {
     // boot-up
     Application app = Application::getInstance();
     Window window(800, 800, "Hello World");
+    Renderer ren;
+    app.bindRenderer(ren);
     app.bindWindow(window);
     app.showWindow();
 
-    // Renderer test
-    Renderer ren;
+    // shader fetching and compilation
     ren.compileShaders();
 
     // drawing a triangle
@@ -29,26 +30,10 @@ int main() {
     object.attachVertexBuffer(vb);
     object.attachIndexBuffer(ib);
     object.linkShader("simple");
-    ren.registerObject(object);
+    ren.registerObject(window, object);
 
-    // teste
-    while(!window.shouldClose()) {
-
-        // scene preparation
-        glClearColor(1.0,1.0,1.0,1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // drawing
-        ren.draw(object);
-
-        // swap front and back buffers
-        glfwSwapBuffers(window.getWindowRef());
-
-        // event handler
-        glfwPollEvents();
-    }
-
-    //app.init();
+    // main loop
+    app.init();
 
     return 0;
 }

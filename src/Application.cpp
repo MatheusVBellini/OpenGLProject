@@ -10,6 +10,7 @@ Application &Application::getInstance() {
 Application::Application() {
     glfwInit();
     window = nullptr;
+    renderer = nullptr;
 }
 
 Application::~Application() {
@@ -44,8 +45,9 @@ void Application::init() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         // drawing
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+        for (auto& object : window->objects) {
+            renderer->draw(object);
+        }
 
         // swap front and back buffers
         glfwSwapBuffers(window->getWindowRef());
@@ -54,6 +56,10 @@ void Application::init() {
         glfwPollEvents();
     }
 
+}
+
+void Application::bindRenderer(Renderer& renderer) {
+    this->renderer = &renderer;
 }
 
 

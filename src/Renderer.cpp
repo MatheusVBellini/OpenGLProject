@@ -1,12 +1,8 @@
 #include "../include/Renderer.h"
 
-Renderer::Renderer() {
-    current_object = 0;
-}
+Renderer::Renderer() = default;
 
-Renderer::~Renderer() {
-    current_object = 0;
-}
+Renderer::~Renderer() = default;
 
 void Renderer::findShaders() {
     std::string dir = "../data/shaders";
@@ -43,8 +39,9 @@ void Renderer::compileShaders() {
 
 }
 
-void Renderer::registerObject(GObject &object) {
+void Renderer::registerObject(Window& window, GObject &object) {
     shaders.at(object.getShaderName()).bindBuffers();
+    window.objects.push_back(object);
 }
 
 void Renderer::draw(GObject& object) {

@@ -8,11 +8,10 @@
 #include <map>
 #include "Shader.h"
 #include "GObject.h"
+#include "Window.h"
 
 class Renderer {
 private:
-    unsigned current_object;
-
     std::vector<std::string> shader_names;
     std::unordered_map<std::string, Shader> shaders;
 
@@ -23,7 +22,7 @@ public:
     ~Renderer();
 
     void compileShaders();
-    void registerObject(GObject& object);
+    void registerObject(Window& window, GObject& object);
     void draw(GObject& object);
 
 };
