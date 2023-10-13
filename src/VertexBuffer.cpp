@@ -7,6 +7,8 @@ VertexBuffer::VertexBuffer() {
     type = UNKNOWN;
 }
 
+VertexBuffer::~VertexBuffer() = default;
+
 void VertexBuffer::attachVertexData(const std::vector<uv> &data) {
     type = VERTEX;
     size = data.size();
@@ -27,10 +29,6 @@ void VertexBuffer::attachIndexData(const std::vector<unsigned int> &data) {
     glGenBuffers(1, &id);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, size * sizeof(unsigned int), data.data(), GL_DYNAMIC_DRAW);
-}
-
-VertexBuffer::~VertexBuffer() {
-    glDeleteBuffers(1, &id);
 }
 
 void VertexBuffer::bind() {
