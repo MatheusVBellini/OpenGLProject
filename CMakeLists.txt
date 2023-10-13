@@ -17,8 +17,6 @@ add_executable(OpenGLProject main.cpp
         include/FileParser.h
         src/VertexBuffer.cpp
         include/VertexBuffer.h
-        include/UVstruct.h
-        include/GObject.h
         src/GObject.cpp
         include/GObject.h
 )

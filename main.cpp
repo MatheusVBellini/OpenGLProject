@@ -17,20 +17,20 @@ int main() {
     ren.compileShaders();
 
     // drawing a triangle
-    GObject object;
-    VertexBuffer vb;
-    VertexBuffer ib;
+    GObject object1;
+    VertexBuffer vb1;
+    VertexBuffer ib1;
 
-    vb.attachVertexData({
+    vb1.attachVertexData({
                                 {-0.5,-0.5, 0},
                                 {0, 0.5, 0},
                                 {0.5,-0.5, 0}
                         });
-    ib.attachIndexData({0, 1, 2});
-    object.attachVertexBuffer(vb);
-    object.attachIndexBuffer(ib);
-    object.linkShader("simple");
-    ren.registerObject(window, object);
+    ib1.attachIndexData({0, 1, 2});
+    object1.attachVertexBuffer(vb1);
+    object1.attachIndexBuffer(ib1);
+    object1.linkShader("simple");
+    ren.registerObject(window, object1);
 
     // main loop
     app.init();
