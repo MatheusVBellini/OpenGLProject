@@ -3,6 +3,7 @@
 #include "include/VertexBuffer.h"
 #include "include/Renderer.h"
 #include "include/Debug.h"
+#include "include/GObjectFactory.h"
 
 int main() {
     // boot-up
@@ -17,37 +18,34 @@ int main() {
     ren.compileShaders();
 
     // drawing triangle 1
-    GObject object1;
-    VertexBuffer vb1;
-    VertexBuffer ib1;
+    std::vector<uv> vec = {
+            {-0.5,-0.5, 0},
+            {0, 0.5, 0},
+            {0.5,-0.5, 0}
+    };
+    std::vector<unsigned> index = {0,1,2};
 
-    vb1.attachVertexData({
-                                {-0.5,-0.5, 0},
-                                {0, 0.5, 0},
-                                {0.5,-0.5, 0}
-                        });
-    ib1.attachIndexData({0, 1, 2});
-    object1.attachVertexBuffer(vb1);
-    object1.attachIndexBuffer(ib1);
-    object1.linkShader("simple");
-    ren.registerObject(window, object1);
+    GObjectFactory::initProduction();
+    GObjectFactory::setVertexBuffer(vec);
+    GObjectFactory::setIndexBuffer(index);
+    GObjectFactory::setShader("simple");
+    GObject object = GObjectFactory::getObject();
+    ren.registerObject(window, object);
 
     // drawing triangle 2
-    GObject object2;
-    VertexBuffer vb2;
-    VertexBuffer ib2;
+    vec = {
+            {-1,-1, 0},
+            {-1, -0.25, 0},
+            {-0.25,-0.25, 0}
+    };
+    index = {0,1,2};
 
-    vb2.attachVertexData({
-                                 {-1,-1, 0},
-                                 {-1, -0.25, 0},
-                                 {-0.25,-0.25, 0}
-                         });
-    ib2.attachIndexData({0, 1, 2});
-    object2.attachVertexBuffer(vb2);
-    object2.attachIndexBuffer(ib2);
-    object2.linkShader("simple");
-    ren.registerObject(window, object2);
-
+    GObjectFactory::initProduction();
+    GObjectFactory::setVertexBuffer(vec);
+    GObjectFactory::setIndexBuffer(index);
+    GObjectFactory::setShader("simple");
+    object = GObjectFactory::getObject();
+    ren.registerObject(window, object);
 
     // main loop
     app.init();

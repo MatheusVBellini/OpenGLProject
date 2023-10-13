@@ -21,5 +21,7 @@ add_executable(OpenGLProject main.cpp
         include/GObject.h
         include/Debug.h
         include/UVstruct.h
+        src/GObjectFactory.cpp
+        include/GObjectFactory.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

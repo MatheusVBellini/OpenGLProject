@@ -20,7 +20,7 @@ VertexBuffer& GObject::getVertexBuffer() {
     return vb;
 }
 
-VertexBuffer &GObject::getIndexBuffer() {
+VertexBuffer& GObject::getIndexBuffer() {
     return ib;
 }
 
