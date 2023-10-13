@@ -1,4 +1,6 @@
 #include "../include/Renderer.h"
+#include "../include/Debug.h"
+int i = 0;
 
 Renderer::Renderer() = default;
 
@@ -46,7 +48,6 @@ void Renderer::registerObject(Window& window, GObject &object) {
     shader.bindBuffers();
 
     window.objects.push_back(object);
-
 }
 
 void Renderer::draw(GObject& object) {
@@ -66,7 +67,7 @@ void Renderer::draw(GObject& object) {
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glDrawElements(GL_TRIANGLES, vb.getSize(), GL_UNSIGNED_INT, nullptr);
+    glDrawElements(GL_TRIANGLES, ib.getSize(), GL_UNSIGNED_INT, nullptr);
 
     // unbind variables
     vb.unbind();
