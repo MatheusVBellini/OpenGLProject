@@ -19,5 +19,6 @@ add_executable(OpenGLProject main.cpp
         include/VertexBuffer.h
         src/GObject.cpp
         include/GObject.h
+        include/Debug.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

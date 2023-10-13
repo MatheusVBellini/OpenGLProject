@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 23,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -131,7 +131,8 @@
 				8,
 				10,
 				12,
-				14
+				14,
+				15
 			]
 		}
 	],
@@ -218,6 +219,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/GObject.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/Debug.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -14,8 +14,10 @@ void VertexBuffer::attachVertexData(const std::vector<uv> &data) {
     glGenVertexArrays(1, &id);
     glBindVertexArray(id);
 
-    glGenBuffers(1, &id);
-    glBindBuffer(GL_ARRAY_BUFFER, id);
+    unsigned buffer_id;
+    glGenBuffers(1, &buffer_id);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer_id);
+    std::cout << size << std::endl;
     glBufferData(GL_ARRAY_BUFFER, size * sizeof(uv), data.data(), GL_DYNAMIC_DRAW);
 }
 

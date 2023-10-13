@@ -40,8 +40,13 @@ void Renderer::compileShaders() {
 }
 
 void Renderer::registerObject(Window& window, GObject &object) {
-    shaders.at(object.getShaderName()).bindBuffers();
+    std::string& shader_name = object.getShaderName();
+    Shader& shader = shaders.at(shader_name);
+
+    shader.bindBuffers();
+
     window.objects.push_back(object);
+
 }
 
 void Renderer::draw(GObject& object) {
@@ -49,7 +54,7 @@ void Renderer::draw(GObject& object) {
     VertexBuffer& vb = object.getVertexBuffer();
     VertexBuffer& ib = object.getIndexBuffer();
     std::string& shader_name = object.getShaderName();
-    Shader& shader = shaders[shader_name];
+    Shader& shader = shaders.at(shader_name);
 
     // bind variables
     vb.bind();
@@ -61,7 +66,7 @@ void Renderer::draw(GObject& object) {
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+    glDrawElements(GL_TRIANGLES, vb.getSize(), GL_UNSIGNED_INT, nullptr);
 
     // unbind variables
     vb.unbind();
