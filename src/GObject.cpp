@@ -4,11 +4,11 @@ GObject::GObject() = default;
 
 GObject::~GObject() = default;
 
-void GObject::attachVertexBuffer(VertexBuffer vb) {
+void GObject::attachVertexBuffer(VertexBuffer& vb) {
     this->vb = vb;
 }
 
-void GObject::attachIndexBuffer(VertexBuffer ib) {
+void GObject::attachIndexBuffer(VertexBuffer& ib) {
     this->ib = ib;
 }
 

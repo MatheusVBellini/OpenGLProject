@@ -1,8 +1,12 @@
 #include "../include/Renderer.h"
 
-Renderer::Renderer() {}
+Renderer::Renderer() {
+    current_object = 0;
+}
 
-Renderer::~Renderer() {}
+Renderer::~Renderer() {
+    current_object = 0;
+}
 
 void Renderer::findShaders() {
     std::string dir = "../data/shaders";
@@ -40,11 +44,10 @@ void Renderer::compileShaders() {
 }
 
 void Renderer::registerObject(GObject &object) {
-    shaders[object.getShaderName()].bindBuffers();
+    shaders.at(object.getShaderName()).bindBuffers();
 }
 
 void Renderer::draw(GObject& object) {
-
     // get variables
     VertexBuffer& vb = object.getVertexBuffer();
     VertexBuffer& ib = object.getIndexBuffer();
@@ -67,6 +70,5 @@ void Renderer::draw(GObject& object) {
     vb.unbind();
     ib.unbind();
     shader.unbind();
-
 }
 

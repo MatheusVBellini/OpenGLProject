@@ -93,10 +93,6 @@ Shader Shader::copy() const {
     return Shader(program);
 }
 
-int Shader::getProgram() {
-    return program;
-}
-
 
 
 

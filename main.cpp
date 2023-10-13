@@ -11,10 +11,6 @@ int main() {
     app.bindWindow(window);
     app.showWindow();
 
-    // shader
-    Shader shader;
-    shader.compile("simple");
-
     // Renderer test
     Renderer ren;
     ren.compileShaders();
@@ -22,26 +18,18 @@ int main() {
     // drawing a triangle
     GObject object;
     VertexBuffer vb;
-    vb.attachVertexData({
-        {-0.5,-0.5, 0},
-        {0, 0.5, 0},
-        {0.5,-0.5, 0}
-    });
     VertexBuffer ib;
+
+    vb.attachVertexData({
+                                {-0.5,-0.5, 0},
+                                {0, 0.5, 0},
+                                {0.5,-0.5, 0}
+                        });
     ib.attachIndexData({0, 1, 2});
-    shader.bindBuffers();
-    //object.attachVertexBuffer(vb);
-    //object.attachIndexBuffer(ib);
-    //object.linkShader("simple");
-    //ren.registerObject(object);
-    //object.linkShader("default");
-    //ren.registerObject(object);
-
-    shader.bind();
-    vb.bind();
-    ib.bind();
-    shader.setUniform4f("color", {1,0,1,1});
-
+    object.attachVertexBuffer(vb);
+    object.attachIndexBuffer(ib);
+    object.linkShader("simple");
+    ren.registerObject(object);
 
     // teste
     while(!window.shouldClose()) {
@@ -51,8 +39,7 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         // drawing
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+        ren.draw(object);
 
         // swap front and back buffers
         glfwSwapBuffers(window.getWindowRef());

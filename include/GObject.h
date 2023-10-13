@@ -12,8 +12,8 @@ public:
     explicit GObject();
     ~GObject();
 
-    void attachVertexBuffer(VertexBuffer vb);
-    void attachIndexBuffer(VertexBuffer ib);
+    void attachVertexBuffer(VertexBuffer& vb);
+    void attachIndexBuffer(VertexBuffer& ib);
     void linkShader(std::string shader_name);
 
     VertexBuffer& getVertexBuffer();
