@@ -232,7 +232,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/UVstruct.h",
+			"path" : "include/AppStructs.h",
 			"sourceGroupIndex" : 1
 		},
 		{

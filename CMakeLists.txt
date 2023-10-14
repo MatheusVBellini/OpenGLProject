@@ -20,7 +20,7 @@ add_executable(OpenGLProject main.cpp
         src/GObject.cpp
         include/GObject.h
         include/Debug.h
-        include/UVstruct.h
+        include/AppStructs.h
         src/GObjectFactory.cpp
         include/GObjectFactory.h
 )

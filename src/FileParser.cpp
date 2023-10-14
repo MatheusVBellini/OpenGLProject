@@ -11,6 +11,34 @@ std::ifstream FileParser::readFile(const std::string& filepath) {
     return file;
 }
 
+std::vector<std::string> FileParser::split(const std::string &str, char delimiter) {
+    std::vector<std::string> slices;
+    std::string slice;
+    std::istringstream stream(str);
+
+    while (std::getline(stream, slice, delimiter)) {
+        slices.push_back(slice);
+    }
+
+    return slices;
+
+}
+
+float FileParser::strToFloat(const std::string &str) {
+    float num = 0;
+
+    try {
+        num = std::stof(str);
+    } catch(std::invalid_argument& e) {
+        std::cerr << "<FileParser> Failed to convert string to float.";
+    } catch(std::out_of_range& e) {
+        std::cerr << "<FileParse> String to float conversion is out-of-bounds.";
+    }
+
+    return num;
+
+}
+
 std::tuple<std::string, std::string> FileParser::glslParse(const std::string& filepath) {
     std::ifstream file = readFile(filepath);
 
@@ -49,5 +77,88 @@ std::tuple<std::string, std::string> FileParser::glslParse(const std::string& fi
     return {vertex_shader, fragment_shader};
 
 }
+
+ObjFileInfo FileParser::objParse(const std::string &filepath) {
+    std::ifstream file = readFile(filepath);
+    std::string line;
+    std::vector<std::string> split_line;
+
+    // return variables
+    std::string material_name;
+    std::string obj_name;
+    std::vector<std::string> mtllibs;
+    std::vector<uv> vertices;
+    std::vector<uv> normal_vertices;
+    std::vector<uv_texture> texture_vertices;
+    bool smooth_shading;
+
+    // auxiliary variables
+    uv coord;
+    uv_texture tex_coord;
+
+    while (std::getline(file, line)) {
+
+        split_line = split(line, ' ');
+
+        if (split_line.empty()) continue;
+
+        if (split_line.at(0) == "mtllib") {  // material libraries
+
+            split_line.erase(split_line.begin());
+            mtllibs = split_line;
+
+        } else if (split_line.at(0) == "o") {  // object name
+
+            obj_name = split_line.at(1);
+
+        } else if (split_line.at(0) == "v") {  // vertices
+
+            coord.x = strToFloat(split_line.at(1));
+            coord.y = strToFloat(split_line.at(2));
+            coord.z = strToFloat(split_line.at(3));
+            vertices.push_back(coord);
+
+        } else if (split_line.at(0) == "vt") {  // texture vertices
+
+            tex_coord.x = strToFloat(split_line.at(1));
+            tex_coord.y = strToFloat(split_line.at(2));
+            texture_vertices.push_back(tex_coord);
+
+        } else if (split_line.at(0) == "vn") {  // normal vertices
+
+            coord.x = strToFloat(split_line.at(1));
+            coord.y = strToFloat(split_line.at(2));
+            coord.z = strToFloat(split_line.at(3));
+            normal_vertices.push_back(coord);
+
+        } else if (split_line.at(0) == "usemtl") {  // material to be used
+
+            material_name = split_line.at(1);
+
+        } else if (split_line.at(0) == "s") {  // smooth shading
+
+            if (split_line.at(1) == "on") smooth_shading = true;
+            else smooth_shading = false;
+
+        } else if (split_line.at(0) == "f") {  // face elements
+            // to be implemented
+        }
+
+    }
+
+    // return
+    return {
+        material_name,
+        obj_name,
+        mtllibs,
+        vertices,
+        normal_vertices,
+        texture_vertices,
+        smooth_shading
+    };
+
+}
+
+
 
 

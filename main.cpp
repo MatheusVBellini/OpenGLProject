@@ -47,6 +47,9 @@ int main() {
     object = GObjectFactory::getObject();
     ren.registerObject(window, object);
 
+    // test - creating object from file
+    GObjectFactory::genObjectFromFile("caixa");
+
     // main loop
     app.init();
 

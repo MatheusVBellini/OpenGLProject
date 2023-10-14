@@ -1,4 +1,5 @@
 #include "../include/GObjectFactory.h"
+#include "../include/FileParser.h"
 
 GObjectFactory::STATE GObjectFactory::state = IDLE;
 std::vector<uv> GObjectFactory::vertex_data;
@@ -6,7 +7,7 @@ std::vector<unsigned int> GObjectFactory::index_data;
 std::string GObjectFactory::shader_name;
 
 void GObjectFactory::errorMsg(const std::string& msg) {
-    std::cout << "<GObjectFactory> " + msg << std::endl;
+    std::cerr << "<GObjectFactory> " + msg << std::endl;
 }
 
 void GObjectFactory::initProduction() {
@@ -62,4 +63,13 @@ GObject GObjectFactory::getObject() {
     object.linkShader(shader_name);
 
     return object;
+}
+
+GObject GObjectFactory::genObjectFromFile(const std::string &name) {
+    FileParser fp;
+    std::string filepath = "../data/objects/" + name + ".obj";
+
+    fp.objParse(filepath);
+
+    return GObject();
 }

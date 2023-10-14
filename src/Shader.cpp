@@ -1,6 +1,6 @@
 #include "../include/Shader.h"
 #include "../include/FileParser.h"
-#include "../include/UVstruct.h"
+#include "../include/AppStructs.h"
 
 Shader::Shader() {
     program = 0;

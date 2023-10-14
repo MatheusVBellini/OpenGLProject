@@ -22,4 +22,6 @@ public:
     static void setShader(const std::string& shader_name);
     static GObject getObject();
 
+    static GObject genObjectFromFile(const std::string& name);
+
 };
