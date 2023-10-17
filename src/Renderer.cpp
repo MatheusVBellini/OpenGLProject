@@ -41,15 +41,6 @@ void Renderer::compileShaders() {
 
 }
 
-void Renderer::registerObject(Window& window, GObject &object) {
-    std::string& shader_name = object.getShaderName();
-    Shader& shader = shaders.at(shader_name);
-
-    shader.bindBuffers();
-
-    window.objects.push_back(object);
-}
-
 void Renderer::draw(GObject& object) {
     // get variables
     VertexBuffer& vb = object.getVertexBuffer();

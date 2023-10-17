@@ -70,13 +70,6 @@ void Shader::unbind() const {
     glUseProgram(0);
 }
 
-void Shader::bindBuffers() const {
-    glUseProgram(program);
-    int loc = glGetAttribLocation(program, "position");
-    glVertexAttribPointer(loc, 3, GL_FLOAT, GL_FALSE, sizeof(uv), (void*) 0);
-    glEnableVertexAttribArray(loc);
-}
-
 void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float, 16>& matrix) {
     glUniformMatrix4fv(getUniform(name),1,GL_TRUE,matrix.data());
 }

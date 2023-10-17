@@ -20,4 +20,6 @@ public:
 
     GLFWwindow* getWindowRef() const;
     int shouldClose() const;
+    void attachObject(const GObject& object);
+
 };

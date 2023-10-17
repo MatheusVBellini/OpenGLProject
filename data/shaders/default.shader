@@ -1,8 +1,9 @@
 #shader vertex
+#version 410 core
 
-attribute vec3 position;
-attribute vec2 texture_coord;
-varying vec2 out_texture;
+layout(location = 0) in vec3 position;
+layout(location = 1) out vec2 texture_coord;
+out vec2 out_texture;
 
 uniform mat4 model;
 uniform mat4 view;
@@ -24,9 +25,10 @@ void main() {
 }
 
 #shader fragment
+#version 410 core
 
+in vec2 out_texture;
 uniform vec4 color;
-varying vec2 out_texture;
 uniform sampler2D samplerTexture;
 
 void main() {

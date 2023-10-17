@@ -22,7 +22,6 @@ public:
     ~Renderer();
 
     void compileShaders();
-    void registerObject(Window& window, GObject& object);
     void draw(GObject& object);
 
 };

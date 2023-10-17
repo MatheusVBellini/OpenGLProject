@@ -1,12 +1,14 @@
 #shader vertex
+#version 410 core
 
-attribute vec3 position;
+layout(location=0) in vec3 position;
 
 void main() {
     gl_Position = vec4(position, 1.0);
 }
 
 #shader fragment
+#version 410 core
 
 uniform vec4 color;
 void main() {
