@@ -31,7 +31,9 @@ in vec2 out_texture;
 uniform vec4 color;
 uniform sampler2D samplerTexture;
 
+out vec4 fragColor;
+
 void main() {
-    vec4 texture = texture2D(samplerTexture, out_texture);
-    gl_FragColor = color;
+    vec4 texture = texture(samplerTexture, out_texture);
+    fragColor = color;
 }

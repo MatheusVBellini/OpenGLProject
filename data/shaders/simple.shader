@@ -10,7 +10,9 @@ void main() {
 #shader fragment
 #version 410 core
 
+out vec4 fragColor;
+
 uniform vec4 color;
 void main() {
-    gl_FragColor = color;
+    fragColor = color;
 }
