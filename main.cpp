@@ -25,7 +25,7 @@ int main() {
     };
     std::vector<unsigned> index = {0,1,2};
 
-    GObjectFactory::initProduction();
+    GObjectFactory::initProduction(false);
     GObjectFactory::setVertexBuffer(vec);
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");
@@ -40,7 +40,7 @@ int main() {
     };
     index = {0,1,2};
 
-    GObjectFactory::initProduction();
+    GObjectFactory::initProduction(false);
     GObjectFactory::setVertexBuffer(vec);
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");

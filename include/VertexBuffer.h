@@ -8,7 +8,7 @@
 
 class VertexBuffer {
 private:
-    typedef enum {VERTEX, INDEX, TEXTURE, UNKNOWN} BUFFER_TYPE;
+    typedef enum {VERTEX, INDEX, UNKNOWN} BUFFER_TYPE;
 
     unsigned id;
     BUFFER_TYPE type;
@@ -20,7 +20,6 @@ public:
 
     void attachVertexData(const std::vector<uv>& data);
     void attachIndexData(const std::vector<unsigned>& data);
-    void attachTextureData(const std::vector<uv_texture>& data);
     void bind();
     void unbind();
     unsigned getSize() const;

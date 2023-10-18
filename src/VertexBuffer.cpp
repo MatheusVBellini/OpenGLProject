@@ -33,27 +33,14 @@ void VertexBuffer::attachIndexData(const std::vector<unsigned int> &data) {
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, size * sizeof(unsigned int), data.data(), GL_DYNAMIC_DRAW);
 }
 
-void VertexBuffer::attachTextureData(const std::vector<uv_texture> &data) {
-    type = TEXTURE;
-    size = data.size();
-
-    glGenBuffers(1, &id);
-    glBindBuffer(GL_ARRAY_BUFFER, id);
-    glBufferData(GL_ARRAY_BUFFER, size * sizeof(uv_texture), data.data(), GL_DYNAMIC_DRAW);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(uv_texture), (void*) 0);
-    glEnableVertexAttribArray(1);
-}
-
 void VertexBuffer::bind() {
     if (type == VERTEX) { glBindVertexArray(id); }
     else if (type == INDEX) { glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id); }
-    else if (type == UNKNOWN) { std::cout << "Buffer not initialized. Type: UNKNOWN" << std::endl; }
 }
 
 void VertexBuffer::unbind() {
     if (type == VERTEX) { glBindVertexArray(0); }
     else if (type == INDEX) { glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0); }
-    else if (type == UNKNOWN) { std::cout << "Buffer not initialized. Type: UNKNOWN" << std::endl; }
 }
 
 unsigned VertexBuffer::getSize() const {
