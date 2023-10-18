@@ -23,5 +23,9 @@ add_executable(OpenGLProject main.cpp
         include/AppStructs.h
         src/GObjectFactory.cpp
         include/GObjectFactory.h
+        src/Texture.cpp
+        include/Texture.h
+        include/vendor/stb_image.h
+        include/vendor/stb_image.cpp
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

@@ -78,6 +78,10 @@ void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &a
     glUniform4f(getUniform(name), array.at(0), array.at(1), array.at(2), array.at(3));
 }
 
+void Shader::setUniform1i(const std::string &name, int value) {
+    glUniform1i(getUniform(name), value);
+}
+
 Shader::Shader(unsigned int program) {
     this->program = program;
 }
@@ -85,6 +89,8 @@ Shader::Shader(unsigned int program) {
 Shader Shader::copy() const {
     return Shader(program);
 }
+
+
 
 
 
