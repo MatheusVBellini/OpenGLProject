@@ -22,6 +22,7 @@ void VertexBuffer::attachVertexData(const std::vector<uv> &data) {
     glBufferData(GL_ARRAY_BUFFER, size * sizeof(uv), data.data(), GL_DYNAMIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(uv), (void*) 0);
     glEnableVertexAttribArray(0);
+
 }
 
 void VertexBuffer::attachIndexData(const std::vector<unsigned int> &data) {

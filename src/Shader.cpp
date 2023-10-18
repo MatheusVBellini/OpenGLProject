@@ -42,6 +42,7 @@ void Shader::compile(const std::string &filename) {
     glDeleteShader(vertex);
     glDeleteShader(fragment);
 
+    unbind();
 }
 
 void Shader::validateShader(unsigned shader) {

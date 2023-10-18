@@ -83,14 +83,17 @@ GObject GObjectFactory::getObject() {
     GObject object;
     VertexBuffer vb;
     VertexBuffer ib;
+    Texture texture;
 
     vb.attachVertexData(vertex_data);
     object.attachVertexBuffer(vb);
     if (with_texture) {
         object.linkTexture(texture_filename);
+        ib.unbind();
     }
     else {
         ib.attachIndexData(index_data);
+        texture.unbind();
     }
     object.attachIndexBuffer(ib);
     object.linkShader(shader_name);
@@ -106,13 +109,17 @@ GObject GObjectFactory::getObject() {
     return object;
 }
 
-GObject GObjectFactory::genObjectFromFile(const std::string &name) {
+GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std::string& texture_name) {
     FileParser fp;
-    std::string filepath = "../data/objects/" + name + ".obj";
+    std::string filepath = "../data/objects/" + obj_name + ".obj";
+    ObjFileInfo info = fp.objParse(filepath);
 
-    fp.objParse(filepath);
+    initProduction(true);
+    setVertexBuffer(info.vertices);
+    setTexture(texture_name, info.texture_vertices);
+    setShader("default");
 
-    return GObject();
+    return getObject();
 }
 
 

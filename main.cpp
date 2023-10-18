@@ -49,7 +49,7 @@ int main() {
     window.attachObject(object);
 
     // test - creating object from file
-    GObjectFactory::genObjectFromFile("caixa");
+    GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
 
     // main loop
     app.init();
