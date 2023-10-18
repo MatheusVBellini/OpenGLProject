@@ -95,8 +95,14 @@ GObject GObjectFactory::getObject() {
     object.attachIndexBuffer(ib);
     object.linkShader(shader_name);
 
+    // restarting variables
     state = IDLE;
-    GObjectFactory::with_texture = false;
+    with_texture = false;
+    shader_name = "";
+    texture_filename = "";
+    vertex_data.clear();
+    index_data.clear();
+
     return object;
 }
 
