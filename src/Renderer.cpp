@@ -1,6 +1,6 @@
 #include "../include/Renderer.h"
 #include "../include/Debug.h"
-int i = 0;
+#include "../include/AppConstants.h"
 
 Renderer::Renderer() = default;
 
@@ -28,16 +28,47 @@ void Renderer::findShaders() {
 
 }
 
+void Renderer::findTextures() {
+    std::string dir = "../data/textures";
+    std::string texture_name;
+    size_t pos = 0;
+
+    // search .shader files
+    for (const auto& entry : std::filesystem::directory_iterator(dir)) {
+        if (entry.is_regular_file()) {
+            texture_name = entry.path().filename();
+            texture_names.push_back(texture_name);
+        }
+    }
+
+}
+
 void Renderer::compileShaders() {
     Shader shader;
     findShaders();
 
     for (auto& shader_name : shader_names) {
         shader.compile(shader_name);
-        shaders.insert({shader_name,shader.copy()});
+        shaders.insert({shader_name,shader});
     }
 
     std::cout << "<Renderer> "  << shaders.size() << " shaders compiled successfully!" << std::endl;
+
+}
+
+void Renderer::loadTextures() {
+    Texture texture;
+    findTextures();
+    unsigned slot = 0;
+
+    for (auto& texture_name : texture_names) {
+        texture.load(texture_name);
+        textures.insert({texture_name,{slot,texture}});
+        slot++;
+        slot %= TEXTURE_SLOT_MAX;
+    }
+
+    std::cout << "<Renderer> "  << textures.size() << " textures loaded successfully!" << std::endl;
 
 }
 
@@ -65,4 +96,8 @@ void Renderer::draw(GObject& object) {
     ib.unbind();
     shader.unbind();
 }
+
+
+
+
 

@@ -4787,7 +4787,8 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: ../src/Renderer.cpp \
   ../include/Texture.h \
   ../include/vendor/stb_image.h \
   ../include/Window.h \
-  ../include/Debug.h
+  ../include/Debug.h \
+  ../include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o: ../src/Shader.cpp \
   ../include/Shader.h \
@@ -6234,7 +6235,8 @@ CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o: ../src/Texture.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  ../include/vendor/stb_image.h
+  ../include/vendor/stb_image.h \
+  ../include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o: ../src/VertexBuffer.cpp \
   ../include/VertexBuffer.h \
@@ -8838,6 +8840,8 @@ CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: ../src/Window.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
+
+../include/AppConstants.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 

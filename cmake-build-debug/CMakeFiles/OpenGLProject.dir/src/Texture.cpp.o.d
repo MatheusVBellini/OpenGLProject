@@ -683,4 +683,5 @@ CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h
+  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
+  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h

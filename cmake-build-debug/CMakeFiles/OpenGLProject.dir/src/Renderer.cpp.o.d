@@ -764,4 +764,5 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: \
   /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/Texture.h \
   /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
   /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/Window.h \
-  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h
+  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h \
+  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h

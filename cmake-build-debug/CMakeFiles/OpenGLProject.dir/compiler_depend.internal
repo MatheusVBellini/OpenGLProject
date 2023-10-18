@@ -4795,6 +4795,7 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/Window.h
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h
+ /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/Shader.cpp
@@ -6244,6 +6245,7 @@ CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h
+ /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o
  /Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/src/VertexBuffer.cpp

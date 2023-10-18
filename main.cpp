@@ -14,8 +14,9 @@ int main() {
     app.bindWindow(window);
     app.showWindow();
 
-    // shader fetching and compilation
+    // shader and texture loading
     ren.compileShaders();
+    ren.loadTextures();
 
     // drawing triangle 1
     std::vector<uv> vec = {
