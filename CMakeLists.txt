@@ -1,8 +1,15 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.23)
 project(OpenGLProject)
 
 set(CMAKE_CXX_STANDARD 17)
-set(OpenGlLinkers -lGL -lglfw -lGLEW)
+
+if(APPLE)
+    set(OpenGlLinkers "-framework OpenGL" "-lglfw" "-lGLEW")
+    include_directories(/opt/homebrew/include)
+    link_directories(/opt/homebrew/lib)
+else()
+    set(OpenGlLinkers -lGL -lglfw -lGLEW)
+endif()
 
 add_executable(OpenGLProject main.cpp
         src/Application.cpp
