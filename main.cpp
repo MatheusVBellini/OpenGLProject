@@ -31,7 +31,6 @@ int main() {
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");
     GObject object = GObjectFactory::getObject();
-    window.attachObject(object);
 
     // drawing triangle 2
     vec = {
@@ -46,10 +45,10 @@ int main() {
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");
     object = GObjectFactory::getObject();
-    window.attachObject(object);
 
     // test - creating object from file
-    GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
+    object = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
+    window.attachObject(object);
 
     // main loop
     app.init();

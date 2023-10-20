@@ -75,26 +75,31 @@ void Renderer::loadTextures() {
 void Renderer::draw(GObject& object) {
     // get variables
     VertexBuffer& vb = object.getVertexBuffer();
-    VertexBuffer& ib = object.getIndexBuffer();
     std::string& shader_name = object.getShaderName();
     Shader& shader = shaders.at(shader_name);
+    std::string& texture_name = object.getTextureFilename();
+    Texture& texture = textures.at(texture_name).second;
+    unsigned slot = textures.at(texture_name).first;
 
     // bind variables
     vb.bind();
-    ib.bind();
+    texture.bind(slot);
     shader.bind();
 
     // set uniforms
     shader.setUniform4f("color", {1,0,1,1});
+    shader.setUniform1i("samplerTexture", slot);
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glDrawElements(GL_TRIANGLES, ib.getSize(), GL_UNSIGNED_INT, nullptr);
+    //glDrawElements(GL_TRIANGLES, vb.getSize(), GL_UNSIGNED_INT, nullptr);
+    glDrawArrays(GL_TRIANGLES, 0, vb.getSize());
 
     // unbind variables
     vb.unbind();
-    ib.unbind();
+    texture.unbind();
     shader.unbind();
+
 }
 
 
