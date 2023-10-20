@@ -87,7 +87,7 @@ void Renderer::draw(GObject& object) {
     texture.bind(slot);
 
     // set uniforms
-    shader.setUniform4f("color", {1,0,1,1});
+    shader.setUniform4f("color", {0,0,0,1});
     shader.setUniform1i("samplerTexture", slot);
 
     // draw on screen

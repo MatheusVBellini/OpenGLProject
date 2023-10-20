@@ -21,5 +21,5 @@ out vec4 fragColor;
 
 void main() {
     vec4 tex = texture(samplerTexture, out_texture);
-    fragColor = tex * color;
+    fragColor = tex;
 }

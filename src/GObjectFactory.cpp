@@ -1,5 +1,6 @@
 #include "../include/GObjectFactory.h"
 #include "../include/FileParser.h"
+#include "../include/Debug.h"
 
 bool GObjectFactory::with_texture = false;
 
@@ -117,7 +118,7 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     initProduction(true);
     setVertexBuffer(info.vertices);
     setTexture(texture_name, info.texture_vertices);
-    setShader("default");
+    setShader("simple_with_texture");
 
     return getObject();
 }

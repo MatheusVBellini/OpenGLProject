@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../include/Texture.h"
 #include "../include/AppConstants.h"
 
@@ -16,8 +17,10 @@ void Texture::load(const std::string& filename) {
     stbi_set_flip_vertically_on_load(1);
     auto buffer = stbi_load(filepath.c_str(), &width, &height, &bpp, 4);
 
+
     glGenTextures(1, &id);
     glBindTexture(GL_TEXTURE_2D, id);
+
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);

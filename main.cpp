@@ -8,7 +8,7 @@
 int main() {
     // boot-up
     Application app = Application::getInstance();
-    Window window(800, 800, "Hello World");
+    Window window(1600, 1600, "Hello World");
     Renderer ren;
     app.bindRenderer(ren);
     app.bindWindow(window);
@@ -47,7 +47,7 @@ int main() {
     object = GObjectFactory::getObject();
 
     // test - creating object from file
-    object = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
+    object = GObjectFactory::genObjectFromFile("square", "caixa2.jpg");
     window.attachObject(object);
 
     // main loop
