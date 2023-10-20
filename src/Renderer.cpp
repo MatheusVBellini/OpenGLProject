@@ -82,9 +82,9 @@ void Renderer::draw(GObject& object) {
     unsigned slot = textures.at(texture_name).first;
 
     // bind variables
+    shader.bind();
     vb.bind();
     texture.bind(slot);
-    shader.bind();
 
     // set uniforms
     shader.setUniform4f("color", {1,0,1,1});
@@ -96,8 +96,8 @@ void Renderer::draw(GObject& object) {
     glDrawArrays(GL_TRIANGLES, 0, vb.getSize());
 
     // unbind variables
-    vb.unbind();
     texture.unbind();
+    vb.unbind();
     shader.unbind();
 
 }
