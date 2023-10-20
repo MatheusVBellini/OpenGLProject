@@ -2107,7 +2107,8 @@ CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o: /home/matheusvb/Desktop/U
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Renderer.cpp \
   /usr/include/stdc-predef.h \
@@ -3467,7 +3468,8 @@ CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o: /home/matheusvb/Desktop/USP
   /usr/include/glm/detail/type_half.hpp \
   /usr/include/glm/detail/type_half.inl \
   /usr/include/glm/integer.hpp \
-  /usr/include/glm/detail/func_integer.inl
+  /usr/include/glm/detail/func_integer.inl \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h
 
 CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Window.cpp \
   /usr/include/stdc-predef.h \

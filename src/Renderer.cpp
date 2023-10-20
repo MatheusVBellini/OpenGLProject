@@ -75,6 +75,7 @@ void Renderer::loadTextures() {
 void Renderer::draw(GObject& object) {
     // get variables
     VertexBuffer& vb = object.getVertexBuffer();
+    VertexBuffer& ib = object.getIndexBuffer();
     std::string& shader_name = object.getShaderName();
     Shader& shader = shaders.at(shader_name);
     std::string& texture_name = object.getTextureFilename();
@@ -84,6 +85,7 @@ void Renderer::draw(GObject& object) {
     // bind variables
     shader.bind();
     vb.bind();
+    ib.bind();
     texture.bind(slot);
 
     // set uniforms
@@ -92,11 +94,11 @@ void Renderer::draw(GObject& object) {
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    //glDrawElements(GL_TRIANGLES, vb.getSize(), GL_UNSIGNED_INT, nullptr);
-    glDrawArrays(GL_TRIANGLES, 0, vb.getSize());
+    glDrawElements(GL_TRIANGLES, ib.getSize(), GL_UNSIGNED_INT, nullptr);
 
     // unbind variables
     texture.unbind();
+    ib.unbind();
     vb.unbind();
     shader.unbind();
 

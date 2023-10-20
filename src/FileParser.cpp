@@ -91,10 +91,13 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     std::vector<glm::vec3> normal_vertices;
     std::vector<glm::vec2> texture_vertices;
     bool smooth_shading;
+    std::vector<unsigned> indexes;
 
     // auxiliary variables
     glm::vec3 coord;
     glm::vec2 tex_coord;
+    unsigned index;
+    std::vector<std::string> split_indexes;
 
     while (std::getline(file, line)) {
 
@@ -138,10 +141,22 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
         } else if (split_line.at(0) == "s") {  // smooth shading
 
             if (split_line.at(1) == "on") smooth_shading = true;
-            else smooth_shading = false;
+            else if (split_line.at(1) == "off") smooth_shading = false;
 
         } else if (split_line.at(0) == "f") {  // face elements
-            // to be implemented
+
+            // v1
+            split_indexes = split(split_line.at(1), '/');
+            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+
+            // v2
+            split_indexes = split(split_line.at(2), '/');
+            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+
+            // v2
+            split_indexes = split(split_line.at(3), '/');
+            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+
         }
 
     }
@@ -154,7 +169,8 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
         vertices,
         normal_vertices,
         texture_vertices,
-        smooth_shading
+        smooth_shading,
+        indexes
     };
 
 }

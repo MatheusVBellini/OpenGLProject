@@ -10,4 +10,5 @@ typedef struct {
     std::vector<glm::vec3> normal_vertices;
     std::vector<glm::vec2> texture_vertices;
     bool smooth_shading;
+    std::vector<unsigned> indexes;
 } ObjFileInfo;

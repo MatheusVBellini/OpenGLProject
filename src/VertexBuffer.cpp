@@ -1,4 +1,5 @@
 #include "../include/VertexBuffer.h"
+#include "../include/AppConstants.h"
 
 
 VertexBuffer::VertexBuffer() {
@@ -20,7 +21,7 @@ void VertexBuffer::attachVertexData(const std::vector<glm::vec3> &data) {
     glGenBuffers(1, &buffer_id);
     glBindBuffer(GL_ARRAY_BUFFER, buffer_id);
     glBufferData(GL_ARRAY_BUFFER, size * sizeof(glm::vec3), data.data(), GL_DYNAMIC_DRAW);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*) 0);
+    glVertexAttribPointer(VERTEX_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*) 0);
     glEnableVertexAttribArray(0);
 
 }
