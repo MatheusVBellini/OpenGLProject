@@ -1,13 +1,13 @@
 #pragma once
 
-typedef struct { float x,y,z; } uv;
-typedef struct { float x,y; }   uv_texture;
+#include <glm/glm.hpp>
+
 typedef struct {
     std::string material_name;
     std::string obj_name;
     std::vector<std::string> mtllibs;
-    std::vector<uv> vertices;
-    std::vector<uv> normal_vertices;
-    std::vector<uv_texture> texture_vertices;
+    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> normal_vertices;
+    std::vector<glm::vec2> texture_vertices;
     bool smooth_shading;
 } ObjFileInfo;

@@ -87,14 +87,14 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     std::string material_name;
     std::string obj_name;
     std::vector<std::string> mtllibs;
-    std::vector<uv> vertices;
-    std::vector<uv> normal_vertices;
-    std::vector<uv_texture> texture_vertices;
+    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> normal_vertices;
+    std::vector<glm::vec2> texture_vertices;
     bool smooth_shading;
 
     // auxiliary variables
-    uv coord;
-    uv_texture tex_coord;
+    glm::vec3 coord;
+    glm::vec2 tex_coord;
 
     while (std::getline(file, line)) {
 

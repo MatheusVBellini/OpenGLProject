@@ -19,7 +19,7 @@ int main() {
     ren.loadTextures();
 
     // drawing triangle 1
-    std::vector<uv> vec = {
+    std::vector<glm::vec3> vec = {
             {-0.5,-0.5, 0},
             {0, 0.5, 0},
             {0.5,-0.5, 0}

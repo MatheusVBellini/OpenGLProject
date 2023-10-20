@@ -5,7 +5,7 @@
 bool GObjectFactory::with_texture = false;
 
 GObjectFactory::STATE GObjectFactory::state = IDLE;
-std::vector<uv> GObjectFactory::vertex_data;
+std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
 std::string GObjectFactory::texture_filename;
 std::string GObjectFactory::shader_name;
@@ -24,7 +24,7 @@ void GObjectFactory::initProduction(bool with_texture) {
     state = VERTEX;
 }
 
-void GObjectFactory::setVertexBuffer(std::vector<uv>& data) {
+void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
     if (state != VERTEX) {
         errorMsg("Cannot define vertices, production must be initialized first. Try: initProduction().");
         return;
@@ -45,7 +45,7 @@ void GObjectFactory::setIndexBuffer(std::vector<unsigned int>& data) {
     index_data = data;
 }
 
-void GObjectFactory::setTexture(const std::string& filename, std::vector<uv_texture>& data) {
+void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::vec2>& data) {
     if (state != TEXTURE) {
         if (with_texture)
             errorMsg("Cannot define texture, vertices must be set first. Try: setVertexBuffer().");
@@ -61,8 +61,8 @@ void GObjectFactory::setTexture(const std::string& filename, std::vector<uv_text
 
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(uv_texture), data.data(), GL_DYNAMIC_DRAW);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(uv_texture), (void*) 0);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(glm::vec2), data.data(), GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2), (void*) 0);
     glEnableVertexAttribArray(1);
 }
 
