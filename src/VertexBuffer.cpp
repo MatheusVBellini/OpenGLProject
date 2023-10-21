@@ -22,7 +22,7 @@ void VertexBuffer::attachVertexData(const std::vector<glm::vec3> &data) {
     glBindBuffer(GL_ARRAY_BUFFER, buffer_id);
     glBufferData(GL_ARRAY_BUFFER, size * sizeof(glm::vec3), data.data(), GL_DYNAMIC_DRAW);
     glVertexAttribPointer(VERTEX_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*) 0);
-    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(VERTEX_SLOT);
 
 }
 

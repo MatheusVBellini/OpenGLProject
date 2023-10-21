@@ -147,15 +147,18 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
             // v1
             split_indexes = split(split_line.at(1), '/');
-            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
 
             // v2
             split_indexes = split(split_line.at(2), '/');
-            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
 
-            // v2
+            // v3
             split_indexes = split(split_line.at(3), '/');
-            indexes.push_back((unsigned)strToFloat(split_indexes.at(0)));
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
 
         }
 
