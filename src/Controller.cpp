@@ -9,6 +9,12 @@ Controller::Controller() {
 
 Controller::~Controller() = default;
 
+void Controller::callback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+    for (auto& controller : Controller::controllers) {
+        controller->keyCallback(key, scancode, action, mods);
+    }
+}
+
 void Controller::keyCallback(int key, int scancode, int action, int mods) {
     if (action == 0) return;
     for (auto& [key_code, func] : key_method) {
@@ -73,6 +79,7 @@ std::map<std::string, int> Controller::key_table = {
 void Controller::printKey(int key) {
     std::cout << "method used!" << std::endl;
 }
+
 
 
 

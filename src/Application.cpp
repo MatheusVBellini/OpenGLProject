@@ -1,12 +1,6 @@
 #include "../include/Application.h"
 #include "../include/Controller.h"
 
-void Application::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-    for (auto& controller : Controller::controllers) {
-        controller->keyCallback(key, scancode, action, mods);
-    }
-}
-
 Application &Application::getInstance() {
     static Application instance;
     return instance;
@@ -39,10 +33,10 @@ void Application::bindWindow(Window& window_to_bind) {
 
 void Application::showWindow() {
     glfwShowWindow(window->getWindowRef());
-    glfwSetKeyCallback(window->getWindowRef(),Application::keyCallback);
 }
 
 void Application::init() {
+    glfwSetKeyCallback(window->getWindowRef(),Controller::callback);
 
     while(!window->shouldClose()) {
 

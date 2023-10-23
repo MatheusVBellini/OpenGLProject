@@ -7,6 +7,7 @@
 
 class Controller {
 private:
+    static std::vector<Controller*> controllers;
     static std::map<std::string, int> key_table;
     static std::map<std::string, void(Controller::*)(int)> func_table;
 
@@ -14,7 +15,7 @@ private:
     std::vector<std::pair<int,std::function<void(int)>>> key_func;
 
 public:
-    static std::vector<Controller*> controllers;
+    static void callback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
     Controller();
     ~Controller();
