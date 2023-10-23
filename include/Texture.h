@@ -7,6 +7,7 @@
 
 class Texture {
 private:
+
     unsigned id;
     int width;
     int height;

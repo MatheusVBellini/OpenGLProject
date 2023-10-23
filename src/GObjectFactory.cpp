@@ -1,11 +1,14 @@
 #include "../include/GObjectFactory.h"
 #include "../include/FileParser.h"
+#include "../include/Debug.h"
+#include "../include/AppConstants.h"
 
 bool GObjectFactory::with_texture = false;
 
 GObjectFactory::STATE GObjectFactory::state = IDLE;
-std::vector<uv> GObjectFactory::vertex_data;
+std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
+std::vector<glm::vec2> GObjectFactory::texture_data;
 std::string GObjectFactory::texture_filename;
 std::string GObjectFactory::shader_name;
 
@@ -23,7 +26,7 @@ void GObjectFactory::initProduction(bool with_texture) {
     state = VERTEX;
 }
 
-void GObjectFactory::setVertexBuffer(std::vector<uv>& data) {
+void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
     if (state != VERTEX) {
         errorMsg("Cannot define vertices, production must be initialized first. Try: initProduction().");
         return;
@@ -32,19 +35,7 @@ void GObjectFactory::setVertexBuffer(std::vector<uv>& data) {
     vertex_data = data;
 }
 
-void GObjectFactory::setIndexBuffer(std::vector<unsigned int>& data) {
-    if (state != INDEX) {
-        if (with_texture)
-            errorMsg("Objects with texture don't support index buffers. Try: setTexture().");
-        else
-            errorMsg("Cannot define indexes, vertices must be set first. Try: setVertexBuffer().");
-        return;
-    }
-    state = SHADER;
-    index_data = data;
-}
-
-void GObjectFactory::setTexture(const std::string& filename, std::vector<uv_texture>& data) {
+void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::vec2>& data) {
     if (state != TEXTURE) {
         if (with_texture)
             errorMsg("Cannot define texture, vertices must be set first. Try: setVertexBuffer().");
@@ -53,16 +44,46 @@ void GObjectFactory::setTexture(const std::string& filename, std::vector<uv_text
         return;
     }
 
-    state = SHADER;
+    state = NORMAL;
     texture_filename = filename;
+    texture_data = data;
 
+}
+
+void GObjectFactory::initTextureCoords(std::vector<glm::vec2> &data) {
     unsigned buffer;
 
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(uv_texture), data.data(), GL_DYNAMIC_DRAW);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(uv_texture), (void*) 0);
-    glEnableVertexAttribArray(1);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(glm::vec2), data.data(), GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2), (void*) 0);
+    glEnableVertexAttribArray(TEXTURE_SLOT);
+}
+
+void GObjectFactory::setNormals(std::vector<glm::vec3> &data) {
+    if (state != NORMAL) {
+        errorMsg("Textures were not yet set. Try: setTexture().");
+        return;
+    }
+
+    state = INDEX;
+
+}
+
+void GObjectFactory::setIndexBuffer(std::vector<unsigned int>& data) {
+    if (state != INDEX) {
+        if (with_texture) {
+            errorMsg("Cannot define indexes, normals must be set first. Try: setNormals().");
+        }
+        else {
+            errorMsg("Cannot define indexes, vertices must be set first. Try: setVertexBuffer().");
+        }
+        return;
+    }
+
+    state = SHADER;
+    index_data = data;
+
 }
 
 void GObjectFactory::setShader(const std::string& shader_name) {
@@ -86,16 +107,11 @@ GObject GObjectFactory::getObject() {
     Texture texture;
 
     vb.attachVertexData(vertex_data);
+    initTextureCoords(texture_data);
     object.attachVertexBuffer(vb);
-    if (with_texture) {
-        object.linkTexture(texture_filename);
-        ib.unbind();
-    }
-    else {
-        ib.attachIndexData(index_data);
-        texture.unbind();
-    }
+    ib.attachIndexData(index_data);
     object.attachIndexBuffer(ib);
+    if (with_texture) object.linkTexture(texture_filename);
     object.linkShader(shader_name);
 
     // restarting variables
@@ -117,10 +133,16 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     initProduction(true);
     setVertexBuffer(info.vertices);
     setTexture(texture_name, info.texture_vertices);
-    setShader("default");
+    setNormals(info.normal_vertices);
+    setIndexBuffer(info.indexes);
+    setShader("simple_with_texture");
 
     return getObject();
 }
+
+
+
+
 
 
 

@@ -8,7 +8,7 @@
 int main() {
     // boot-up
     Application app = Application::getInstance();
-    Window window(800, 800, "Hello World");
+    Window window(1600, 1600, "Hello World");
     Renderer ren;
     app.bindRenderer(ren);
     app.bindWindow(window);
@@ -19,7 +19,7 @@ int main() {
     ren.loadTextures();
 
     // drawing triangle 1
-    std::vector<uv> vec = {
+    std::vector<glm::vec3> vec = {
             {-0.5,-0.5, 0},
             {0, 0.5, 0},
             {0.5,-0.5, 0}
@@ -31,7 +31,6 @@ int main() {
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");
     GObject object = GObjectFactory::getObject();
-    window.attachObject(object);
 
     // drawing triangle 2
     vec = {
@@ -46,10 +45,10 @@ int main() {
     GObjectFactory::setIndexBuffer(index);
     GObjectFactory::setShader("simple");
     object = GObjectFactory::getObject();
-    window.attachObject(object);
 
     // test - creating object from file
-    GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
+    object = GObjectFactory::genObjectFromFile("square", "caixa2.jpg");
+    window.attachObject(object);
 
     // main loop
     app.init();

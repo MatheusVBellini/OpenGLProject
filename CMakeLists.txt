@@ -9,7 +9,9 @@ if(APPLE)
     link_directories(/opt/homebrew/lib)
 else()
     set(OpenGlLinkers -lGL -lglfw -lGLEW)
+    include_directories(/usr/include)
 endif()
+
 
 add_executable(OpenGLProject main.cpp
         src/Application.cpp

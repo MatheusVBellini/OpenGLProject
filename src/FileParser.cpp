@@ -87,14 +87,17 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     std::string material_name;
     std::string obj_name;
     std::vector<std::string> mtllibs;
-    std::vector<uv> vertices;
-    std::vector<uv> normal_vertices;
-    std::vector<uv_texture> texture_vertices;
+    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> normal_vertices;
+    std::vector<glm::vec2> texture_vertices;
     bool smooth_shading;
+    std::vector<unsigned> indexes;
 
     // auxiliary variables
-    uv coord;
-    uv_texture tex_coord;
+    glm::vec3 coord;
+    glm::vec2 tex_coord;
+    unsigned index;
+    std::vector<std::string> split_indexes;
 
     while (std::getline(file, line)) {
 
@@ -138,10 +141,25 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
         } else if (split_line.at(0) == "s") {  // smooth shading
 
             if (split_line.at(1) == "on") smooth_shading = true;
-            else smooth_shading = false;
+            else if (split_line.at(1) == "off") smooth_shading = false;
 
         } else if (split_line.at(0) == "f") {  // face elements
-            // to be implemented
+
+            // v1
+            split_indexes = split(split_line.at(1), '/');
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
+
+            // v2
+            split_indexes = split(split_line.at(2), '/');
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
+
+            // v3
+            split_indexes = split(split_line.at(3), '/');
+            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
+            indexes.push_back(index);
+
         }
 
     }
@@ -154,7 +172,8 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
         vertices,
         normal_vertices,
         texture_vertices,
-        smooth_shading
+        smooth_shading,
+        indexes
     };
 
 }

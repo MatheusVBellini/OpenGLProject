@@ -13,3 +13,9 @@ inline void CheckOpenGLError(const char* fname, int line) {
 }
 
 #define CHECK_GL_ERRORS() CheckOpenGLError(__FILE__, __LINE__)
+
+inline void warnDebug(const char* fname, int line) {
+    std::cout << "DEBUG: " << fname << ":" << line << std::endl;
+}
+
+#define DEBUG() warnDebug(__FILE__, __LINE__)
