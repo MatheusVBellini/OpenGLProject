@@ -342,4 +342,11 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/c++/11/bits/stl_multimap.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Shader.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Controller.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h

@@ -36,5 +36,7 @@ add_executable(OpenGLProject main.cpp
         include/Texture.h
         include/vendor/stb_image.h
         include/vendor/stb_image.cpp
+        src/Controller.cpp
+        include/Controller.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})

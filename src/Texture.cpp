@@ -33,6 +33,16 @@ void Texture::load(const std::string& filename) {
     if (buffer) stbi_image_free(buffer);
 }
 
+void Texture::attachTextureData(std::vector<glm::vec2> &data) {
+    unsigned buffer;
+
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(glm::vec2), data.data(), GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2), (void*) 0);
+    glEnableVertexAttribArray(TEXTURE_SLOT);
+}
+
 void Texture::bind(unsigned int slot) {
     slot %= TEXTURE_SLOT_MAX;
     glActiveTexture(GL_TEXTURE0 + slot);

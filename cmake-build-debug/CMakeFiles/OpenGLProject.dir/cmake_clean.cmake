@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProject.dir/main.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/Application.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/Application.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/Controller.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/Controller.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o"

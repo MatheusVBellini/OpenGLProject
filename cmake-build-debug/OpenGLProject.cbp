@@ -72,6 +72,9 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Controller.h">
+			<Option target="OpenGLProject"/>
+		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
@@ -109,6 +112,9 @@
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Application.cpp">
+			<Option target="OpenGLProject"/>
+		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Controller.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp">

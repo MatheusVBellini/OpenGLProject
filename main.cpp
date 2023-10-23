@@ -4,6 +4,7 @@
 #include "include/Renderer.h"
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
+#include "include/Controller.h"
 
 int main() {
     // boot-up
@@ -46,9 +47,16 @@ int main() {
     GObjectFactory::setShader("simple");
     object = GObjectFactory::getObject();
 
-    // test - creating object from file
+    // creating object from file
     object = GObjectFactory::genObjectFromFile("square", "caixa2.jpg");
     window.attachObject(object);
+
+    // test - controller
+    Controller con;
+    con.bindKeyFunc("a", "printKey");
+    con.bindKeyFunc("s", [](int key) {
+        std::cout << "lambda function used!" << std::endl;
+    });
 
     // main loop
     app.init();

@@ -1,6 +1,11 @@
 #include "../include/Application.h"
-#include "../include/VertexBuffer.h"
-#include "../include/GObject.h"
+#include "../include/Controller.h"
+
+void Application::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+    for (auto& controller : Controller::controllers) {
+        controller->keyCallback(key, scancode, action, mods);
+    }
+}
 
 Application &Application::getInstance() {
     static Application instance;
@@ -34,6 +39,7 @@ void Application::bindWindow(Window& window_to_bind) {
 
 void Application::showWindow() {
     glfwShowWindow(window->getWindowRef());
+    glfwSetKeyCallback(window->getWindowRef(),Application::keyCallback);
 }
 
 void Application::init() {
@@ -46,7 +52,7 @@ void Application::init() {
 
         // drawing
         for (auto& object : window->objects) {
-            renderer->draw(object);
+            renderer->draw(*object);
         }
 
         // swap front and back buffers
@@ -61,5 +67,7 @@ void Application::init() {
 void Application::bindRenderer(Renderer& renderer) {
     this->renderer = &renderer;
 }
+
+
 
 

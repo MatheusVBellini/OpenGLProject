@@ -17,8 +17,7 @@ private:
     static std::string texture_filename;
     static std::string shader_name;
 
-    void static errorMsg(const std::string& msg);
-    void static initTextureCoords(std::vector<glm::vec2> &data);
+    static void errorMsg(const std::string& msg);
 
 public:
 

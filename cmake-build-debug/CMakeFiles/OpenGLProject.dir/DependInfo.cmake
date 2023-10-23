@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.cpp" "CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/main.cpp" "CMakeFiles/OpenGLProject.dir/main.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/main.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Application.cpp" "CMakeFiles/OpenGLProject.dir/src/Application.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Application.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Controller.cpp" "CMakeFiles/OpenGLProject.dir/src/Controller.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Controller.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp" "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObject.cpp" "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObjectFactory.cpp" "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o.d"
