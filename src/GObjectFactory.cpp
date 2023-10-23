@@ -8,6 +8,7 @@ bool GObjectFactory::with_texture = false;
 GObjectFactory::STATE GObjectFactory::state = IDLE;
 std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
+std::vector<glm::vec2> GObjectFactory::texture_data;
 std::string GObjectFactory::texture_filename;
 std::string GObjectFactory::shader_name;
 
@@ -45,7 +46,11 @@ void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::ve
 
     state = NORMAL;
     texture_filename = filename;
+    texture_data = data;
 
+}
+
+void GObjectFactory::initTextureCoords(std::vector<glm::vec2> &data) {
     unsigned buffer;
 
     glGenBuffers(1, &buffer);
@@ -102,6 +107,7 @@ GObject GObjectFactory::getObject() {
     Texture texture;
 
     vb.attachVertexData(vertex_data);
+    initTextureCoords(texture_data);
     object.attachVertexBuffer(vb);
     ib.attachIndexData(index_data);
     object.attachIndexBuffer(ib);
@@ -133,6 +139,8 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
 
     return getObject();
 }
+
+
 
 
 

@@ -13,10 +13,12 @@ private:
     static STATE state;
     static std::vector<glm::vec3> vertex_data;
     static std::vector<unsigned int> index_data;
+    static std::vector<glm::vec2> texture_data;
     static std::string texture_filename;
     static std::string shader_name;
 
     void static errorMsg(const std::string& msg);
+    void static initTextureCoords(std::vector<glm::vec2> &data);
 
 public:
 
