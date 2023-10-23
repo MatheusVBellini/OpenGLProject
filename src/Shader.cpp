@@ -1,6 +1,7 @@
 #include "../include/Shader.h"
 #include "../include/FileParser.h"
 #include "../include/AppStructs.h"
+#include <glm/gtc/type_ptr.hpp>
 
 Shader::Shader() {
     program = 0;
@@ -71,8 +72,8 @@ void Shader::unbind() const {
     glUseProgram(0);
 }
 
-void Shader::setUniformMatrix4fv(const std::string &name, const std::array<float, 16>& matrix) {
-    glUniformMatrix4fv(getUniform(name),1,GL_TRUE,matrix.data());
+void Shader::setUniformMatrix4fv(const std::string &name, const glm::mat4& matrix) {
+    glUniformMatrix4fv(getUniform(name),1,GL_FALSE, glm::value_ptr(matrix));
 }
 
 void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &array) {

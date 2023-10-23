@@ -2,6 +2,7 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
 #include <string>
 #include <array>
 
@@ -23,7 +24,7 @@ public:
     void bind() const;
     void unbind() const;
 
-    void setUniformMatrix4fv(const std::string& name, const std::array<float,16>& matrix);
+    void setUniformMatrix4fv(const std::string& name, const glm::mat4& matrix);
     void setUniform4f(const std::string& name, const std::array<float,4>& array);
     void setUniform1i(const std::string& name, int value);
 

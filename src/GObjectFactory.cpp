@@ -96,6 +96,7 @@ GObject GObjectFactory::getObject() {
     VertexBuffer ib;
     Texture texture;
 
+    object.setPivot(vertex_data.at(0));
     vb.attachVertexData(vertex_data);
     texture.attachTextureData(texture_data);
     object.attachVertexBuffer(vb);
@@ -125,7 +126,7 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     setTexture(texture_name, info.texture_vertices);
     setNormals(info.normal_vertices);
     setIndexBuffer(info.indexes);
-    setShader("simple_with_texture");
+    setShader("default");
 
     return getObject();
 }
