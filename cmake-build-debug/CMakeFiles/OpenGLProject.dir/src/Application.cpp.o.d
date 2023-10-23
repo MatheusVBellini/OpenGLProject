@@ -343,7 +343,7 @@ CMakeFiles/OpenGLProject.dir/src/Application.cpp.o: \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Shader.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Controller.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/control/Controller.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \

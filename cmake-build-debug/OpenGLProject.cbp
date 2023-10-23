@@ -72,9 +72,6 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Controller.h">
-			<Option target="OpenGLProject"/>
-		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
@@ -102,6 +99,12 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h">
+			<Option target="OpenGLProject"/>
+		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h">
+			<Option target="OpenGLProject"/>
+		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
@@ -112,9 +115,6 @@
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Application.cpp">
-			<Option target="OpenGLProject"/>
-		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Controller.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp">
@@ -139,6 +139,12 @@
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Window.cpp">
+			<Option target="OpenGLProject"/>
+		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp">
+			<Option target="OpenGLProject"/>
+		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/CMakeLists.txt">

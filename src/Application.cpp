@@ -1,5 +1,5 @@
 #include "../include/Application.h"
-#include "../include/Controller.h"
+#include "../include/control/Controller.h"
 
 Application &Application::getInstance() {
     static Application instance;

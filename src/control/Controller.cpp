@@ -1,10 +1,12 @@
-#include "../include/Controller.h"
+#include "../../include/control/Controller.h"
 #include <GLFW/glfw3.h>
+#include <glm/gtc/matrix_transform.hpp>
 
 std::vector<Controller*> Controller::controllers;
 
 Controller::Controller() {
     Controller::controllers.push_back(this);
+    object = nullptr;
 }
 
 Controller::~Controller() = default;
@@ -16,13 +18,16 @@ void Controller::callback(GLFWwindow *window, int key, int scancode, int action,
 }
 
 void Controller::keyCallback(int key, int scancode, int action, int mods) {
-    if (action == 0) return;
     for (auto& [key_code, func] : key_method) {
-        if (key == key_code) (this->*func)(key);
+        if (key == key_code) (this->*func)(key,scancode,action,mods);
     }
     for (auto& [key_code, func] : key_func) {
-        if (key == key_code) func(key);
+        if (key == key_code) func(key,scancode,action,mods);
     }
+}
+
+void Controller::control(GObject &object) {
+    this->object = &object;
 }
 
 void Controller::bindKeyFunc(const std::string &key, const std::string &func) {
@@ -32,15 +37,15 @@ void Controller::bindKeyFunc(const std::string &key, const std::string &func) {
     );
 }
 
-void Controller::bindKeyFunc(const std::string &key, const std::function<void(int)>& func) {
+void Controller::bindKeyFunc(const std::string &key, const std::function<void(int,int,int,int)>& func) {
     key_func.emplace_back(
        key_table.at(key),
        func
     );
 }
 
-std::map<std::string, void(Controller::*)(int)> Controller::func_table = {
-        {"printKey", &Controller::printKey}
+std::map<std::string, void(Controller::*)(int,int,int,int)> Controller::func_table = {
+        {"debug", &Controller::debug}
 };
 
 std::map<std::string, int> Controller::key_table = {
@@ -76,8 +81,11 @@ std::map<std::string, int> Controller::key_table = {
         {"left_shift", GLFW_KEY_LEFT_SHIFT}
 };
 
-void Controller::printKey(int key) {
-    std::cout << "method used!" << std::endl;
+void Controller::debug(int key, int scancode, int action, int mods) {
+    std::cout << "Key: " << key << std::endl
+              << "Scancode: " << scancode << std::endl
+              << "Action: " << action << std::endl
+              << "Mods: " << mods << std::endl;
 }
 
 

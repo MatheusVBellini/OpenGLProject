@@ -4,7 +4,7 @@
 #include "include/Renderer.h"
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
-#include "include/Controller.h"
+#include "include/control/Controller.h"
 
 int main() {
     // boot-up
@@ -53,10 +53,11 @@ int main() {
 
     // test - controller
     Controller con;
-    con.bindKeyFunc("a", "printKey");
-    con.bindKeyFunc("s", [](int key) {
+    con.bindKeyFunc("a", "debug");
+    con.bindKeyFunc("s", [](int key, int scancode, int action, int mods) {
         std::cout << "lambda function used!" << std::endl;
     });
+    con.control(object);
 
     // main loop
     app.init();
