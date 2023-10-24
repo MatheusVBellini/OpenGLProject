@@ -1,6 +1,6 @@
 #include "../../include/control/Controller.h"
 #include <GLFW/glfw3.h>
-#include <glm/gtc/matrix_transform.hpp>
+
 
 std::vector<Controller*> Controller::controllers;
 
@@ -162,7 +162,11 @@ std::map<std::string, int> Controller::key_table = {
         {"space", GLFW_KEY_SPACE},
         {"enter", GLFW_KEY_ENTER},
         {"escape", GLFW_KEY_ESCAPE},
-        {"left_shift", GLFW_KEY_LEFT_SHIFT}
+        {"left_shift", GLFW_KEY_LEFT_SHIFT},
+        {"left_arrow", GLFW_KEY_LEFT},
+        {"right_arrow", GLFW_KEY_RIGHT},
+        {"up_arrow", GLFW_KEY_UP},
+        {"down_arrow", GLFW_KEY_DOWN}
 };
 
 void Controller::errorMsg(const std::string &msg) {

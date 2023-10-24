@@ -308,12 +308,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/control/ManualMov.cpp",
+			"path" : "src/control/modules/ManualMov.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/control/ManualMov.h",
+			"path" : "include/control/modules/ManualMov.h",
 			"sourceGroupIndex" : 1
 		}
 	],

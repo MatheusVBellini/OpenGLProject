@@ -441,29 +441,29 @@ src/control/FuncModule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s
 .PHONY : src/control/FuncModule.cpp.s
 
-src/control/ManualMov.o: src/control/ManualMov.cpp.o
-.PHONY : src/control/ManualMov.o
+src/control/modules/ManualMov.o: src/control/modules/ManualMov.cpp.o
+.PHONY : src/control/modules/ManualMov.o
 
 # target to build an object file
-src/control/ManualMov.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o
-.PHONY : src/control/ManualMov.cpp.o
+src/control/modules/ManualMov.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o
+.PHONY : src/control/modules/ManualMov.cpp.o
 
-src/control/ManualMov.i: src/control/ManualMov.cpp.i
-.PHONY : src/control/ManualMov.i
+src/control/modules/ManualMov.i: src/control/modules/ManualMov.cpp.i
+.PHONY : src/control/modules/ManualMov.i
 
 # target to preprocess a source file
-src/control/ManualMov.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.i
-.PHONY : src/control/ManualMov.cpp.i
+src/control/modules/ManualMov.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.i
+.PHONY : src/control/modules/ManualMov.cpp.i
 
-src/control/ManualMov.s: src/control/ManualMov.cpp.s
-.PHONY : src/control/ManualMov.s
+src/control/modules/ManualMov.s: src/control/modules/ManualMov.cpp.s
+.PHONY : src/control/modules/ManualMov.s
 
 # target to generate assembly for a file
-src/control/ManualMov.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.s
-.PHONY : src/control/ManualMov.cpp.s
+src/control/modules/ManualMov.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.s
+.PHONY : src/control/modules/ManualMov.cpp.s
 
 # Help Target
 help:
@@ -513,9 +513,9 @@ help:
 	@echo "... src/control/FuncModule.o"
 	@echo "... src/control/FuncModule.i"
 	@echo "... src/control/FuncModule.s"
-	@echo "... src/control/ManualMov.o"
-	@echo "... src/control/ManualMov.i"
-	@echo "... src/control/ManualMov.s"
+	@echo "... src/control/modules/ManualMov.o"
+	@echo "... src/control/modules/ManualMov.i"
+	@echo "... src/control/modules/ManualMov.s"
 .PHONY : help
 
 

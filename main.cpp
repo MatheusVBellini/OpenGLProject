@@ -5,7 +5,7 @@
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
-#include "include/control/ManualMov.h"
+#include "include/control/modules/ManualMov.h"
 
 int main() {
     // boot-up
@@ -54,10 +54,6 @@ int main() {
 
     // test - controller
     Controller con;
-    con.setKeyFunc("s", [](int key, int scancode, int action, int mods, GObject *) {
-        if (!action) return;
-        std::cout << "lambda function used!" << std::endl;
-    });
     con.bindObject(object);
 
     // test - FuncModule;

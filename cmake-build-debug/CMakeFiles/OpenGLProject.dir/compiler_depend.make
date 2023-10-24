@@ -562,7 +562,7 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/Op
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/ManualMov.h
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h
 
 CMakeFiles/OpenGLProject.dir/src/Application.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Application.cpp \
   /usr/include/stdc-predef.h \
@@ -4502,19 +4502,7 @@ CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: /home/matheusvb/Deskt
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
   /usr/include/c++/11/stdlib.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
-  /usr/include/glm/gtc/matrix_transform.hpp \
-  /usr/include/glm/ext/matrix_projection.hpp \
-  /usr/include/glm/gtc/constants.hpp \
-  /usr/include/glm/ext/scalar_constants.hpp \
-  /usr/include/glm/ext/scalar_constants.inl \
-  /usr/include/glm/gtc/constants.inl \
-  /usr/include/glm/ext/matrix_projection.inl \
-  /usr/include/glm/ext/matrix_clip_space.hpp \
-  /usr/include/glm/ext/matrix_clip_space.inl \
-  /usr/include/glm/ext/matrix_transform.hpp \
-  /usr/include/glm/ext/matrix_transform.inl \
-  /usr/include/glm/gtc/matrix_transform.inl
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h
 
 CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp \
   /usr/include/stdc-predef.h \
@@ -4910,9 +4898,9 @@ CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o: /home/matheusvb/Deskt
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
   /usr/include/c++/11/stdlib.h
 
-CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp \
+CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp \
   /usr/include/stdc-predef.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/ManualMov.h \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
   /usr/include/c++/11/string \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -5303,8 +5291,22 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: /home/matheusvb/Deskto
   /usr/include/glm/detail/func_integer.inl \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
-  /usr/include/c++/11/stdlib.h
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/glm/gtc/matrix_transform.hpp \
+  /usr/include/glm/ext/matrix_projection.hpp \
+  /usr/include/glm/gtc/constants.hpp \
+  /usr/include/glm/ext/scalar_constants.hpp \
+  /usr/include/glm/ext/scalar_constants.inl \
+  /usr/include/glm/gtc/constants.inl \
+  /usr/include/glm/ext/matrix_projection.inl \
+  /usr/include/glm/ext/matrix_clip_space.hpp \
+  /usr/include/glm/ext/matrix_clip_space.inl \
+  /usr/include/glm/ext/matrix_transform.hpp \
+  /usr/include/glm/ext/matrix_transform.inl \
+  /usr/include/glm/gtc/matrix_transform.inl
 
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp:
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp:
 
@@ -5333,8 +5335,6 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: /home/matheusvb/Deskto
 /usr/include/glm/ext/quaternion_double.hpp:
 
 /usr/include/glm/ext/quaternion_float_precision.hpp:
-
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp:
 
 /usr/include/glm/ext/quaternion_relational.inl:
 
@@ -5382,7 +5382,7 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: /home/matheusvb/Deskto
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp:
 
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/ManualMov.h:
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
