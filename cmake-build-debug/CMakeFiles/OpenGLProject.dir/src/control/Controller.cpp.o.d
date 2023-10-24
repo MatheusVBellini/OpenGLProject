@@ -329,7 +329,9 @@ CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: \
  /usr/include/glm/detail/func_integer.inl \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../Texture.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../vendor/stb_image.h \
- /usr/include/c++/11/stdlib.h /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/c++/11/stdlib.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/FuncModule.h \
+ /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \
  /usr/include/glm/ext/scalar_constants.hpp \

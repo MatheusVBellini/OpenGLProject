@@ -26,8 +26,33 @@ void Controller::keyCallback(int key, int scancode, int action, int mods) {
     }
 }
 
-void Controller::control(GObject &object) {
+void Controller::bindObject(GObject &object) {
     this->object = &object;
+}
+
+void Controller::loadModule(FuncModule &module) {
+    this->module = &module;
+
+    for (auto& [key, func] : this->module->getModuleFuncs()) {
+        key_func.emplace_back(key_table.at(key),func);
+    }
+}
+
+void Controller::unloadCurrentModule() {
+    for (auto& [key, func] : this->module->getModuleFuncs()) {
+
+        int key_code = key_table.at(key);
+
+        for (auto it = key_func.begin(); it != key_func.end(); ) {
+            if (key_code == it->first) {
+                key_func.erase(it);
+                break;
+            }
+
+            it++;
+        }
+
+    }
 }
 
 void Controller::bindKeyFunc(const std::string &key, const std::string &func) {
@@ -87,6 +112,10 @@ void Controller::debug(int key, int scancode, int action, int mods) {
               << "Action: " << action << std::endl
               << "Mods: " << mods << std::endl;
 }
+
+
+
+
 
 
 

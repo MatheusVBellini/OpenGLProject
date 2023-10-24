@@ -2,10 +2,11 @@
 
 #include <string>
 #include <functional>
+#include "../GObject.h"
 
 class FuncModule {
 protected:
-    std::tuple<std::string, std::string, std::function<void(int,int,int,int)>> module_funcs;
+    std::vector<std::pair<std::string, std::function<void(int,int,int,int,GObject*)>>> module_funcs;
 public:
-    std::tuple<std::string, std::string, std::function<void(int,int,int,int)>> getModuleFuncs();
+    std::vector<std::pair<std::string, std::function<void(int,int,int,int,GObject*)>>> getModuleFuncs();
 };

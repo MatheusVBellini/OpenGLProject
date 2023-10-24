@@ -5,6 +5,7 @@
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
+#include "include/control/ManualMov.h"
 
 int main() {
     // boot-up
@@ -58,7 +59,11 @@ int main() {
         if (!action) return;
         std::cout << "lambda function used!" << std::endl;
     });
-    con.control(object);
+    con.bindObject(object);
+
+    // test - FuncModule;
+    ManualMov module;
+    con.loadModule(module);
 
     // main loop
     app.init();

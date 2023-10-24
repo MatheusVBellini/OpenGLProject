@@ -4,6 +4,7 @@
 #include <string>
 #include <functional>
 #include "../GObject.h"
+#include "FuncModule.h"
 
 class Controller {
 private:
@@ -15,6 +16,7 @@ private:
     std::vector<std::pair<int,std::function<void(int,int,int,int,GObject*)>>> key_func;
 
     GObject* object;
+    FuncModule* module;
 
 public:
     static void callback(GLFWwindow *window, int key, int scancode, int action, int mods);
@@ -22,7 +24,9 @@ public:
     Controller();
     ~Controller();
 
-    void control(GObject& object);
+    void bindObject(GObject& object);
+    void loadModule(FuncModule& module);
+    void unloadCurrentModule();
 
     void keyCallback(int key, int scancode, int action, int mods);
     void bindKeyFunc(const std::string& key, const std::string& func);

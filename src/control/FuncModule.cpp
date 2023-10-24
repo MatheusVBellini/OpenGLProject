@@ -1,5 +1,5 @@
 #include "../../include/control/FuncModule.h"
 
-std::tuple<std::string, std::string, std::function<void(int, int, int, int)>> FuncModule::getModuleFuncs() {
+std::vector<std::pair<std::string, std::function<void(int,int,int,int,GObject*)>>> FuncModule::getModuleFuncs() {
     return module_funcs;
 }
