@@ -12,7 +12,7 @@ private:
     static std::map<std::string, void(Controller::*)(int,int,int,int)> func_table;
 
     std::vector<std::pair<int,void(Controller::*)(int,int,int,int)>> key_method;
-    std::vector<std::pair<int,std::function<void(int,int,int,int)>>> key_func;
+    std::vector<std::pair<int,std::function<void(int,int,int,int,GObject*)>>> key_func;
 
     GObject* object;
 
@@ -26,7 +26,7 @@ public:
 
     void keyCallback(int key, int scancode, int action, int mods);
     void bindKeyFunc(const std::string& key, const std::string& func);
-    void bindKeyFunc(const std::string& key, const std::function<void(int,int,int,int)>& func);
+    void bindKeyFunc(const std::string& key, const std::function<void(int,int,int,int,GObject*)>& func);
 
     void debug(int key, int scancode, int action, int mods);
 };

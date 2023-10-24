@@ -54,7 +54,8 @@ int main() {
     // test - controller
     Controller con;
     con.bindKeyFunc("a", "debug");
-    con.bindKeyFunc("s", [](int key, int scancode, int action, int mods) {
+    con.bindKeyFunc("s", [](int key, int scancode, int action, int mods, GObject*) {
+        if (!action) return;
         std::cout << "lambda function used!" << std::endl;
     });
     con.control(object);

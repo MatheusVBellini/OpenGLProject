@@ -22,7 +22,7 @@ void Controller::keyCallback(int key, int scancode, int action, int mods) {
         if (key == key_code) (this->*func)(key,scancode,action,mods);
     }
     for (auto& [key_code, func] : key_func) {
-        if (key == key_code) func(key,scancode,action,mods);
+        if (key == key_code) func(key,scancode,action,mods,object);
     }
 }
 
@@ -37,7 +37,7 @@ void Controller::bindKeyFunc(const std::string &key, const std::string &func) {
     );
 }
 
-void Controller::bindKeyFunc(const std::string &key, const std::function<void(int,int,int,int)>& func) {
+void Controller::bindKeyFunc(const std::string &key, const std::function<void(int,int,int,int,GObject*)>& func) {
     key_func.emplace_back(
        key_table.at(key),
        func
