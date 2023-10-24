@@ -19,6 +19,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Texture.cpp" "CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/VertexBuffer.cpp" "CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Window.cpp" "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp" "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp" "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp" "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

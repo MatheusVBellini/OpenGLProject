@@ -1,6 +1,9 @@
-CMakeFiles/OpenGLProject.dir/main.cpp.o: \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/OpenGLProject.dir/src/Controller.cpp.o: \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Controller.cpp \
+ /usr/include/stdc-predef.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Controller.h \
+ /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -11,11 +14,45 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
- /usr/include/c++/11/pstl/pstl_config.h /usr/include/c++/11/ostream \
- /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/pstl/pstl_config.h \
+ /usr/include/c++/11/bits/functexcept.h \
+ /usr/include/c++/11/bits/exception_defines.h \
+ /usr/include/c++/11/bits/cpp_type_traits.h \
+ /usr/include/c++/11/ext/type_traits.h \
+ /usr/include/c++/11/ext/numeric_traits.h \
+ /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/bits/stl_iterator_base_types.h \
+ /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/11/bits/concept_check.h \
+ /usr/include/c++/11/debug/assertions.h \
+ /usr/include/c++/11/bits/stl_iterator.h \
+ /usr/include/c++/11/bits/ptr_traits.h /usr/include/c++/11/debug/debug.h \
+ /usr/include/c++/11/bits/predefined_ops.h \
+ /usr/include/c++/11/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+ /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
+ /usr/include/c++/11/bits/exception.h \
+ /usr/include/c++/11/bits/memoryfwd.h \
+ /usr/include/c++/11/bits/stl_function.h \
+ /usr/include/c++/11/backward/binders.h \
+ /usr/include/c++/11/ext/alloc_traits.h \
+ /usr/include/c++/11/bits/alloc_traits.h \
+ /usr/include/c++/11/bits/stl_construct.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/stl_map.h /usr/include/c++/11/initializer_list \
+ /usr/include/c++/11/tuple /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
+ /usr/include/c++/11/bits/range_access.h \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/string \
  /usr/include/c++/11/bits/stringfwd.h \
- /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
- /usr/include/c++/11/cwchar /usr/include/wchar.h \
+ /usr/include/c++/11/bits/char_traits.h \
+ /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
+ /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
@@ -29,28 +66,7 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/exception_defines.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/move.h \
- /usr/include/c++/11/type_traits \
- /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/char_traits.h \
- /usr/include/c++/11/bits/stl_algobase.h \
- /usr/include/c++/11/bits/functexcept.h \
- /usr/include/c++/11/bits/cpp_type_traits.h \
- /usr/include/c++/11/ext/type_traits.h \
- /usr/include/c++/11/ext/numeric_traits.h \
- /usr/include/c++/11/bits/stl_pair.h \
- /usr/include/c++/11/bits/stl_iterator_base_types.h \
- /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/11/bits/concept_check.h \
- /usr/include/c++/11/debug/assertions.h \
- /usr/include/c++/11/bits/stl_iterator.h \
- /usr/include/c++/11/bits/ptr_traits.h /usr/include/c++/11/debug/debug.h \
- /usr/include/c++/11/bits/predefined_ops.h /usr/include/c++/11/cstdint \
+ /usr/include/c++/11/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -60,10 +76,14 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/c++/11/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
  /usr/include/c++/11/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/cctype /usr/include/ctype.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
- /usr/include/c++/11/bits/ios_base.h /usr/include/c++/11/ext/atomicity.h \
+ /usr/include/c++/11/bits/ostream_insert.h \
+ /usr/include/c++/11/bits/cxxabi_forced.h \
+ /usr/include/c++/11/bits/basic_string.h \
+ /usr/include/c++/11/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
@@ -92,21 +112,9 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/11/bits/locale_classes.h /usr/include/c++/11/string \
- /usr/include/c++/11/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
- /usr/include/c++/11/ext/new_allocator.h \
- /usr/include/c++/11/bits/ostream_insert.h \
- /usr/include/c++/11/bits/cxxabi_forced.h \
- /usr/include/c++/11/bits/stl_function.h \
- /usr/include/c++/11/backward/binders.h \
- /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/initializer_list \
- /usr/include/c++/11/bits/basic_string.h \
- /usr/include/c++/11/ext/alloc_traits.h \
- /usr/include/c++/11/bits/alloc_traits.h \
- /usr/include/c++/11/bits/stl_construct.h /usr/include/c++/11/string_view \
+ /usr/include/c++/11/string_view \
  /usr/include/c++/11/bits/functional_hash.h \
+ /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/string_view.tcc \
  /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdlib \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -130,7 +138,32 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
+ /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/functional \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/unordered_map.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/GObject.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/VertexBuffer.h \
+ /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
+ /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -146,17 +179,7 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h \
- /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/VertexBuffer.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppStructs.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -304,51 +327,6 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
- /usr/include/c++/11/stdlib.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Renderer.h \
- /usr/include/c++/11/unordered_map \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/filesystem \
- /usr/include/c++/11/bits/fs_fwd.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
- /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/iomanip \
- /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
- /usr/include/c++/11/ext/concurrence.h \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/fs_dir.h \
- /usr/include/c++/11/bits/fs_ops.h /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Shader.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /usr/include/c++/11/bits/stl_algo.h \
- /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/bits/stl_heap.h \
- /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/ManualMov.h
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Texture.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
+ /usr/include/c++/11/stdlib.h

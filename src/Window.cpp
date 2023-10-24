@@ -32,6 +32,7 @@ int Window::shouldClose() const {
     return glfwWindowShouldClose(window);
 }
 
-void Window::attachObject(const GObject& object) {
-    this->objects.push_back(object);
+void Window::attachObject(GObject& object) {
+    this->objects.push_back(&object);
 }
+

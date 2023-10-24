@@ -11,7 +11,7 @@ private:
     GLFWwindow* window;
 
 public:
-    std::vector<GObject> objects;
+    std::vector<GObject*> objects;
 
     explicit Window(const int& width = 400,
            const int& height = 400,
@@ -20,6 +20,6 @@ public:
 
     GLFWwindow* getWindowRef() const;
     int shouldClose() const;
-    void attachObject(const GObject& object);
+    void attachObject(GObject& object);
 
 };

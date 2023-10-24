@@ -21,6 +21,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProject.dir/src/VertexBuffer.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o.d"
   "OpenGLProject"
   "OpenGLProject.pdb"
 )

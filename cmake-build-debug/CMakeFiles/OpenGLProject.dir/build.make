@@ -223,6 +223,48 @@ CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.cpp -o CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.s
 
+CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: CMakeFiles/OpenGLProject.dir/flags.make
+CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp
+CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o -MF CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o.d -o CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o -c /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp
+
+CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp > CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.i
+
+CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp -o CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.s
+
+CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o: CMakeFiles/OpenGLProject.dir/flags.make
+CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp
+CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o -MF CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d -o CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o -c /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp
+
+CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp > CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.i
+
+CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp -o CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s
+
+CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: CMakeFiles/OpenGLProject.dir/flags.make
+CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp
+CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o -MF CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o.d -o CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o -c /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp
+
+CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp > CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.i
+
+CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp -o CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.s
+
 # Object files for target OpenGLProject
 OpenGLProject_OBJECTS = \
 "CMakeFiles/OpenGLProject.dir/main.cpp.o" \
@@ -235,7 +277,10 @@ OpenGLProject_OBJECTS = \
 "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o" \
 "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o" \
 "CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o" \
-"CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.o"
+"CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.o" \
+"CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o" \
+"CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o" \
+"CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o"
 
 # External object files for target OpenGLProject
 OpenGLProject_EXTERNAL_OBJECTS =
@@ -251,9 +296,12 @@ OpenGLProject: CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/include/vendor/stb_image.cpp.o
+OpenGLProject: CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o
+OpenGLProject: CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o
+OpenGLProject: CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/build.make
 OpenGLProject: CMakeFiles/OpenGLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable OpenGLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable OpenGLProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

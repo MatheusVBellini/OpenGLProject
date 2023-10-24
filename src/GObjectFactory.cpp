@@ -50,16 +50,6 @@ void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::ve
 
 }
 
-void GObjectFactory::initTextureCoords(std::vector<glm::vec2> &data) {
-    unsigned buffer;
-
-    glGenBuffers(1, &buffer);
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(glm::vec2), data.data(), GL_DYNAMIC_DRAW);
-    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2), (void*) 0);
-    glEnableVertexAttribArray(TEXTURE_SLOT);
-}
-
 void GObjectFactory::setNormals(std::vector<glm::vec3> &data) {
     if (state != NORMAL) {
         errorMsg("Textures were not yet set. Try: setTexture().");
@@ -106,8 +96,9 @@ GObject GObjectFactory::getObject() {
     VertexBuffer ib;
     Texture texture;
 
+    object.setPivot(vertex_data.at(0));
     vb.attachVertexData(vertex_data);
-    initTextureCoords(texture_data);
+    texture.attachTextureData(texture_data);
     object.attachVertexBuffer(vb);
     ib.attachIndexData(index_data);
     object.attachIndexBuffer(ib);
@@ -135,7 +126,7 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     setTexture(texture_name, info.texture_vertices);
     setNormals(info.normal_vertices);
     setIndexBuffer(info.indexes);
-    setShader("simple_with_texture");
+    setShader("default");
 
     return getObject();
 }

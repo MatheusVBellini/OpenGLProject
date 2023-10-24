@@ -11,15 +11,10 @@ uniform mat4 projection;
 
 uniform mat4 shiftBack;
 uniform mat4 shiftForward;
-uniform mat4 displacement;
-uniform mat4 scale;
-uniform mat4 rotationX;
-uniform mat4 rotationY;
-uniform mat4 rotationZ;
+uniform mat4 movement;
 
 void main() {
-    mat4 movement = displacement * shiftForward * rotationX * rotationY * rotationZ * shiftBack;
-    mat4 modelMatrix = movement;
+    mat4 modelMatrix = shiftForward * movement * shiftBack;
     gl_Position = modelMatrix * vec4(position, 1.0);
     out_texture = vec2(texture_coord);
 }
@@ -35,5 +30,5 @@ out vec4 fragColor;
 
 void main() {
     vec4 tex = texture(samplerTexture, out_texture);
-    fragColor = tex * color;
+    fragColor = tex;
 }

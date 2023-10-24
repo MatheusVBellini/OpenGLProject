@@ -1,6 +1,5 @@
 #include "../include/Application.h"
-#include "../include/VertexBuffer.h"
-#include "../include/GObject.h"
+#include "../include/control/Controller.h"
 
 Application &Application::getInstance() {
     static Application instance;
@@ -37,6 +36,9 @@ void Application::showWindow() {
 }
 
 void Application::init() {
+    glfwSetKeyCallback(window->getWindowRef(), Controller::keyEventHandler);
+    glfwSetMouseButtonCallback(window->getWindowRef(), Controller::mouseButtonEventHandler);
+    glfwSetCursorPosCallback(window->getWindowRef(), Controller::mousePositionHandler);
 
     while(!window->shouldClose()) {
 
@@ -46,7 +48,7 @@ void Application::init() {
 
         // drawing
         for (auto& object : window->objects) {
-            renderer->draw(object);
+            renderer->draw(*object);
         }
 
         // swap front and back buffers
@@ -54,6 +56,7 @@ void Application::init() {
 
         // event handler
         glfwPollEvents();
+        Controller::automaticEventHandler();
     }
 
 }
@@ -61,5 +64,7 @@ void Application::init() {
 void Application::bindRenderer(Renderer& renderer) {
     this->renderer = &renderer;
 }
+
+
 
 

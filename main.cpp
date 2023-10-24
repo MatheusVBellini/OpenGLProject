@@ -4,6 +4,8 @@
 #include "include/Renderer.h"
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
+#include "include/control/Controller.h"
+#include "include/control/ManualMov.h"
 
 int main() {
     // boot-up
@@ -46,9 +48,21 @@ int main() {
     GObjectFactory::setShader("simple");
     object = GObjectFactory::getObject();
 
-    // test - creating object from file
-    object = GObjectFactory::genObjectFromFile("square", "caixa2.jpg");
+    // creating object from file
+    object = GObjectFactory::genObjectFromFile("square", "PixelRain.png");
     window.attachObject(object);
+
+    // test - controller
+    Controller con;
+    con.setKeyFunc("s", [](int key, int scancode, int action, int mods, GObject *) {
+        if (!action) return;
+        std::cout << "lambda function used!" << std::endl;
+    });
+    con.bindObject(object);
+
+    // test - FuncModule;
+    ManualMov module;
+    con.loadModule(module);
 
     // main loop
     app.init();

@@ -393,6 +393,78 @@ src/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/Window.cpp.s
 .PHONY : src/Window.cpp.s
 
+src/control/Controller.o: src/control/Controller.cpp.o
+.PHONY : src/control/Controller.o
+
+# target to build an object file
+src/control/Controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o
+.PHONY : src/control/Controller.cpp.o
+
+src/control/Controller.i: src/control/Controller.cpp.i
+.PHONY : src/control/Controller.i
+
+# target to preprocess a source file
+src/control/Controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.i
+.PHONY : src/control/Controller.cpp.i
+
+src/control/Controller.s: src/control/Controller.cpp.s
+.PHONY : src/control/Controller.s
+
+# target to generate assembly for a file
+src/control/Controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.s
+.PHONY : src/control/Controller.cpp.s
+
+src/control/FuncModule.o: src/control/FuncModule.cpp.o
+.PHONY : src/control/FuncModule.o
+
+# target to build an object file
+src/control/FuncModule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o
+.PHONY : src/control/FuncModule.cpp.o
+
+src/control/FuncModule.i: src/control/FuncModule.cpp.i
+.PHONY : src/control/FuncModule.i
+
+# target to preprocess a source file
+src/control/FuncModule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.i
+.PHONY : src/control/FuncModule.cpp.i
+
+src/control/FuncModule.s: src/control/FuncModule.cpp.s
+.PHONY : src/control/FuncModule.s
+
+# target to generate assembly for a file
+src/control/FuncModule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s
+.PHONY : src/control/FuncModule.cpp.s
+
+src/control/ManualMov.o: src/control/ManualMov.cpp.o
+.PHONY : src/control/ManualMov.o
+
+# target to build an object file
+src/control/ManualMov.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o
+.PHONY : src/control/ManualMov.cpp.o
+
+src/control/ManualMov.i: src/control/ManualMov.cpp.i
+.PHONY : src/control/ManualMov.i
+
+# target to preprocess a source file
+src/control/ManualMov.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.i
+.PHONY : src/control/ManualMov.cpp.i
+
+src/control/ManualMov.s: src/control/ManualMov.cpp.s
+.PHONY : src/control/ManualMov.s
+
+# target to generate assembly for a file
+src/control/ManualMov.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.s
+.PHONY : src/control/ManualMov.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -435,6 +507,15 @@ help:
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
+	@echo "... src/control/Controller.o"
+	@echo "... src/control/Controller.i"
+	@echo "... src/control/Controller.s"
+	@echo "... src/control/FuncModule.o"
+	@echo "... src/control/FuncModule.i"
+	@echo "... src/control/FuncModule.s"
+	@echo "... src/control/ManualMov.o"
+	@echo "... src/control/ManualMov.i"
+	@echo "... src/control/ManualMov.s"
 .PHONY : help
 
 

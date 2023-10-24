@@ -189,13 +189,9 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: \
  /usr/include/c++/11/bits/stl_multimap.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Shader.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/GObject.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/VertexBuffer.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppStructs.h \
- /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
- /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h /usr/include/glm/glm.hpp \
+ /usr/include/glm/detail/_fixes.hpp /usr/include/c++/11/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -339,9 +335,24 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/GObject.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/VertexBuffer.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppStructs.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Texture.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
  /usr/include/c++/11/stdlib.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Window.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h \
+ /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_projection.hpp \
+ /usr/include/glm/gtc/constants.hpp \
+ /usr/include/glm/ext/scalar_constants.hpp \
+ /usr/include/glm/ext/scalar_constants.inl \
+ /usr/include/glm/gtc/constants.inl \
+ /usr/include/glm/ext/matrix_projection.inl \
+ /usr/include/glm/ext/matrix_clip_space.hpp \
+ /usr/include/glm/ext/matrix_clip_space.inl \
+ /usr/include/glm/ext/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_transform.inl \
+ /usr/include/glm/gtc/matrix_transform.inl
