@@ -105,7 +105,7 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/ManualMov.h">
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.cpp">
@@ -150,7 +150,7 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp">
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/CMakeLists.txt">

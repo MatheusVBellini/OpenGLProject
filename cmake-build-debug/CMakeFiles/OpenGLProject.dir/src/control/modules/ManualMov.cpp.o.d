@@ -1,8 +1,8 @@
-CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/ManualMov.cpp \
+CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp \
  /usr/include/stdc-predef.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/ManualMov.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/FuncModule.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/ManualMov.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../FuncModule.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -152,8 +152,8 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../GObject.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../VertexBuffer.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../../GObject.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../../VertexBuffer.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
@@ -178,7 +178,7 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../AppStructs.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../../AppStructs.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -326,8 +326,8 @@ CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../Texture.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../vendor/stb_image.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../../Texture.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/../../../include/control/modules/../../vendor/stb_image.h \
  /usr/include/c++/11/stdlib.h /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \

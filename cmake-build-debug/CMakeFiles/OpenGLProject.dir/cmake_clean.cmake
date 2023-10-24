@@ -25,8 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d"
-  "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o"
-  "CMakeFiles/OpenGLProject.dir/src/control/ManualMov.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o.d"
   "OpenGLProject"
   "OpenGLProject.pdb"
 )

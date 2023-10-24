@@ -330,16 +330,4 @@ CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o: \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../Texture.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/../vendor/stb_image.h \
  /usr/include/c++/11/stdlib.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/FuncModule.h \
- /usr/include/glm/gtc/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_projection.hpp \
- /usr/include/glm/gtc/constants.hpp \
- /usr/include/glm/ext/scalar_constants.hpp \
- /usr/include/glm/ext/scalar_constants.inl \
- /usr/include/glm/gtc/constants.inl \
- /usr/include/glm/ext/matrix_projection.inl \
- /usr/include/glm/ext/matrix_clip_space.hpp \
- /usr/include/glm/ext/matrix_clip_space.inl \
- /usr/include/glm/ext/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_transform.inl \
- /usr/include/glm/gtc/matrix_transform.inl
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/../../include/control/FuncModule.h
