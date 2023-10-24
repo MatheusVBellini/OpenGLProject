@@ -49,13 +49,12 @@ int main() {
     object = GObjectFactory::getObject();
 
     // creating object from file
-    object = GObjectFactory::genObjectFromFile("square", "caixa2.jpg");
+    object = GObjectFactory::genObjectFromFile("square", "PixelRain.png");
     window.attachObject(object);
 
     // test - controller
     Controller con;
-    con.bindKeyFunc("a", "debug");
-    con.bindKeyFunc("s", [](int key, int scancode, int action, int mods, GObject*) {
+    con.setKeyFunc("s", [](int key, int scancode, int action, int mods, GObject *) {
         if (!action) return;
         std::cout << "lambda function used!" << std::endl;
     });

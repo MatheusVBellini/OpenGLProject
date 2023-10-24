@@ -10,28 +10,38 @@ class Controller {
 private:
     static std::vector<Controller*> controllers;
     static std::map<std::string, int> key_table;
-    static std::map<std::string, void(Controller::*)(int,int,int,int)> func_table;
+    static std::array<std::pair<std::string,int>,3> mouse_buttons;
 
-    std::vector<std::pair<int,void(Controller::*)(int,int,int,int)>> key_method;
     std::vector<std::pair<int,std::function<void(int,int,int,int,GObject*)>>> key_func;
+    std::vector<std::pair<int,std::function<void(int,int,int,GObject*)>>> mouse_button_func;
+    std::vector<std::function<void(double,double,GObject*)>> mouse_pos_func;
+    std::vector<std::function<void(GObject*)>> auto_func;
 
     GObject* object;
-    FuncModule* module;
+
+    static void errorMsg(const std::string& msg);
 
 public:
-    static void callback(GLFWwindow *window, int key, int scancode, int action, int mods);
-
     Controller();
     ~Controller();
 
     void bindObject(GObject& object);
-    void loadModule(FuncModule& module);
-    void unloadCurrentModule();
+    void loadModule(FuncModule& module); // change
+
+    static void keyEventHandler(GLFWwindow *window, int key, int scancode, int action, int mods);
+    static void mouseButtonEventHandler(GLFWwindow *window, int button, int action, int mods);
+    static void mousePositionHandler(GLFWwindow* window, double xpos, double ypos);
+    static void automaticEventHandler();
 
     void keyCallback(int key, int scancode, int action, int mods);
-    void bindKeyFunc(const std::string& key, const std::string& func);
-    void bindKeyFunc(const std::string& key, const std::function<void(int,int,int,int,GObject*)>& func);
+    void mouseButtonCallback(int button, int action, int mods);
+    void mousePositionCallback(double xpos, double ypos);
+    void updateAutomatics();
 
-    void debug(int key, int scancode, int action, int mods);
+    void setKeyFunc(const std::string& event, const std::function<void(int, int, int, int, GObject*)>& func);
+    void setMouseButtonFunc(const std::string& event, const std::function<void(int, int, int, GObject*)>& func);
+    void setMousePosFunc(const std::function<void(double, double, GObject*)>& func);
+    void setAutoFunc(const std::function<void(GObject*)>& func);
+
 };
 

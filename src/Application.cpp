@@ -36,7 +36,9 @@ void Application::showWindow() {
 }
 
 void Application::init() {
-    glfwSetKeyCallback(window->getWindowRef(),Controller::callback);
+    glfwSetKeyCallback(window->getWindowRef(), Controller::keyEventHandler);
+    glfwSetMouseButtonCallback(window->getWindowRef(), Controller::mouseButtonEventHandler);
+    glfwSetCursorPosCallback(window->getWindowRef(), Controller::mousePositionHandler);
 
     while(!window->shouldClose()) {
 
@@ -54,6 +56,7 @@ void Application::init() {
 
         // event handler
         glfwPollEvents();
+        Controller::automaticEventHandler();
     }
 
 }
