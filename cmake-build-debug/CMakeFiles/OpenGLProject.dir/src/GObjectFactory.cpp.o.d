@@ -314,6 +314,4 @@ CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o: \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h
+ /usr/include/c++/11/bits/sstream.tcc

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <glm/gtc/matrix_transform.hpp>
+#include <cmath>
 #include "include/Application.h"
 #include "include/VertexBuffer.h"
 #include "include/Renderer.h"
@@ -6,6 +8,7 @@
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
 #include "include/control/modules/ManualMov.h"
+
 
 int main() {
     // boot-up
@@ -49,7 +52,7 @@ int main() {
     object = GObjectFactory::getObject();
 
     // creating object from file
-    object = GObjectFactory::genObjectFromFile("square", "PixelRain.png");
+    object = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
     window.attachObject(object);
 
     // test - controller

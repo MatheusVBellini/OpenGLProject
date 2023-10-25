@@ -311,72 +311,27 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/Op
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h \
-  /usr/include/GL/glew.h \
-  /usr/include/c++/11/cstddef \
-  /usr/include/GL/glu.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GLFW/glfw3.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/VertexBuffer.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h \
-  /usr/include/glm/glm.hpp \
-  /usr/include/glm/detail/_fixes.hpp \
-  /usr/include/c++/11/cmath \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/limits \
-  /usr/include/c++/11/tr1/gamma.tcc \
-  /usr/include/c++/11/tr1/special_function_util.h \
-  /usr/include/c++/11/tr1/bessel_function.tcc \
-  /usr/include/c++/11/tr1/beta_function.tcc \
-  /usr/include/c++/11/tr1/ell_integral.tcc \
-  /usr/include/c++/11/tr1/exp_integral.tcc \
-  /usr/include/c++/11/tr1/hypergeometric.tcc \
-  /usr/include/c++/11/tr1/legendre_function.tcc \
-  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11/tr1/poly_hermite.tcc \
-  /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/glm/gtc/matrix_transform.hpp \
+  /usr/include/glm/mat4x4.hpp \
+  /usr/include/glm/ext/matrix_double4x4.hpp \
+  /usr/include/glm/detail/type_mat4x4.hpp \
+  /usr/include/glm/detail/type_vec4.hpp \
+  /usr/include/glm/detail/qualifier.hpp \
   /usr/include/glm/detail/setup.hpp \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
+  /usr/include/c++/11/cstddef \
   /usr/include/glm/simd/platform.h \
-  /usr/include/c++/11/climits \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/c++/11/cfloat \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  /usr/include/glm/fwd.hpp \
-  /usr/include/glm/detail/qualifier.hpp \
+  /usr/include/glm/detail/type_vec4.inl \
+  /usr/include/glm/detail/compute_vector_relational.hpp \
+  /usr/include/c++/11/limits \
+  /usr/include/glm/detail/type_mat4x4.inl \
+  /usr/include/glm/matrix.hpp \
   /usr/include/glm/detail/setup.hpp \
   /usr/include/glm/vec2.hpp \
   /usr/include/glm/ext/vector_bool2.hpp \
   /usr/include/glm/detail/type_vec2.hpp \
   /usr/include/glm/detail/type_vec2.inl \
-  /usr/include/glm/detail/compute_vector_relational.hpp \
   /usr/include/glm/ext/vector_bool2_precision.hpp \
   /usr/include/glm/ext/vector_float2.hpp \
   /usr/include/glm/ext/vector_float2_precision.hpp \
@@ -404,8 +359,6 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/Op
   /usr/include/glm/ext/vector_uint3_sized.hpp \
   /usr/include/glm/vec4.hpp \
   /usr/include/glm/ext/vector_bool4.hpp \
-  /usr/include/glm/detail/type_vec4.hpp \
-  /usr/include/glm/detail/type_vec4.inl \
   /usr/include/glm/ext/vector_bool4_precision.hpp \
   /usr/include/glm/ext/vector_float4.hpp \
   /usr/include/glm/ext/vector_float4_precision.hpp \
@@ -419,7 +372,9 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/Op
   /usr/include/glm/ext/matrix_double2x2.hpp \
   /usr/include/glm/detail/type_mat2x2.hpp \
   /usr/include/glm/detail/type_mat2x2.inl \
-  /usr/include/glm/matrix.hpp \
+  /usr/include/glm/ext/matrix_double2x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x2.hpp \
+  /usr/include/glm/ext/matrix_float2x2_precision.hpp \
   /usr/include/glm/mat2x3.hpp \
   /usr/include/glm/ext/matrix_double2x3.hpp \
   /usr/include/glm/detail/type_mat2x3.hpp \
@@ -469,31 +424,88 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/Op
   /usr/include/glm/ext/matrix_double4x3_precision.hpp \
   /usr/include/glm/ext/matrix_float4x3.hpp \
   /usr/include/glm/ext/matrix_float4x3_precision.hpp \
-  /usr/include/glm/mat4x4.hpp \
-  /usr/include/glm/ext/matrix_double4x4.hpp \
-  /usr/include/glm/detail/type_mat4x4.hpp \
-  /usr/include/glm/detail/type_mat4x4.inl \
-  /usr/include/glm/ext/matrix_double4x4_precision.hpp \
-  /usr/include/glm/ext/matrix_float4x4.hpp \
-  /usr/include/glm/ext/matrix_float4x4_precision.hpp \
   /usr/include/glm/detail/func_matrix.inl \
   /usr/include/glm/geometric.hpp \
   /usr/include/glm/detail/func_geometric.inl \
   /usr/include/glm/exponential.hpp \
   /usr/include/glm/detail/type_vec1.hpp \
   /usr/include/glm/detail/type_vec1.inl \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/glm/detail/func_exponential.inl \
   /usr/include/glm/vector_relational.hpp \
   /usr/include/glm/detail/func_vector_relational.inl \
   /usr/include/glm/detail/_vectorize.hpp \
   /usr/include/glm/common.hpp \
+  /usr/include/glm/detail/_fixes.hpp \
   /usr/include/glm/detail/func_common.inl \
   /usr/include/glm/detail/compute_common.hpp \
-  /usr/include/glm/ext/matrix_double2x2_precision.hpp \
-  /usr/include/glm/ext/matrix_float2x2.hpp \
-  /usr/include/glm/ext/matrix_float2x2_precision.hpp \
+  /usr/include/glm/ext/matrix_double4x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x4.hpp \
+  /usr/include/glm/ext/matrix_float4x4_precision.hpp \
+  /usr/include/glm/ext/matrix_projection.hpp \
+  /usr/include/glm/gtc/constants.hpp \
+  /usr/include/glm/ext/scalar_constants.hpp \
+  /usr/include/glm/ext/scalar_constants.inl \
+  /usr/include/glm/gtc/constants.inl \
   /usr/include/glm/trigonometric.hpp \
   /usr/include/glm/detail/func_trigonometric.inl \
+  /usr/include/glm/ext/matrix_projection.inl \
+  /usr/include/glm/ext/matrix_clip_space.hpp \
+  /usr/include/glm/ext/matrix_clip_space.inl \
+  /usr/include/glm/ext/matrix_transform.hpp \
+  /usr/include/glm/ext/matrix_transform.inl \
+  /usr/include/glm/gtc/matrix_transform.inl \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h \
+  /usr/include/GL/glew.h \
+  /usr/include/GL/glu.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GLFW/glfw3.h \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/VertexBuffer.h \
+  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h \
+  /usr/include/glm/glm.hpp \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/glm/fwd.hpp \
   /usr/include/glm/packing.hpp \
   /usr/include/glm/detail/func_packing.inl \
   /usr/include/glm/detail/type_half.hpp \
@@ -2125,9 +2137,7 @@ CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o: /home/matheusvb/Desktop/U
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h
+  /usr/include/c++/11/bits/sstream.tcc
 
 CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Renderer.cpp \
   /usr/include/stdc-predef.h \
@@ -5358,20 +5368,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Shader.cpp:
 
-/usr/include/glm/ext/matrix_transform.inl:
-
-/usr/include/glm/gtc/constants.inl:
-
-/usr/include/glm/ext/scalar_constants.inl:
-
-/usr/include/glm/ext/scalar_constants.hpp:
-
-/usr/include/glm/gtc/constants.hpp:
-
-/usr/include/glm/ext/matrix_projection.hpp:
-
-/usr/include/glm/gtc/matrix_transform.hpp:
-
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppConstants.h:
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObject.cpp:
@@ -5476,17 +5472,55 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/glm/packing.hpp:
 
+/usr/include/glm/ext/quaternion_trigonometric.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/usr/include/c++/11/cfloat:
+
+/usr/include/c++/11/climits:
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+/usr/include/GLFW/glfw3.h:
+
+/usr/include/GL/glew.h:
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h:
+
+/usr/include/glm/ext/matrix_transform.inl:
+
 /usr/include/glm/detail/func_trigonometric.inl:
 
 /usr/include/glm/trigonometric.hpp:
 
-/usr/include/glm/ext/matrix_float2x2_precision.hpp:
+/usr/include/glm/gtc/constants.inl:
 
-/usr/include/glm/ext/matrix_float2x2.hpp:
+/usr/include/glm/ext/scalar_constants.inl:
+
+/usr/include/glm/ext/scalar_constants.hpp:
+
+/usr/include/glm/gtc/constants.hpp:
+
+/usr/include/glm/ext/matrix_projection.hpp:
+
+/usr/include/GL/gl.h:
+
+/usr/include/glm/ext/matrix_float4x4_precision.hpp:
+
+/usr/include/glm/ext/matrix_float4x4.hpp:
+
+/usr/include/glm/ext/matrix_double4x4_precision.hpp:
 
 /usr/include/glm/detail/compute_common.hpp:
 
 /usr/include/glm/detail/func_common.inl:
+
+/usr/include/glm/detail/_fixes.hpp:
 
 /usr/include/glm/detail/func_exponential.inl:
 
@@ -5497,32 +5531,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/glm/exponential.hpp:
 
 /usr/include/glm/detail/func_geometric.inl:
-
-/usr/include/glm/detail/func_matrix.inl:
-
-/usr/include/glm/ext/matrix_float4x4.hpp:
-
-/usr/include/glm/ext/matrix_double4x4_precision.hpp:
-
-/usr/include/glm/ext/matrix_double4x3_precision.hpp:
-
-/usr/include/glm/detail/_vectorize.hpp:
-
-/usr/include/glm/detail/type_mat4x3.inl:
-
-/usr/include/glm/detail/type_mat4x3.hpp:
-
-/usr/include/glm/ext/matrix_double4x3.hpp:
-
-/usr/include/c++/11/cstring:
-
-/usr/include/glm/mat4x3.hpp:
-
-/usr/include/glm/ext/matrix_float4x2_precision.hpp:
-
-/usr/include/glm/ext/matrix_float4x2.hpp:
-
-/usr/include/glm/ext/matrix_double4x2_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
@@ -5570,10 +5578,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/glm/detail/type_mat4x4.inl:
-
-/usr/include/glm/ext/matrix_float2x3.hpp:
-
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h:
 
 /usr/include/c++/11/bits/std_abs.h:
@@ -5616,6 +5620,14 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
+/usr/include/glm/fwd.hpp:
+
+/usr/include/glm/ext/vector_int2.hpp:
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
 /usr/include/glm/ext/matrix_float3x2_precision.hpp:
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h:
@@ -5625,6 +5637,8 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/glm/gtc/epsilon.hpp:
 
 /usr/include/c++/11/bits/stl_pair.h:
+
+/usr/include/glm/ext/matrix_float2x2.hpp:
 
 /usr/include/pthread.h:
 
@@ -5639,8 +5653,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -5668,19 +5680,17 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/include/c++/11/bits/stl_vector.h:
-
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
+/usr/include/glm/ext/matrix_double4x3.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h:
 
 /usr/include/limits.h:
 
@@ -5710,13 +5720,9 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/features-time64.h:
 
-/usr/include/glm/ext/vector_bool2.hpp:
-
 /usr/include/glm/detail/type_vec4.hpp:
 
-/usr/include/glm/ext/matrix_float4x3_precision.hpp:
-
-/usr/include/c++/11/bits/basic_string.h:
+/usr/include/glm/ext/vector_bool2.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -5756,6 +5762,10 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h:
 
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/glm/ext/matrix_double3x3.hpp:
+
 /usr/include/features.h:
 
 /usr/include/c++/11/bits/char_traits.h:
@@ -5780,6 +5790,10 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
+/usr/include/c++/11/vector:
+
+/usr/include/c++/11/bits/localefwd.h:
+
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -5799,12 +5813,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/math.h:
 
 /usr/include/c++/11/tr1/poly_hermite.tcc:
-
-/usr/include/c++/11/bits/fs_fwd.h:
-
-/usr/include/glm/ext/matrix_double2x2_precision.hpp:
-
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/main.cpp:
 
 /usr/include/glm/detail/type_quat.inl:
 
@@ -5826,6 +5834,8 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/linux/limits.h:
 
+/usr/include/glm/ext/matrix_float2x2_precision.hpp:
+
 /usr/include/glm/detail/type_vec2.hpp:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
@@ -5838,9 +5848,7 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/cwctype:
 
-/usr/include/glm/ext/matrix_double3x3.hpp:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
+/usr/include/glm/ext/matrix_double4x2_precision.hpp:
 
 /usr/include/glm/mat3x3.hpp:
 
@@ -5880,15 +5888,13 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/bits/ostream.tcc:
 
+/usr/include/glm/gtc/matrix_transform.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/include/glm/detail/_fixes.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/c++/11/climits:
 
 /usr/include/glm/ext/scalar_uint_sized.hpp:
 
@@ -5899,6 +5905,10 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/glm/detail/setup.hpp:
+
+/usr/include/glm/ext/matrix_float2x3.hpp:
+
+/usr/include/glm/detail/type_mat4x4.inl:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -5918,11 +5928,7 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/usr/include/glm/ext/matrix_double4x4.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/alloca.h:
+/usr/include/glm/ext/matrix_double4x3_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -5980,14 +5986,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
-/usr/include/glm/detail/func_vector_relational.inl:
-
-/usr/include/glm/ext/matrix_float4x3.hpp:
-
-/usr/include/c++/11/backward/binders.h:
-
-/usr/include/c++/11/stdlib.h:
-
 /usr/include/c++/11/ios:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
@@ -6004,15 +6002,15 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/bits/string_view.tcc:
 
-/usr/include/glm/ext/vector_int2.hpp:
-
-/usr/include/glm/fwd.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/glm/detail/type_mat2x3.inl:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
@@ -6044,6 +6042,12 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/bits/locale_classes.h:
 
+/usr/include/libintl.h:
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h:
+
+/usr/include/c++/11/string:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
@@ -6061,6 +6065,8 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/11/initializer_list:
+
+/usr/include/glm/ext/matrix_float4x2.hpp:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -6088,10 +6094,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/asm-generic/errno-base.h:
 
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
-
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h:
-
 /usr/include/glm/detail/type_vec3.inl:
 
 /usr/include/c++/11/bits/basic_string.tcc:
@@ -6103,12 +6105,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/stdexcept:
-
-/usr/include/glm/mat4x4.hpp:
-
-/usr/include/c++/11/ext/atomicity.h:
-
-/usr/include/c++/11/streambuf:
 
 /usr/include/c++/11/bits/basic_ios.h:
 
@@ -6124,53 +6120,47 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/c++/11/bits/istream.tcc:
 
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h:
+/usr/include/c++/11/ext/atomicity.h:
 
-/usr/include/GL/glew.h:
+/usr/include/c++/11/streambuf:
 
-/usr/include/glm/detail/type_mat4x4.hpp:
+/usr/include/glm/mat4x4.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/alloca.h:
+
+/usr/include/glm/ext/matrix_double4x4.hpp:
 
 /usr/include/GL/glu.h:
 
-/usr/include/glm/ext/matrix_float4x4_precision.hpp:
-
-/usr/include/GL/gl.h:
-
-/usr/include/GLFW/glfw3.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/11/string:
-
-/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h:
-
-/usr/include/c++/11/bits/localefwd.h:
-
-/usr/include/c++/11/vector:
-
-/usr/include/glm/detail/type_mat2x3.inl:
-
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/glm/ext/matrix_clip_space.inl:
-
-/usr/include/glm/geometric.hpp:
-
-/usr/include/c++/11/cassert:
-
-/usr/include/c++/11/cfloat:
-
-/usr/include/glm/ext/quaternion_trigonometric.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+/usr/include/glm/detail/type_mat4x4.hpp:
 
 /usr/include/glm/detail/qualifier.hpp:
 
-/usr/include/glm/common.hpp:
-
 /usr/include/glm/glm.hpp:
 
+/usr/include/glm/common.hpp:
+
 /usr/include/glm/ext/matrix_float3x4.hpp:
+
+/usr/include/glm/ext/matrix_float4x2_precision.hpp:
+
+/usr/include/c++/11/array:
+
+/usr/include/glm/detail/type_vec4.inl:
+
+/usr/include/c++/11/bits/sstream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/glm/detail/compute_vector_relational.hpp:
+
+/usr/include/glm/matrix.hpp:
+
+/usr/include/glm/detail/_vectorize.hpp:
+
+/usr/include/glm/detail/type_mat4x3.inl:
 
 /usr/include/c++/11/bits/postypes.h:
 
@@ -6179,12 +6169,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/endian.h:
 
 /usr/include/glm/detail/type_vec2.inl:
-
-/usr/include/c++/11/bits/sstream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/glm/detail/compute_vector_relational.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -6232,10 +6216,6 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/glm/ext/vector_bool4.hpp:
 
-/usr/include/c++/11/array:
-
-/usr/include/glm/detail/type_vec4.inl:
-
 /usr/include/c++/11/utility:
 
 /usr/include/c++/11/bits/alloc_traits.h:
@@ -6258,7 +6238,11 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 
 /usr/include/glm/detail/type_mat2x2.inl:
 
-/usr/include/glm/matrix.hpp:
+/usr/include/c++/11/bits/fs_fwd.h:
+
+/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/main.cpp:
+
+/usr/include/glm/ext/matrix_double2x2_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
@@ -6315,3 +6299,29 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusv
 /usr/include/glm/ext/matrix_float2x4.hpp:
 
 /usr/include/glm/detail/type_mat4x2.hpp:
+
+/usr/include/c++/11/cstring:
+
+/usr/include/glm/mat4x3.hpp:
+
+/usr/include/glm/detail/type_mat4x3.hpp:
+
+/usr/include/glm/detail/func_vector_relational.inl:
+
+/usr/include/c++/11/backward/binders.h:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/glm/ext/matrix_float4x3.hpp:
+
+/usr/include/c++/11/bits/basic_string.h:
+
+/usr/include/glm/ext/matrix_float4x3_precision.hpp:
+
+/usr/include/glm/detail/func_matrix.inl:
+
+/usr/include/glm/ext/matrix_clip_space.inl:
+
+/usr/include/c++/11/cassert:
+
+/usr/include/glm/geometric.hpp:

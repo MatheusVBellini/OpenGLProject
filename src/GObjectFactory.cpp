@@ -1,7 +1,5 @@
 #include "../include/GObjectFactory.h"
 #include "../include/FileParser.h"
-#include "../include/Debug.h"
-#include "../include/AppConstants.h"
 
 bool GObjectFactory::with_texture = false;
 
