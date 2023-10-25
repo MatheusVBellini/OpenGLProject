@@ -26,6 +26,28 @@ void VertexBuffer::attachVertexData(const std::vector<glm::vec3> &data) {
 
 }
 
+void VertexBuffer::attachVertexData(const std::vector<ComposedCoord> &data) {
+    type = VERTEX;
+    size = data.size();
+
+    glGenVertexArrays(1, &id);
+    glBindVertexArray(id);
+
+    unsigned buffer_id;
+    glGenBuffers(1, &buffer_id);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer_id);
+    glBufferData(GL_ARRAY_BUFFER, size * sizeof(ComposedCoord), data.data(), GL_DYNAMIC_DRAW);
+
+    // bind vertex coordinates
+    glVertexAttribPointer(VERTEX_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)0);
+    glEnableVertexAttribArray(VERTEX_SLOT);
+
+    // bind texture coordinates
+    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)(sizeof(glm::vec3)));
+    glEnableVertexAttribArray(TEXTURE_SLOT);
+
+}
+
 void VertexBuffer::attachIndexData(const std::vector<unsigned int> &data) {
     type = INDEX;
     size = data.size();
@@ -48,6 +70,8 @@ void VertexBuffer::unbind() {
 unsigned VertexBuffer::getSize() const {
     return size;
 }
+
+
 
 
 

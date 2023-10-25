@@ -20,7 +20,6 @@ public:
     ~Texture();
 
     void load(const std::string& filename);
-    void attachTextureData(std::vector<glm::vec2> &data);
     void bind(unsigned slot = 0);
     void unbind();
 

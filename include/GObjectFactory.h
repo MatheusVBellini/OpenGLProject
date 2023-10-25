@@ -6,14 +6,14 @@
 
 class GObjectFactory {
 private:
-    typedef enum {IDLE, VERTEX, TEXTURE, NORMAL, INDEX, SHADER, FINISHED} STATE;
+    typedef enum {IDLE, VERTEX, COMPOSE, TEXTURE, NORMAL, INDEX, SHADER, FINISHED} STATE;
 
     static bool with_texture;
 
     static STATE state;
     static std::vector<glm::vec3> vertex_data;
     static std::vector<unsigned int> index_data;
-    static std::vector<glm::vec2> texture_data;
+    static std::vector<ComposedCoord> composed_data;
     static std::string texture_filename;
     static std::string shader_name;
 
@@ -23,7 +23,8 @@ public:
 
     static void initProduction(bool with_texture = true);
     static void setVertexBuffer(std::vector<glm::vec3>& data);
-    static void setTexture(const std::string& filename, std::vector<glm::vec2>& data);
+    static void setComposedBuffer(std::vector<ComposedCoord>& data);
+    static void setTexture(const std::string& filename);
     static void setNormals(std::vector<glm::vec3>& data);
     static void setIndexBuffer(std::vector<unsigned int> &data);
     static void setShader(const std::string& shader_name);

@@ -19,6 +19,7 @@ public:
     ~VertexBuffer();
 
     void attachVertexData(const std::vector<glm::vec3>& data);
+    void attachVertexData(const std::vector<ComposedCoord>& data);
     void attachIndexData(const std::vector<unsigned>& data);
     void bind();
     void unbind();

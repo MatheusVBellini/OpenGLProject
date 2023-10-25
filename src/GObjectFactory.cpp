@@ -6,7 +6,7 @@ bool GObjectFactory::with_texture = false;
 GObjectFactory::STATE GObjectFactory::state = IDLE;
 std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
-std::vector<glm::vec2> GObjectFactory::texture_data;
+std::vector<ComposedCoord> GObjectFactory::composed_data;
 std::string GObjectFactory::texture_filename;
 std::string GObjectFactory::shader_name;
 
@@ -21,7 +21,18 @@ void GObjectFactory::initProduction(bool with_texture) {
     }
 
     GObjectFactory::with_texture = with_texture;
-    state = VERTEX;
+    state = (with_texture) ? COMPOSE : VERTEX;
+}
+
+void GObjectFactory::setComposedBuffer(std::vector<ComposedCoord> &data) {
+    if (state != COMPOSE) {
+        errorMsg("Cannot set data, production must be started first. Try: initProduction().");
+        return;
+    }
+
+    state = TEXTURE;
+    composed_data = data;
+
 }
 
 void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
@@ -29,22 +40,18 @@ void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
         errorMsg("Cannot define vertex_coords, production must be initialized first. Try: initProduction().");
         return;
     }
-    state = (with_texture) ? TEXTURE : INDEX;
+    state = INDEX;
     vertex_data = data;
 }
 
-void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::vec2>& data) {
+void GObjectFactory::setTexture(const std::string& filename) {
     if (state != TEXTURE) {
-        if (with_texture)
-            errorMsg("Cannot define texture, vertex_coords must be set first. Try: setVertexBuffer().");
-        else
-            errorMsg("Object without texture specified. Try: setIndexBuffer().");
+        errorMsg("Cannot define texture, composed data must be set first. Try: setComposedBuffer().");
         return;
     }
 
     state = NORMAL;
     texture_filename = filename;
-    texture_data = data;
 
 }
 
@@ -92,11 +99,9 @@ GObject GObjectFactory::getObject() {
     GObject object;
     VertexBuffer vb;
     VertexBuffer ib;
-    Texture texture;
 
-    object.setPivot(vertex_data.at(0));
-    vb.attachVertexData(vertex_data);
-    texture.attachTextureData(texture_data);
+    object.setPivot(composed_data.at(0).vertex_coord);
+    vb.attachVertexData(composed_data);
     object.attachVertexBuffer(vb);
     ib.attachIndexData(index_data);
     object.attachIndexBuffer(ib);
@@ -110,6 +115,7 @@ GObject GObjectFactory::getObject() {
     texture_filename = "";
     vertex_data.clear();
     index_data.clear();
+    composed_data.clear();
 
     return object;
 }
@@ -120,14 +126,16 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     ObjFileInfo info = fp.objParse(filepath);
 
     initProduction(true);
-    setVertexBuffer(info.vertex_coords);
-    setTexture(texture_name, info.texture_coords);
+    setComposedBuffer(info.composed_coords);
+    setTexture(texture_name);
     setNormals(info.normal_coords);
     setIndexBuffer(info.indexes);
     setShader("default");
 
     return getObject();
 }
+
+
 
 
 
