@@ -185,8 +185,6 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
             // first set of coords
             split_indexes = split(split_line.at(1), '/');
-            if (split_indexes.size() != 3) continue;
-            std::cout << "aqui" << std::endl;
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
             face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
