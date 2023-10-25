@@ -26,7 +26,7 @@ void GObjectFactory::initProduction(bool with_texture) {
 
 void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
     if (state != VERTEX) {
-        errorMsg("Cannot define vertices, production must be initialized first. Try: initProduction().");
+        errorMsg("Cannot define vertex_coords, production must be initialized first. Try: initProduction().");
         return;
     }
     state = (with_texture) ? TEXTURE : INDEX;
@@ -36,7 +36,7 @@ void GObjectFactory::setVertexBuffer(std::vector<glm::vec3>& data) {
 void GObjectFactory::setTexture(const std::string& filename, std::vector<glm::vec2>& data) {
     if (state != TEXTURE) {
         if (with_texture)
-            errorMsg("Cannot define texture, vertices must be set first. Try: setVertexBuffer().");
+            errorMsg("Cannot define texture, vertex_coords must be set first. Try: setVertexBuffer().");
         else
             errorMsg("Object without texture specified. Try: setIndexBuffer().");
         return;
@@ -64,7 +64,7 @@ void GObjectFactory::setIndexBuffer(std::vector<unsigned int>& data) {
             errorMsg("Cannot define indexes, normals must be set first. Try: setNormals().");
         }
         else {
-            errorMsg("Cannot define indexes, vertices must be set first. Try: setVertexBuffer().");
+            errorMsg("Cannot define indexes, vertex_coords must be set first. Try: setVertexBuffer().");
         }
         return;
     }
@@ -120,9 +120,9 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     ObjFileInfo info = fp.objParse(filepath);
 
     initProduction(true);
-    setVertexBuffer(info.vertices);
-    setTexture(texture_name, info.texture_vertices);
-    setNormals(info.normal_vertices);
+    setVertexBuffer(info.vertex_coords);
+    setTexture(texture_name, info.texture_coords);
+    setNormals(info.normal_coords);
     setIndexBuffer(info.indexes);
     setShader("default");
 

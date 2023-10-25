@@ -52,7 +52,7 @@ int main() {
     object = GObjectFactory::getObject();
 
     // creating object from file
-    object = GObjectFactory::genObjectFromFile("monstro", "monstro.jpg");
+    object = GObjectFactory::genObjectFromFile("caixa", "monstro.jpg");
     window.attachObject(object);
 
     // test - controller

@@ -1,3 +1,4 @@
+#include <map>
 #include "../include/FileParser.h"
 
 std::ifstream FileParser::readFile(const std::string& filepath) {
@@ -37,6 +38,37 @@ float FileParser::strToFloat(const std::string &str) {
 
     return num;
 
+}
+
+std::pair<std::vector<ComposedCoord>,std::vector<unsigned>>
+FileParser::composeCoordinates(const std::vector<std::array<std::array<unsigned int, 2>, 3>> &faces,
+                               const std::vector<glm::vec3> &vertex_coords,
+                               const std::vector<glm::vec2> &texture_coords) {
+
+    std::map<std::tuple<unsigned,unsigned>, unsigned> loaded_indexes; // maps (vertex_index, texture_index) -> (element_index)
+    std::vector<ComposedCoord> composed_coords; // return vector
+    ComposedCoord coord; // vector element
+    std::vector<unsigned> indexes; // component order
+
+    for (auto& face : faces) {
+        for (auto& component : face) {
+            unsigned vertex = component.at(0);
+            unsigned texture = component.at(1);
+
+            // if component has not been loaded yet
+            if (loaded_indexes.find({vertex,texture}) == loaded_indexes.end()) {
+                loaded_indexes[{vertex,texture}] = composed_coords.size();
+                coord.vertex_coord = vertex_coords.at(vertex);
+                coord.texture_coord = texture_coords.at(texture);
+                composed_coords.push_back(coord); // fill up composed coordinates
+            }
+
+            indexes.push_back(loaded_indexes[{vertex,texture}]); // fill up indexes
+
+        }
+    }
+
+    return std::make_pair(composed_coords,indexes);
 }
 
 std::tuple<std::string, std::string> FileParser::glslParse(const std::string& filepath) {
@@ -87,18 +119,21 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     std::string material_name;
     std::string obj_name;
     std::vector<std::string> mtllibs;
-    std::vector<glm::vec3> vertices;
-    std::vector<glm::vec3> normal_vertices;
-    std::vector<glm::vec2> texture_vertices;
+    std::vector<glm::vec3> vertex_coords;
+    std::vector<glm::vec2> texture_coords;
+    std::vector<glm::vec3> normal_coords;
     bool smooth_shading;
-    std::vector<unsigned> indexes;
 
     // auxiliary variables
     glm::vec3 coord;
-    glm::vec2 tex_coord;
-    unsigned index;
+    glm::vec2 texture_coord;
     std::vector<std::string> split_indexes;
+    std::array<unsigned,2> face_indexes{};
+    std::array<std::array<unsigned,2>,3> face{};
+    std::vector<std::array<std::array<unsigned,2>,3>> faces;
 
+
+    // data acquisition
     while (std::getline(file, line)) {
 
         split_line = split(line, ' ');
@@ -114,25 +149,25 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
             obj_name = split_line.at(1);
 
-        } else if (split_line.at(0) == "v") {  // vertices
+        } else if (split_line.at(0) == "v") {  // vertex_coords
 
             coord.x = strToFloat(split_line.at(1));
             coord.y = strToFloat(split_line.at(2));
             coord.z = strToFloat(split_line.at(3));
-            vertices.push_back(coord);
+            vertex_coords.push_back(coord);
 
-        } else if (split_line.at(0) == "vt") {  // texture vertices
+        } else if (split_line.at(0) == "vt") {  // texture vertex_coords
 
-            tex_coord.x = strToFloat(split_line.at(1));
-            tex_coord.y = strToFloat(split_line.at(2));
-            texture_vertices.push_back(tex_coord);
+            texture_coord.x = strToFloat(split_line.at(1));
+            texture_coord.y = strToFloat(split_line.at(2));
+            texture_coords.push_back(texture_coord);
 
-        } else if (split_line.at(0) == "vn") {  // normal vertices
+        } else if (split_line.at(0) == "vn") {  // normal vertex_coords
 
             coord.x = strToFloat(split_line.at(1));
             coord.y = strToFloat(split_line.at(2));
             coord.z = strToFloat(split_line.at(3));
-            normal_vertices.push_back(coord);
+            normal_coords.push_back(coord);
 
         } else if (split_line.at(0) == "usemtl") {  // material to be used
 
@@ -145,38 +180,48 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
         } else if (split_line.at(0) == "f") {  // face elements
 
-            // v1
+            // first set of coords
             split_indexes = split(split_line.at(1), '/');
-            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
-            indexes.push_back(index);
+            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
+            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face.at(0) = face_indexes;
 
-            // v2
+            // second set of coords
             split_indexes = split(split_line.at(2), '/');
-            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
-            indexes.push_back(index);
+            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
+            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face.at(1) = face_indexes;
 
-            // v3
+            // third set of coords
             split_indexes = split(split_line.at(3), '/');
-            index = ((unsigned)strToFloat(split_indexes.at(0))) - 1;
-            indexes.push_back(index);
+            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
+            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face.at(2) = face_indexes;
+
+            faces.push_back(face);
 
         }
 
     }
 
+    auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords);
+
     // return
     return {
-        material_name,
-        obj_name,
-        mtllibs,
-        vertices,
-        normal_vertices,
-        texture_vertices,
-        smooth_shading,
-        indexes
+            material_name,
+            obj_name,
+            mtllibs,
+            vertex_coords,
+            normal_coords,
+            texture_coords,
+            composed_coords,
+            smooth_shading,
+            indexes
     };
 
 }
+
+
 
 
 
