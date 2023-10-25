@@ -187,27 +187,33 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
             split_indexes = split(split_line.at(1), '/');
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
+            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
             face.at(0) = face_indexes;
 
             // second set of coords
             split_indexes = split(split_line.at(2), '/');
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
+            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
             face.at(1) = face_indexes;
 
             // third set of coords
             split_indexes = split(split_line.at(3), '/');
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
+            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
             face.at(2) = face_indexes;
 
             faces.push_back(face);
 
         }
 
+    }
+
+    // for .obj with no normals
+    if (normal_coords.empty()) {
+       glm::vec3 vn = {0,0,0};
+       normal_coords.push_back(vn);
     }
 
     auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords, normal_coords);
