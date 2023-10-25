@@ -41,11 +41,12 @@ float FileParser::strToFloat(const std::string &str) {
 }
 
 std::pair<std::vector<ComposedCoord>,std::vector<unsigned>>
-FileParser::composeCoordinates(const std::vector<std::array<std::array<unsigned int, 2>, 3>> &faces,
+FileParser::composeCoordinates(const std::vector<std::array<std::array<unsigned int, 3>, 3>> &faces,
                                const std::vector<glm::vec3> &vertex_coords,
-                               const std::vector<glm::vec2> &texture_coords) {
+                               const std::vector<glm::vec2> &texture_coords,
+                               const std::vector<glm::vec3> &normal_coords) {
 
-    std::map<std::tuple<unsigned,unsigned>, unsigned> loaded_indexes; // maps (vertex_index, texture_index) -> (element_index)
+    std::map<std::tuple<unsigned,unsigned,unsigned>, unsigned> loaded_indexes; // maps (vertex_index, texture_index, normal_index) -> (element_index)
     std::vector<ComposedCoord> composed_coords; // return vector
     ComposedCoord coord; // vector element
     std::vector<unsigned> indexes; // component order
@@ -54,16 +55,18 @@ FileParser::composeCoordinates(const std::vector<std::array<std::array<unsigned 
         for (auto& component : face) {
             unsigned vertex = component.at(0);
             unsigned texture = component.at(1);
+            unsigned normal = component.at(2);
 
             // if component has not been loaded yet
-            if (loaded_indexes.find({vertex,texture}) == loaded_indexes.end()) {
-                loaded_indexes[{vertex,texture}] = composed_coords.size();
+            if (loaded_indexes.find({vertex,texture,normal}) == loaded_indexes.end()) {
+                loaded_indexes[{vertex,texture,normal}] = composed_coords.size();
                 coord.vertex_coord = vertex_coords.at(vertex);
                 coord.texture_coord = texture_coords.at(texture);
+                coord.normal_coord = normal_coords.at(normal);
                 composed_coords.push_back(coord); // fill up composed coordinates
             }
 
-            indexes.push_back(loaded_indexes[{vertex,texture}]); // fill up indexes
+            indexes.push_back(loaded_indexes[{vertex,texture,normal}]); // fill up indexes
 
         }
     }
@@ -128,9 +131,9 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     glm::vec3 coord;
     glm::vec2 texture_coord;
     std::vector<std::string> split_indexes;
-    std::array<unsigned,2> face_indexes{};
-    std::array<std::array<unsigned,2>,3> face{};
-    std::vector<std::array<std::array<unsigned,2>,3>> faces;
+    std::array<unsigned,3> face_indexes{};
+    std::array<std::array<unsigned,3>,3> face{};
+    std::vector<std::array<std::array<unsigned,3>,3>> faces;
 
 
     // data acquisition
@@ -182,20 +185,25 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
             // first set of coords
             split_indexes = split(split_line.at(1), '/');
+            if (split_indexes.size() != 3) continue;
+            std::cout << "aqui" << std::endl;
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
             face.at(0) = face_indexes;
 
             // second set of coords
             split_indexes = split(split_line.at(2), '/');
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
             face.at(1) = face_indexes;
 
             // third set of coords
             split_indexes = split(split_line.at(3), '/');
             face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
             face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
+            face_indexes.at(2) = (unsigned) strToFloat(split_indexes.at(2)) - 1;
             face.at(2) = face_indexes;
 
             faces.push_back(face);
@@ -204,7 +212,7 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
     }
 
-    auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords);
+    auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords, normal_coords);
 
     // return
     return {

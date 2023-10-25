@@ -5,6 +5,7 @@
 typedef struct {
     glm::vec3 vertex_coord;
     glm::vec2 texture_coord;
+    glm::vec3 normal_coord;
 } ComposedCoord;
 
 typedef struct {
