@@ -4,6 +4,7 @@
 bool GObjectFactory::with_texture = false;
 
 GObjectFactory::STATE GObjectFactory::state = IDLE;
+std::string GObjectFactory::name;
 std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
 std::vector<ComposedCoord> GObjectFactory::composed_data;
@@ -14,13 +15,15 @@ void GObjectFactory::errorMsg(const std::string& msg) {
     std::cerr << "<GObjectFactory> " + msg << std::endl;
 }
 
-void GObjectFactory::initProduction(bool with_texture) {
+void GObjectFactory::initProduction(const std::string& name, bool with_texture) {
     if (state != IDLE) {
         errorMsg("Object already in production, could not start new one.");
         return;
     }
 
     GObjectFactory::with_texture = with_texture;
+    GObjectFactory::name = name;
+
     state = (with_texture) ? COMPOSE : VERTEX;
 }
 
@@ -100,16 +103,19 @@ GObject GObjectFactory::getObject() {
     VertexBuffer vb;
     VertexBuffer ib;
 
-    object.setPivot(composed_data.at(0).vertex_coord);
-    vb.attachVertexData(composed_data);
+    // object building
+    object.setName(name);
+    object.setPivot(composed_data.at(0).vertex_coord); // center of the object
+    vb.attachVertexData(composed_data); // define data to render
     object.attachVertexBuffer(vb);
-    ib.attachIndexData(index_data);
+    ib.attachIndexData(index_data); // define order of data render
     object.attachIndexBuffer(ib);
     if (with_texture) object.linkTexture(texture_filename);
     object.linkShader(shader_name);
 
     // restarting variables
     state = IDLE;
+    name = "";
     with_texture = false;
     shader_name = "";
     texture_filename = "";
@@ -125,7 +131,7 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     std::string filepath = "../data/objects/" + obj_name + ".obj";
     ObjFileInfo info = fp.objParse(filepath);
 
-    initProduction(true);
+    initProduction(obj_name, true);
     setComposedBuffer(info.composed_coords);
     setTexture(texture_name);
     setNormals(info.normal_coords);

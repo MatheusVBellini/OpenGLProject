@@ -55,6 +55,14 @@ glm::mat4 GObject::getMovement() {
     return movement;
 }
 
+void GObject::setName(const std::string &name) {
+    this->name = name;
+}
+
+std::string GObject::getName() {
+    return name;
+}
+
 
 
 

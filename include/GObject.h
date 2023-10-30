@@ -6,6 +6,9 @@
 class GObject {
 private:
 
+    // metadata
+    std::string name;
+
     // construction attributes
     VertexBuffer vb;
     VertexBuffer ib;
@@ -27,9 +30,12 @@ public:
 
     void setPivot(glm::vec3& pivot);
     void setMovement(glm::mat4& movement);
+    void setName(const std::string& name);
 
     glm::vec3 getPivot();
     glm::mat4 getMovement();
+    std::string getName();
+
     VertexBuffer& getVertexBuffer();
     VertexBuffer& getIndexBuffer();
     std::string& getShaderName();
