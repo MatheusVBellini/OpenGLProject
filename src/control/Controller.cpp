@@ -6,7 +6,8 @@ std::vector<Controller*> Controller::controllers;
 
 Controller::Controller() {
     Controller::controllers.push_back(this);
-    object = nullptr;
+    empty_object = GObject();
+    object = &empty_object;
 }
 
 Controller::~Controller() = default;
@@ -61,6 +62,10 @@ void Controller::updateAutomatics() {
 
 void Controller::attachObject(GObject &object) {
     this->object = &object;
+}
+
+void Controller::detachObject() {
+    this->object = &empty_object;
 }
 
 void Controller::loadModule(FuncModule &module) {
@@ -176,6 +181,8 @@ std::map<std::string, int> Controller::key_table = {
 void Controller::errorMsg(const std::string &msg) {
     std::cerr << "<Controller> " << msg << std::endl;
 }
+
+
 
 
 

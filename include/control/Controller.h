@@ -17,6 +17,7 @@ private:
     std::vector<std::function<void(double,double,GObject*)>> mouse_pos_func;
     std::vector<std::function<void(GObject*)>> auto_func;
 
+    GObject empty_object;
     GObject* object;
 
     static void errorMsg(const std::string& msg);
@@ -26,6 +27,7 @@ public:
     ~Controller();
 
     void attachObject(GObject& object);
+    void detachObject();
     void loadModule(FuncModule& module); // change
 
     static void keyEventHandler(GLFWwindow *window, int key, int scancode, int action, int mods);

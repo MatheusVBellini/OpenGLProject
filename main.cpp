@@ -38,6 +38,13 @@ int main() {
         con.attachObject(caixa);
     });
 
+    con.setKeyFunc("2", [&window, &con, &caixa](int,int,int,int,GObject* previous){
+        if (!previous) {}
+
+        window.detachObject(caixa);
+        con.detachObject();
+    });
+
     // main loop
     app.init();
 

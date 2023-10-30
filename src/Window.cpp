@@ -3,6 +3,7 @@
 //
 
 #include "../include/Window.h"
+#include "algorithm"
 
 Window::Window(const int &width, const int &height, const std::string& title) {
     glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
@@ -34,5 +35,14 @@ int Window::shouldClose() const {
 
 void Window::attachObject(GObject& object) {
     this->objects.push_back(&object);
+}
+
+void Window::detachObject(GObject &object) {
+    auto it = std::find(objects.begin(), objects.end(), &object);
+
+    if (it != objects.end()) {
+        objects.erase(it);
+    }
+
 }
 
