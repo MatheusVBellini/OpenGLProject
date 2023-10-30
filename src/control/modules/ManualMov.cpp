@@ -19,8 +19,8 @@ ManualMov::ManualMov() {
     // rotation with arrows
     key_func.emplace_back("down_arrow",rotateXACW);
     key_func.emplace_back("up_arrow",rotateXCW);
-    key_func.emplace_back("left_arrow",rotateYACW);
-    key_func.emplace_back("right_arrow",rotateYCW);
+    key_func.emplace_back("right_arrow",rotateYACW);
+    key_func.emplace_back("left_arrow",rotateYCW);
 
     // scale
     key_func.emplace_back("o",shrink);

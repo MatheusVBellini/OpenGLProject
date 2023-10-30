@@ -13,7 +13,7 @@
 int main() {
     // boot-up
     Application app = Application::getInstance();
-    Window window(1600, 1600, "Hello World");
+    Window window(800, 800, "Hello World");
     Renderer ren;
     app.bindRenderer(ren);
     app.bindWindow(window);
