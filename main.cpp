@@ -32,17 +32,23 @@ int main() {
 
     // project specifications
     con.setKeyFunc("1", [&window, &con, &caixa](int,int,int,int,GObject* previous){
-        if (!previous) {}
+        if (!previous) {
+            window.detachObject(*previous);
+            con.detachObject();
+        }
 
         window.attachObject(caixa);
         con.attachObject(caixa);
     });
 
-    con.setKeyFunc("2", [&window, &con, &caixa](int,int,int,int,GObject* previous){
-        if (!previous) {}
+    con.setKeyFunc("2", [&window, &con, &monstro](int,int,int,int,GObject* previous){
+        if (!previous) {
+            window.detachObject(*previous);
+            con.detachObject();
+        }
 
-        window.detachObject(caixa);
-        con.detachObject();
+        window.attachObject(monstro);
+        con.attachObject(monstro);
     });
 
     // main loop
