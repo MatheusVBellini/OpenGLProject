@@ -1,13 +1,11 @@
-#include <iostream>
 #include <glm/gtc/matrix_transform.hpp>
-#include <cmath>
 #include "include/Application.h"
-#include "include/VertexBuffer.h"
 #include "include/Renderer.h"
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
 #include "include/control/modules/ManualMov.h"
+#include "include/AppConstants.h"
 
 
 int main() {
@@ -24,16 +22,21 @@ int main() {
     ren.loadTextures();
 
     // creating object from file
-    GObject object = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
-    window.attachObject(object);
+    GObject caixa = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
+    GObject monstro = GObjectFactory::genObjectFromFile("monstro", "monstro.jpg");
 
-    // test - controller
+    // controller instantiation
     Controller con;
-    con.bindObject(object);
-
-    // test - FuncModule;
     ManualMov module;
     con.loadModule(module);
+
+    // project specifications
+    con.setKeyFunc("1", [&window, &con, &caixa](int,int,int,int,GObject* previous){
+        if (!previous) {}
+
+        window.attachObject(caixa);
+        con.attachObject(caixa);
+    });
 
     // main loop
     app.init();

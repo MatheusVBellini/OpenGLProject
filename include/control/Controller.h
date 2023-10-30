@@ -25,7 +25,7 @@ public:
     Controller();
     ~Controller();
 
-    void bindObject(GObject& object);
+    void attachObject(GObject& object);
     void loadModule(FuncModule& module); // change
 
     static void keyEventHandler(GLFWwindow *window, int key, int scancode, int action, int mods);

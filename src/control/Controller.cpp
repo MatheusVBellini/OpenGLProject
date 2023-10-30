@@ -59,7 +59,7 @@ void Controller::updateAutomatics() {
     }
 }
 
-void Controller::bindObject(GObject &object) {
+void Controller::attachObject(GObject &object) {
     this->object = &object;
 }
 
@@ -166,7 +166,11 @@ std::map<std::string, int> Controller::key_table = {
         {"left_arrow", GLFW_KEY_LEFT},
         {"right_arrow", GLFW_KEY_RIGHT},
         {"up_arrow", GLFW_KEY_UP},
-        {"down_arrow", GLFW_KEY_DOWN}
+        {"down_arrow", GLFW_KEY_DOWN},
+        {"0", GLFW_KEY_0},
+        {"1", GLFW_KEY_1},
+        {"2", GLFW_KEY_2},
+        {"3", GLFW_KEY_3}
 };
 
 void Controller::errorMsg(const std::string &msg) {
