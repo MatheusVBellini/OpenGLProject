@@ -4,6 +4,7 @@
 #include <GLFW/glfw3.h>
 #include <string>
 #include <vector>
+#include <map>
 #include "GObject.h"
 
 class Window {
@@ -11,7 +12,7 @@ private:
     GLFWwindow* window;
 
 public:
-    std::vector<GObject*> objects;
+    std::map<std::string,GObject*> objects;
 
     explicit Window(const int& width = 400,
            const int& height = 400,

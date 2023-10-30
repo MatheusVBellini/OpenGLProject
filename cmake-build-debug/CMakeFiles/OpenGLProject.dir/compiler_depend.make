@@ -3804,9 +3804,12 @@ CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: /home/matheusvb/Desktop/USP/CompG
   /usr/include/c++/11/bits/stl_iterator.h \
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/stl_pair.h \
   /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/streambuf.tcc \
@@ -3847,6 +3850,7 @@ CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: /home/matheusvb/Desktop/USP/CompG
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/limits \
+  /usr/include/c++/11/map \
   /usr/include/c++/11/new \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/pstl/execution_defs.h \

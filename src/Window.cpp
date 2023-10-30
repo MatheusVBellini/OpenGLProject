@@ -34,15 +34,10 @@ int Window::shouldClose() const {
 }
 
 void Window::attachObject(GObject& object) {
-    this->objects.push_back(&object);
+    objects[object.getName()] = &object;
 }
 
 void Window::detachObject(GObject &object) {
-    auto it = std::find(objects.begin(), objects.end(), &object);
-
-    if (it != objects.end()) {
-        objects.erase(it);
-    }
-
+    objects.erase(object.getName());
 }
 

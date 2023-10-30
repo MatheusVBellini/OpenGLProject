@@ -47,7 +47,7 @@ void Application::init() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         // drawing
-        for (auto& object : window->objects) {
+        for (auto& [_, object] : window->objects) {
             renderer->draw(*object);
         }
 
