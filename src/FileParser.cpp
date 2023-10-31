@@ -40,6 +40,28 @@ float FileParser::strToFloat(const std::string &str) {
 
 }
 
+std::vector<glm::vec3> FileParser::normalize(std::vector<glm::vec3> &coords) {
+    std::vector<glm::vec3> normalized;
+    glm::vec3 normalized_coord;
+    float max = 1;
+
+    // search for biggest coordinate
+    for (auto& coord : coords) {
+        if (coord.x > max) max = coord.x;
+        if (coord.y > max) max = coord.y;
+        if (coord.z > max) max = coord.z;
+    }
+
+    // normalize vector
+    for (auto& coord : coords) {
+        normalized_coord = coord / max;
+        normalized.push_back(normalized_coord);
+    }
+
+    return normalized;
+
+}
+
 std::pair<std::vector<ComposedCoord>,std::vector<unsigned>>
 FileParser::composeCoordinates(const std::vector<std::array<std::array<unsigned int, 3>, 3>> &faces,
                                const std::vector<glm::vec3> &vertex_coords,
@@ -216,6 +238,10 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
        normal_coords.push_back(vn);
     }
 
+    // normalize coordinates
+    vertex_coords = normalize(vertex_coords);
+
+    // create composed vector and index vector
     auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords, normal_coords);
 
     // return
@@ -232,6 +258,8 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     };
 
 }
+
+
 
 
 
