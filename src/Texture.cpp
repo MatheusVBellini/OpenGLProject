@@ -7,6 +7,8 @@ Texture::Texture() {
     width = 0;
     height = 0;
     bpp = 0;
+    active = true;
+    draw_type = GL_FILL;
 }
 
 Texture::~Texture() = default;
@@ -36,11 +38,21 @@ void Texture::load(const std::string& filename) {
 void Texture::bind(unsigned int slot) {
     slot %= TEXTURE_SLOT_MAX;
     glActiveTexture(GL_TEXTURE0 + slot);
-    glBindTexture(GL_TEXTURE_2D, id);
+    if (active) glBindTexture(GL_TEXTURE_2D, id);
+    else glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 void Texture::unbind() {
     glBindTexture(GL_TEXTURE_2D,0);
+}
+
+void Texture::toggle() {
+    active = !active;
+    draw_type = (active) ? GL_FILL : GL_LINE;
+}
+
+unsigned Texture::getDrawType() {
+    return draw_type;
 }
 
 

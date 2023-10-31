@@ -15,6 +15,9 @@ private:
     int height;
     int bpp;
 
+    bool active;
+    unsigned draw_type;
+
 public:
     Texture();
     ~Texture();
@@ -22,6 +25,8 @@ public:
     void load(const std::string& filename);
     void bind(unsigned slot = 0);
     void unbind();
+    void toggle();
+    unsigned getDrawType();
 
 };
 

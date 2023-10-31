@@ -31,7 +31,11 @@ int main() {
     con.loadModule(module);
 
     // project specifications
-    con.setKeyFunc("1", [&window, &con, &caixa](int,int,int,int,GObject* previous){
+
+    // show object1 when 1 is pressed
+    con.setKeyFunc("1", [&window, &con, &caixa](int,int,int action,int,GObject* previous){
+        if (!action) return;
+
         // remove previous object
         window.detachObject(*previous);
         con.detachObject();
@@ -41,7 +45,10 @@ int main() {
         con.attachObject(caixa);
     });
 
-    con.setKeyFunc("2", [&window, &con, &monstro](int,int,int,int,GObject* previous){
+    // show object2 when 2 is pressed
+    con.setKeyFunc("2", [&window, &con, &monstro](int,int,int action,int,GObject* previous){
+        if (!action) return;
+
         // remove previous object
         window.detachObject(*previous);
         con.detachObject();
@@ -49,6 +56,12 @@ int main() {
         // attach monstro
         window.attachObject(monstro);
         con.attachObject(monstro);
+    });
+
+    // toggle textures in current object
+    con.setKeyFunc("p",[&ren](int,int,int action,int,GObject* object){
+        if (!action) return;
+        ren.fetchTexture(object->getTextureFilename()).toggle();
     });
 
     // main loop

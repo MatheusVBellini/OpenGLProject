@@ -29,5 +29,7 @@ public:
     void loadTextures();
     void draw(GObject& object);
 
+    Texture& fetchTexture(const std::string& texture_name);
+
 };
 

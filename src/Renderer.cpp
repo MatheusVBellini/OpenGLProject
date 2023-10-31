@@ -95,7 +95,7 @@ void Renderer::draw(GObject& object) {
     shader.setUniformMatrix4fv("movement", object.getMovement());
 
     // draw on screen
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());
     glDrawElements(GL_TRIANGLES, ib.getSize(), GL_UNSIGNED_INT, nullptr);
 
     // unbind variables
@@ -105,6 +105,11 @@ void Renderer::draw(GObject& object) {
     shader.unbind();
 
 }
+
+Texture& Renderer::fetchTexture(const std::string& texture_name) {
+    return textures.at(texture_name).second;
+}
+
 
 
 
