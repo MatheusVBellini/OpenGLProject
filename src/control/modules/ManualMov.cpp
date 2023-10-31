@@ -82,13 +82,13 @@ void ManualMov::defFuncs() {
 
     rotateYACW = [this](int key, int, int action, int, GObject* object) {
         if (!action) return;
-        glm::mat4 mat = glm::rotate(object->getMovement(), t, glm::vec3(0,1,0));
+        glm::mat4 mat = glm::rotate(object->getMovement(), -t, glm::vec3(0,1,0));
         object->setMovement(mat);
     };
 
     rotateYCW = [this](int key, int, int action, int, GObject* object) {
         if (!action) return;
-        glm::mat4 mat = glm::rotate(object->getMovement(), -t, glm::vec3(0,1,0));
+        glm::mat4 mat = glm::rotate(object->getMovement(), t, glm::vec3(0,1,0));
         object->setMovement(mat);
     };
 

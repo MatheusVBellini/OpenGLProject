@@ -27,6 +27,7 @@ void Application::bindWindow(Window& window_to_bind) {
         std::cerr << "ERROR:: GLEW could not be initialized" << std::endl;
         exit(1);
     }
+    glEnable(GL_DEPTH_TEST);
 
     std::cout << "<Application> GLEW initialized successfully!" << std::endl;
 }
@@ -44,7 +45,7 @@ void Application::init() {
 
         // scene preparation
         glClearColor(1.0,1.0,1.0,1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // drawing
         for (auto& [_, object] : window->objects) {
