@@ -11,8 +11,8 @@
 class FileParser {
 private:
     std::ifstream readFile(const std::string& filepath);
-    std::vector<std::string> split(const std::string& str, char delimiter);
-    float strToFloat(const std::string& str);
+    std::vector<std::string> split(const std::string& str, char delimiter); // splits a string using a delimiter between substrings
+    float strToFloat(const std::string& str); // converts a string to a float when possible
 
 
     std::pair<std::vector<ComposedCoord>,std::vector<unsigned>> composeCoordinates(
@@ -20,10 +20,10 @@ private:
             const std::vector<glm::vec3>& vertex_coords,
             const std::vector<glm::vec2>& texture_coords,
             const std::vector<glm::vec3>& normal_coords
-            );
+            ); // bind together the vertex, texture and normal coords into one ComposedCoords structs ad also returns a index vector
 
 public:
     std::tuple<std::string, std::string> glslParse(const std::string& filepath);
-    ObjFileInfo objParse(const std::string& filepath);
+    ObjFileInfo objParse(const std::string& filepath); // returns a struct with all the useful information in a .obj file
 };
 

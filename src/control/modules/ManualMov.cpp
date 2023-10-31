@@ -23,8 +23,8 @@ ManualMov::ManualMov() {
     key_func.emplace_back("left_arrow",rotateYCW);
 
     // scale
-    key_func.emplace_back("o",shrink);
-    key_func.emplace_back("p",grow);
+    key_func.emplace_back("i",shrink);
+    key_func.emplace_back("o",grow);
 
 }
 
