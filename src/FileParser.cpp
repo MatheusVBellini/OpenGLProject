@@ -44,7 +44,7 @@ std::vector<glm::vec3> FileParser::centralize(const std::vector<glm::vec3>& coor
     std::vector<glm::vec3> centralized;
     glm::vec3 centralized_coord;
     glm::vec3 center;
-    float x, y, z = 0;
+    double x, y, z = 0;
 
     // find gravitational center
     for (auto& coord : coords) {
@@ -52,9 +52,9 @@ std::vector<glm::vec3> FileParser::centralize(const std::vector<glm::vec3>& coor
         y += coord.y;
         z += coord.z;
     }
-    x /= (float)coords.size();
-    y /= (float)coords.size();
-    z /= (float)coords.size();
+    x /= (double)coords.size();
+    y /= (double)coords.size();
+    z /= (double)coords.size();
     center = {x,y,z};
 
     // centralize vertices
@@ -74,9 +74,9 @@ std::vector<glm::vec3> FileParser::normalize(const std::vector<glm::vec3>& coord
 
     // search for biggest coordinate
     for (auto& coord : coords) {
-        if (coord.x > max) max = coord.x;
-        if (coord.y > max) max = coord.y;
-        if (coord.z > max) max = coord.z;
+        if (std::fabs(coord.x) > max) max = std::fabs(coord.x);
+        if (std::fabs(coord.y) > max) max = std::fabs(coord.y);
+        if (std::fabs(coord.z) > max) max = std::fabs(coord.z);
     }
 
     // normalize vector
