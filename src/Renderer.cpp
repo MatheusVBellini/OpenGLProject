@@ -92,8 +92,6 @@ void Renderer::draw(GObject& object) {
     // set uniforms
     shader.setUniform4f("color", {0,0,0,1});
     shader.setUniform1i("samplerTexture", slot);
-    shader.setUniformMatrix4fv("shiftBack", glm::translate(glm::mat4(1.0f), -object.getPivot()));
-    shader.setUniformMatrix4fv("shiftForward", glm::translate(glm::mat4(1.0f), object.getPivot()));
     shader.setUniformMatrix4fv("movement", object.getMovement());
 
     // draw on screen

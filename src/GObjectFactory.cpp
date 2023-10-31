@@ -105,7 +105,6 @@ GObject GObjectFactory::getObject() {
 
     // object building
     object.setName(name);
-    object.setPivot(composed_data.at(0).vertex_coord); // center of the object
     vb.attachVertexData(composed_data); // define data to render
     object.attachVertexBuffer(vb);
     ib.attachIndexData(index_data); // define order of data render

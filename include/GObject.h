@@ -16,7 +16,6 @@ private:
     std::string texture_filename;
 
     // position attributes
-    glm::vec3 pivot;
     glm::mat4 movement;
 
 public:
@@ -28,11 +27,9 @@ public:
     void linkShader(const std::string& shader_name);
     void linkTexture(const std::string& texture_filename);
 
-    void setPivot(glm::vec3& pivot);
     void setMovement(glm::mat4& movement);
     void setName(const std::string& name);
 
-    glm::vec3 getPivot();
     glm::mat4 getMovement();
     std::string getName();
 

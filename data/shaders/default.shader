@@ -14,7 +14,7 @@ uniform mat4 shiftForward;
 uniform mat4 movement;
 
 void main() {
-    mat4 modelMatrix = shiftForward * movement * shiftBack;
+    mat4 modelMatrix = movement;
     gl_Position = modelMatrix * vec4(position, 1.0);
     out_texture = vec2(texture_coord);
 }

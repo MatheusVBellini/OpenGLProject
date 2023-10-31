@@ -1,7 +1,6 @@
 #include "../include/GObject.h"
 
 GObject::GObject() {
-    pivot = glm::vec3(0.0f);
     movement = glm::mat4(1.0f);
 };
 
@@ -37,14 +36,6 @@ std::string &GObject::getShaderName() {
 
 std::string &GObject::getTextureFilename() {
     return texture_filename;
-}
-
-void GObject::setPivot(glm::vec3& pivot) {
-    this->pivot;
-}
-
-glm::vec3 GObject::getPivot() {
-    return pivot;
 }
 
 void GObject::setMovement(glm::mat4& movement) {
