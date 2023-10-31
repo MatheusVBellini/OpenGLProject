@@ -13,7 +13,8 @@ private:
     std::ifstream readFile(const std::string& filepath);
     std::vector<std::string> split(const std::string& str, char delimiter); // splits a string using a delimiter between substrings
     float strToFloat(const std::string& str); // converts a string to a float when possible
-    std::vector<glm::vec3> normalize(std::vector<glm::vec3>& coords); // normalize the vec3 to be between 0 and 1
+    std::vector<glm::vec3> centralize(const std::vector<glm::vec3>& coords); // centralize vertices by simple gravitational center
+    std::vector<glm::vec3> normalize(const std::vector<glm::vec3>& coords); // normalize the vec3 to be between 0 and 1
 
     std::pair<std::vector<ComposedCoord>,std::vector<unsigned>> composeCoordinates(
             const std::vector<std::array<std::array<unsigned,3>,3>>& faces,

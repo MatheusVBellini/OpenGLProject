@@ -40,7 +40,34 @@ float FileParser::strToFloat(const std::string &str) {
 
 }
 
-std::vector<glm::vec3> FileParser::normalize(std::vector<glm::vec3> &coords) {
+std::vector<glm::vec3> FileParser::centralize(const std::vector<glm::vec3>& coords) {
+    std::vector<glm::vec3> centralized;
+    glm::vec3 centralized_coord;
+    glm::vec3 center;
+    float x, y, z = 0;
+
+    // find gravitational center
+    for (auto& coord : coords) {
+        x += coord.x;
+        y += coord.y;
+        z += coord.z;
+    }
+    x /= (float)coords.size();
+    y /= (float)coords.size();
+    z /= (float)coords.size();
+    center = {x,y,z};
+
+    // centralize vertices
+    for (auto& coord : coords) {
+        centralized_coord = coord - center;
+        centralized.push_back(centralized_coord);
+    }
+
+    return centralized;
+
+}
+
+std::vector<glm::vec3> FileParser::normalize(const std::vector<glm::vec3>& coords) {
     std::vector<glm::vec3> normalized;
     glm::vec3 normalized_coord;
     float max = 1;
@@ -238,8 +265,8 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
        normal_coords.push_back(vn);
     }
 
-    // normalize coordinates
-    vertex_coords = normalize(vertex_coords);
+    vertex_coords = centralize(vertex_coords); // centralize coordinates
+    vertex_coords = normalize(vertex_coords); // normalize coordinates
 
     // create composed vector and index vector
     auto [composed_coords, indexes] = composeCoordinates(faces, vertex_coords, texture_coords, normal_coords);
@@ -258,6 +285,8 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
     };
 
 }
+
+
 
 
 
