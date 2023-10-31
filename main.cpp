@@ -30,39 +30,31 @@ int main() {
     ManualMov module;
     con.loadModule(module);
 
-    // project specifications
+    /* PROJECT FUNCTIONS */
 
-    // show object1 when 1 is pressed
-    con.setKeyFunc("1", [&window, &con, &caixa](int,int,int action,int,GObject* previous){
-        if (!action) return;
+    // show Nth object when key N is pressed
+    std::array<GObject*,2> objects = {&caixa, &monstro};
+    for (int i = 0; i < objects.size(); i++) {
+        con.setKeyFunc(std::to_string(i+1), [&window, &con, &objects, i](int,int,int action,int,GObject* previous){
+            if (!action) return;
 
-        // remove previous object
-        window.detachObject(*previous);
-        con.detachObject();
+            // remove previous object
+            window.detachObject(*previous);
+            con.detachObject();
 
-        // attach caixa
-        window.attachObject(caixa);
-        con.attachObject(caixa);
-    });
-
-    // show object2 when 2 is pressed
-    con.setKeyFunc("2", [&window, &con, &monstro](int,int,int action,int,GObject* previous){
-        if (!action) return;
-
-        // remove previous object
-        window.detachObject(*previous);
-        con.detachObject();
-
-        // attach monstro
-        window.attachObject(monstro);
-        con.attachObject(monstro);
-    });
+            // attach object
+            window.attachObject(*objects.at(i));
+            con.attachObject(*objects.at(i));
+        });
+    }
 
     // toggle textures in current object
     con.setKeyFunc("p",[&ren](int,int,int action,int,GObject* object){
         if (!action) return;
         ren.fetchTexture(object->getTextureFilename()).toggle();
     });
+
+    /**********    ***********/
 
     // main loop
     app.init();
