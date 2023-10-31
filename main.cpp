@@ -54,6 +54,21 @@ int main() {
         ren.fetchTexture(object->getTextureFilename()).toggle();
     });
 
+    // toggle texture magnification algorithm
+    bool linear = true;
+    con.setKeyFunc("v",[&ren, &linear](int,int,int action,int,GObject* object){
+        if (!action) return;
+        Texture& tex = ren.fetchTexture(object->getTextureFilename());
+
+        linear = !linear;
+
+        tex.bind();
+        (linear) ?
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR) :
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+        tex.unbind();
+    });
+
     /**********    ***********/
 
     // main loop

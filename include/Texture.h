@@ -25,7 +25,7 @@ public:
     void load(const std::string& filename);
     void bind(unsigned slot = 0);
     void unbind();
-    void toggle();
+    void toggle(); // toggle betwen (active and unactive) and (GL_FILL and GL_LINE)
     unsigned getDrawType();
 
 };
