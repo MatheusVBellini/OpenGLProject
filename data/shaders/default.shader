@@ -9,8 +9,6 @@ uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
 
-uniform mat4 shiftBack;
-uniform mat4 shiftForward;
 uniform mat4 movement;
 
 void main() {
