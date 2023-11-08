@@ -58,7 +58,7 @@ void GObject::setHitbox(const std::array<glm::vec3, 8>& hitbox) {
     this->hitbox = hitbox;
 }
 
-std::array<glm::vec3, 8> GObject::getHitbox() {
+std::array<glm::vec3, 8> GObject::getHitbox() const {
     return hitbox;
 }
 

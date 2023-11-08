@@ -31,8 +31,18 @@ ManualMov::ManualMov() {
 ManualMov::~ManualMov() = default;
 
 bool ManualMov::checkBoundaries(const glm::mat4& mat, const GObject* obj) {
+    bool value = true;
+    glm::vec4 boundary = {0,0,0,0};
 
-    return true;
+    // translation validation
+    for (auto& current : obj->getHitbox()) {
+        boundary = mat * glm::vec4(current,1);
+        if ((boundary.x > 1) || (boundary.x < -1)) value = false;
+        if ((boundary.y > 1) || (boundary.y < -1)) value = false;
+        if ((boundary.z > 1) || (boundary.z < -1)) value = false;
+    }
+
+    return value;
 }
 
 void ManualMov::defFuncs() {

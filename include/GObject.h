@@ -41,7 +41,7 @@ public:
     std::string& getShaderName();
     std::string& getTextureFilename();
 
-    std::array<glm::vec3,8> getHitbox();
+    std::array<glm::vec3,8> getHitbox() const;
 
 
 
