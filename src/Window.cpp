@@ -3,7 +3,6 @@
 //
 
 #include "../include/Window.h"
-#include "algorithm"
 
 Window::Window(const int &width, const int &height, const std::string& title) {
     glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);

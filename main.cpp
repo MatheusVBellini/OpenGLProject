@@ -5,7 +5,6 @@
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
 #include "include/control/modules/ManualMov.h"
-#include "include/AppConstants.h"
 
 
 int main() {
