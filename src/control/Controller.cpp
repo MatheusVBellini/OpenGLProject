@@ -101,6 +101,7 @@ void Controller::loadModule(FuncModule &module) {
 }
 
 void Controller::setKeyFunc(const std::string &event, const std::function<void(int, int, int, int, GObject*)>& func) {
+
     if (key_table.find(event) == key_table.end()) {
         errorMsg("No keyboard key with the specified signature.");
         return;
@@ -175,7 +176,9 @@ std::map<std::string, int> Controller::key_table = {
         {"0", GLFW_KEY_0},
         {"1", GLFW_KEY_1},
         {"2", GLFW_KEY_2},
-        {"3", GLFW_KEY_3}
+        {"3", GLFW_KEY_3},
+        {"4", GLFW_KEY_4},
+        {"5", GLFW_KEY_5}
 };
 
 void Controller::errorMsg(const std::string &msg) {

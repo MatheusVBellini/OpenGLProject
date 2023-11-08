@@ -109,9 +109,3 @@ void Renderer::draw(GObject& object) {
 Texture& Renderer::fetchTexture(const std::string& texture_name) {
     return textures.at(texture_name).second;
 }
-
-
-
-
-
-
