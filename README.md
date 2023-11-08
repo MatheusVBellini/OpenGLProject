@@ -9,6 +9,7 @@ cmake --build cmake-build-debug/
 
 Now that project has been built, in order to run it, run the command
 ``
-./cmake-build-debug/OpenGLProject
+cd cmake-build-debug
+./OpenGLProject
 ``
 
