@@ -24,6 +24,11 @@ int main() {
     GObject caixa = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
     GObject monstro = GObjectFactory::genObjectFromFile("monstro", "monstro.jpg");
 
+    std::cout << "\nMONSTRO" << std::endl;
+    std::cout << "\ntop/bottom: " << monstro.top << "/" << monstro.bottom <<
+    "\nleft/right: " << monstro.left << "/" << monstro.right <<
+    "\nfront/back: " << monstro.front << "/" << monstro.back << std::endl;
+
     // controller instantiation
     Controller con;
     ManualMov module;

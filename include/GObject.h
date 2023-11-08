@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include "VertexBuffer.h"
 #include "Texture.h"
 
@@ -37,6 +38,8 @@ public:
     VertexBuffer& getIndexBuffer();
     std::string& getShaderName();
     std::string& getTextureFilename();
+
+    float top, bottom, left, right, front, back;
 
 };
 
