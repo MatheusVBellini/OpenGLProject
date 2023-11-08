@@ -296,6 +296,7 @@ CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
+<<<<<<< HEAD
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/../include/GObject.h \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/../include/VertexBuffer.h \
  /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
@@ -350,3 +351,27 @@ CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o: \
  /usr/include/c++/12/bits/regex.h /usr/include/c++/12/bits/regex.tcc \
  /usr/include/c++/12/bits/regex_executor.h \
  /usr/include/c++/12/bits/regex_executor.tcc
+=======
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/GObject.h \
+ /usr/include/c++/11/array /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/VertexBuffer.h \
+ /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/include/GLFW/glfw3.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppStructs.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Texture.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
+ /usr/include/c++/11/stdlib.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/FileParser.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/tuple \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc
+>>>>>>> e5feea4e5d52034f6a9eb8230f08e7202466c4e1

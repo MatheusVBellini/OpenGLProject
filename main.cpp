@@ -5,7 +5,6 @@
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
 #include "include/control/modules/ManualMov.h"
-#include "include/AppConstants.h"
 
 
 int main() {
@@ -27,6 +26,11 @@ int main() {
     GObject head = GObjectFactory::genObjectFromFile("head", "head.jpg");
     GObject hand = GObjectFactory::genObjectFromFile("hand", "hand.png");
     GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
+
+    std::cout << "\nMONSTRO" << std::endl;
+    std::cout << "\ntop/bottom: " << monstro.top << "/" << monstro.bottom <<
+    "\nleft/right: " << monstro.left << "/" << monstro.right <<
+    "\nfront/back: " << monstro.front << "/" << monstro.back << std::endl;
 
     // controller instantiation
     Controller con;

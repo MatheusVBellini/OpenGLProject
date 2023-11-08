@@ -324,6 +324,7 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
+<<<<<<< HEAD
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Texture.h \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/vendor/stb_image.h \
  /usr/include/c++/12/stdlib.h \
@@ -364,3 +365,44 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/control/FuncModule.h \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/control/modules/ManualMov.h \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/AppConstants.h
+=======
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
+ /usr/include/c++/11/stdlib.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Renderer.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/unordered_map.h /usr/include/c++/11/filesystem \
+ /usr/include/c++/11/bits/fs_fwd.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
+ /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/fs_dir.h \
+ /usr/include/c++/11/bits/fs_ops.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Shader.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h
+>>>>>>> e5feea4e5d52034f6a9eb8230f08e7202466c4e1

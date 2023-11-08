@@ -314,6 +314,7 @@ CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
+<<<<<<< HEAD
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/../include/Texture.h \
  /home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/../include/vendor/stb_image.h \
  /usr/include/c++/12/stdlib.h /usr/include/c++/12/algorithm \
@@ -324,3 +325,8 @@ CMakeFiles/OpenGLProject.dir/src/Window.cpp.o: \
  /usr/include/c++/12/bits/uniform_int_dist.h \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h
+=======
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Texture.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
+ /usr/include/c++/11/stdlib.h
+>>>>>>> e5feea4e5d52034f6a9eb8230f08e7202466c4e1

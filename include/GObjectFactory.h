@@ -20,6 +20,7 @@ private:
     static std::string shader_name;
 
     static void errorMsg(const std::string& msg);
+    static std::array<float,6> getBoundaries(const std::vector<glm::vec3>& coords);
 
 public:
 

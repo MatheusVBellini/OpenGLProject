@@ -112,6 +112,15 @@ GObject GObjectFactory::getObject() {
     if (with_texture) object.linkTexture(texture_filename);
     object.linkShader(shader_name);
 
+    // boundaries
+    std::array<float,6> boundaries = getBoundaries(vertex_data);
+    object.top = boundaries.at(0);
+    object.bottom = boundaries.at(1);
+    object.left = boundaries.at(2);
+    object.right = boundaries.at(3);
+    object.front = boundaries.at(4);
+    object.back = boundaries.at(5);
+
     // restarting variables
     state = IDLE;
     name = "";
@@ -137,7 +146,30 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     setIndexBuffer(info.indexes);
     setShader("default");
 
+    // for boundary generation
+    vertex_data = info.vertex_coords;
+
     return getObject();
+}
+
+std::array<float, 6> GObjectFactory::getBoundaries(const std::vector<glm::vec3> &coords) {
+    float top = -1;
+    float bottom = 1;
+    float left = 1;
+    float right = -1;
+    float front = 1;
+    float back = -1;
+
+    for (auto& coord : coords) {
+        top = (coord.y > top) ? coord.y : top;
+        bottom = (coord.y < bottom) ? coord.y : bottom;
+        left = (coord.x < left) ? coord.x : left;
+        right = (coord.x > right) ? coord.x : right;
+        front = (coord.z < front) ? coord.z : front;
+        back = (coord.z > back) ? coord.z : back;
+    }
+
+    return {top,bottom,left,right,front,back};
 }
 
 
