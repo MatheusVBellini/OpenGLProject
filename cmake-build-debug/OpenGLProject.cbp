@@ -8,152 +8,152 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug"/>
+				<Option working_dir="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="OpenGLProject">
-				<Option output="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/OpenGLProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug"/>
+				<Option output="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/OpenGLProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLProject"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLProject"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="OpenGLProject/fast">
-				<Option output="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/OpenGLProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug"/>
+				<Option output="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/OpenGLProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLProject/fast"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLProject/fast"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug"/>
+				<Option working_dir="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug"/>
+				<Option working_dir="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -f &quot;/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -f &quot;/home/rafaelfrgc/Documents/GitHub/OpenGLProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/AppStructs.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Application.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Application.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Debug.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/FileParser.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/FileParser.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObject.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/GObject.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/GObjectFactory.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Renderer.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Renderer.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Shader.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Shader.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Texture.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/VertexBuffer.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/VertexBuffer.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Window.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/Window.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/control/Controller.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/control/FuncModule.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/control/modules/ManualMov.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/vendor/stb_image.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/include/vendor/stb_image.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/main.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/main.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Application.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/Application.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/FileParser.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObject.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/GObject.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObjectFactory.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/GObjectFactory.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Renderer.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/Renderer.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Shader.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/Shader.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Texture.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/Texture.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/VertexBuffer.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/VertexBuffer.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Window.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/Window.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/control/Controller.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/control/FuncModule.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/src/control/modules/ManualMov.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/CMakeLists.txt">
+		<Unit filename="/home/rafaelfrgc/Documents/GitHub/OpenGLProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

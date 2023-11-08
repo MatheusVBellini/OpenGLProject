@@ -20,9 +20,12 @@ int main() {
     ren.compileShaders();
     ren.loadTextures();
 
-    // creating object from file
-    GObject caixa = GObjectFactory::genObjectFromFile("caixa", "caixa2.jpg");
-    GObject monstro = GObjectFactory::genObjectFromFile("monstro", "monstro.jpg");
+// creating object from file
+    GObject skull = GObjectFactory::genObjectFromFile("skull", "skull.jpg");
+    GObject penguin = GObjectFactory::genObjectFromFile("penguin", "penguin.png");
+    GObject head = GObjectFactory::genObjectFromFile("head", "head.jpg");
+    GObject hand = GObjectFactory::genObjectFromFile("hand", "hand.png");
+    GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
 
     // controller instantiation
     Controller con;
@@ -32,7 +35,7 @@ int main() {
     /* PROJECT FUNCTIONS */
 
     // show Nth object when key N is pressed
-    std::array<GObject*,2> objects = {&caixa, &monstro};
+    std::array<GObject*,5> objects = {&skull, &penguin, &head, &hand, &elephant};
     for (int i = 0; i < objects.size(); i++) {
         con.setKeyFunc(std::to_string(i+1), [&window, &con, &objects, i](int,int,int action,int,GObject* previous){
             if (!action) return;

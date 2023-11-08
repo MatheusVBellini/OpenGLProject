@@ -25,19 +25,18 @@ std::vector<std::string> FileParser::split(const std::string &str, char delimite
 
 }
 
-float FileParser::strToFloat(const std::string &str) {
+float FileParser::strToFloat(const std::string &str, std::string data_type) {
     float num = 0;
-
+    
     try {
         num = std::stof(str);
     } catch(std::invalid_argument& e) {
-        std::cerr << "<FileParser> Failed to convert string to float.";
+        std::cerr << "<FileParser> Failed to convert string to float of datatype: %s.\n" << data_type << std::endl;
     } catch(std::out_of_range& e) {
-        std::cerr << "<FileParse> String to float conversion is out-of-bounds.";
+        std::cerr << "<FileParse> String to float conversion is out-of-bounds.\n";
     }
 
     return num;
-
 }
 
 std::vector<glm::vec3> FileParser::centralize(const std::vector<glm::vec3>& coords) {
@@ -203,22 +202,22 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
         } else if (split_line.at(0) == "v") {  // vertex_coords
 
-            coord.x = strToFloat(split_line.at(1));
-            coord.y = strToFloat(split_line.at(2));
-            coord.z = strToFloat(split_line.at(3));
+            coord.x = strToFloat(split_line.at(1), "v");
+            coord.y = strToFloat(split_line.at(2), "v");
+            coord.z = strToFloat(split_line.at(3), "v");
             vertex_coords.push_back(coord);
 
         } else if (split_line.at(0) == "vt") {  // texture vertex_coords
 
-            texture_coord.x = strToFloat(split_line.at(1));
-            texture_coord.y = strToFloat(split_line.at(2));
+            texture_coord.x = strToFloat(split_line.at(1), "vt");
+            texture_coord.y = strToFloat(split_line.at(2), "vt");
             texture_coords.push_back(texture_coord);
 
         } else if (split_line.at(0) == "vn") {  // normal vertex_coords
 
-            coord.x = strToFloat(split_line.at(1));
-            coord.y = strToFloat(split_line.at(2));
-            coord.z = strToFloat(split_line.at(3));
+            coord.x = strToFloat(split_line.at(1), "vn");
+            coord.y = strToFloat(split_line.at(2), "vn");
+            coord.z = strToFloat(split_line.at(3), "vn");
             normal_coords.push_back(coord);
 
         } else if (split_line.at(0) == "usemtl") {  // material to be used
@@ -232,31 +231,12 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
         } else if (split_line.at(0) == "f") {  // face elements
 
-            // first set of coords
-            split_indexes = split(split_line.at(1), '/');
-            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
-            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
-            face.at(0) = face_indexes;
-
-            // second set of coords
-            split_indexes = split(split_line.at(2), '/');
-            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
-            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
-            face.at(1) = face_indexes;
-
-            // third set of coords
-            split_indexes = split(split_line.at(3), '/');
-            face_indexes.at(0) = (unsigned) strToFloat(split_indexes.at(0)) - 1;
-            face_indexes.at(1) = (unsigned) strToFloat(split_indexes.at(1)) - 1;
-            face_indexes.at(2) = (split_indexes.size() == 3) ? (unsigned) strToFloat(split_indexes.at(2)) - 1 : 0;
-            face.at(2) = face_indexes;
-
-            faces.push_back(face);
-
+            split_line.erase(split_line.begin());
+            std::vector<std::array<std::array<unsigned int, 3>, 3>> triangles = splitPolygonFace(split_line);
+            for (const auto& triangle : triangles) {
+                faces.push_back(triangle);
+            }
         }
-
     }
 
     // for .obj with no normals
@@ -286,14 +266,41 @@ ObjFileInfo FileParser::objParse(const std::string &filepath) {
 
 }
 
+std::vector<std::array<std::array<unsigned int, 3>, 3>> FileParser::splitPolygonFace(const std::vector<std::string>& faceTokens) {
+    std::vector<std::array<std::array<unsigned int, 3>, 3>> triangles;
 
+    if (faceTokens.size() < 3) {
+        // Not enough vertices to create a face
+        return triangles;
+    }
 
+    // Extract the first vertex
+    std::vector<std::string> v0Tokens = split(faceTokens[0], '/');
+    unsigned int v0 = (unsigned)strToFloat(v0Tokens[0], "f") - 1;
+    unsigned int t0 = (v0Tokens.size() > 1) ? (unsigned)strToFloat(v0Tokens[1], "f") - 1 : 0;
+    unsigned int n0 = (v0Tokens.size() > 2) ? (unsigned)strToFloat(v0Tokens[2], "f") - 1 : 0;
 
+    for (size_t i = 1; i < faceTokens.size() - 1; i++) {
+        // Extract the second vertex
+        std::vector<std::string> v1Tokens = split(faceTokens[i], '/');
+        unsigned int v1 = (unsigned)strToFloat(v1Tokens[0], "f") - 1;
+        unsigned int t1 = (v1Tokens.size() > 1) ? (unsigned)strToFloat(v1Tokens[1], "f") - 1 : 0;
+        unsigned int n1 = (v1Tokens.size() > 2) ? (unsigned)strToFloat(v1Tokens[2], "f") - 1 : 0;
 
+        // Extract the third vertex
+        std::vector<std::string> v2Tokens = split(faceTokens[i + 1], '/');
+        unsigned int v2 = (unsigned)strToFloat(v2Tokens[0], "f") - 1;
+        unsigned int t2 = (v2Tokens.size() > 1) ? (unsigned)strToFloat(v2Tokens[1], "f") - 1 : 0;
+        unsigned int n2 = (v2Tokens.size() > 2) ? (unsigned)strToFloat(v2Tokens[2], "f") - 1 : 0;
 
+        // Create a triangle
+        std::array<std::array<unsigned int, 3>, 3> triangle = {{
+            {v0, t0, n0},
+            {v1, t1, n1},
+            {v2, t2, n2}
+        }};
 
-
-
-
-
-
+        triangles.push_back(triangle);
+    }
+    return triangles;
+}
