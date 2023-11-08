@@ -10,6 +10,9 @@ public:
     float v; // speed
     float t; // angular speed
 
+    // return false if operation should not be done, true otherwise
+    bool checkBoundaries(const glm::mat4& mat, const GObject* obj);
+
 private:
     void defFuncs();
 

@@ -114,12 +114,7 @@ GObject GObjectFactory::getObject() {
 
     // boundaries
     std::array<float,6> boundaries = getBoundaries(vertex_data);
-    object.top = boundaries.at(0);
-    object.bottom = boundaries.at(1);
-    object.left = boundaries.at(2);
-    object.right = boundaries.at(3);
-    object.front = boundaries.at(4);
-    object.back = boundaries.at(5);
+    object.setHitbox(genHitbox(boundaries));
 
     // restarting variables
     state = IDLE;
@@ -170,6 +165,32 @@ std::array<float, 6> GObjectFactory::getBoundaries(const std::vector<glm::vec3> 
     }
 
     return {top,bottom,left,right,front,back};
+}
+
+std::array<glm::vec3, 8> GObjectFactory::genHitbox(const std::array<float, 6> &boundaries) {
+    // l - left, r - right
+    // u - up, d - down
+    // b - back, f - front
+    glm::vec3 luf, ruf, lub, rub,
+              ldf, rdf, ldb, rdb;
+
+    float top = boundaries.at(0);
+    float bottom = boundaries.at(1);
+    float left = boundaries.at(2);
+    float right = boundaries.at(3);
+    float front = boundaries.at(4);
+    float back = boundaries.at(5);
+
+    luf = {left, top, front};
+    ruf = {right, top, front};
+    lub = {left, top, back};
+    rub = {right, top, back};
+    ldf = {left, bottom, front};
+    rdf = {right, bottom, front};
+    ldb = {left, bottom, back};
+    rdb = {right, bottom, back};
+
+    return {luf, ruf, lub, rub, ldf, rdf, ldb, rdb};
 }
 
 

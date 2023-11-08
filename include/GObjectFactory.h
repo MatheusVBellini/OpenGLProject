@@ -21,6 +21,7 @@ private:
 
     static void errorMsg(const std::string& msg);
     static std::array<float,6> getBoundaries(const std::vector<glm::vec3>& coords);
+    static std::array<glm::vec3,8> genHitbox(const std::array<float,6>& boundaries);
 
 public:
 

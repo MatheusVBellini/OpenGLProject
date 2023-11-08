@@ -18,6 +18,7 @@ private:
 
     // position attributes
     glm::mat4 movement;
+    std::array<glm::vec3,8> hitbox;
 
 public:
     explicit GObject();
@@ -30,6 +31,7 @@ public:
 
     void setMovement(glm::mat4& movement);
     void setName(const std::string& name);
+    void setHitbox(const std::array<glm::vec3,8>& hitbox);
 
     glm::mat4 getMovement();
     std::string getName();
@@ -39,7 +41,9 @@ public:
     std::string& getShaderName();
     std::string& getTextureFilename();
 
-    float top, bottom, left, right, front, back;
+    std::array<glm::vec3,8> getHitbox();
+
+
 
 };
 

@@ -2,7 +2,6 @@
 
 GObject::GObject() {
     movement = glm::mat4(1.0f);
-    top = bottom = left = right = front = back = 0;
 };
 
 GObject::~GObject() = default;
@@ -54,6 +53,16 @@ void GObject::setName(const std::string &name) {
 std::string GObject::getName() {
     return name;
 }
+
+void GObject::setHitbox(const std::array<glm::vec3, 8>& hitbox) {
+    this->hitbox = hitbox;
+}
+
+std::array<glm::vec3, 8> GObject::getHitbox() {
+    return hitbox;
+}
+
+
 
 
 
