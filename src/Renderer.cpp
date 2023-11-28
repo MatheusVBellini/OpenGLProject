@@ -92,7 +92,7 @@ void Renderer::draw(GObject& object) {
     // set uniforms
     shader.setUniform4f("color", {0,0,0,1});
     shader.setUniform1i("samplerTexture", slot);
-    shader.setUniformMatrix4fv("movement", object.getMovement());
+    shader.setUniformMatrix4fv("model", object.getMovement());
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

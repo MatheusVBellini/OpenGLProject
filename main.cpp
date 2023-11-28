@@ -29,8 +29,10 @@ int main() {
 
     // controller instantiation
     Controller con;
-    ManualMov module;
-    con.loadModule(module);
+
+    // Project's first part
+    //ManualMov module;
+    //con.loadModule(module);
 
     /* PROJECT FUNCTIONS */
 

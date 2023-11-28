@@ -9,11 +9,9 @@ uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
 
-uniform mat4 movement;
-
 void main() {
-    mat4 modelMatrix = movement;
-    gl_Position = modelMatrix * vec4(position, 1.0);
+    mat4 mvp = model;
+    gl_Position = mvp * vec4(position, 1.0);
     out_texture = vec2(texture_coord);
 }
 

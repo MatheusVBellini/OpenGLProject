@@ -39,6 +39,12 @@
 	"compileGroups" : 
 	[
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fdiagnostics-color=always"
+				}
+			],
 			"language" : "CXX",
 			"languageStandard" : 
 			{
@@ -72,6 +78,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
