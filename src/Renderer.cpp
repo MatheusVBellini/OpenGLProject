@@ -94,6 +94,7 @@ void Renderer::draw(GObject& object) {
     shader.setUniform1i("samplerTexture", slot);
     shader.setUniformMatrix4fv("model", object.getMovement());
     shader.setUniformMatrix4fv("view", Camera::getView());
+    shader.setUniformMatrix4fv("projection", Camera::getProjection());
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

@@ -16,13 +16,19 @@ private:
     static glm::vec3 cameraUp;
 
     // Perspective Projection Matrix components
-
+    static float fov;
+    static float aspectRatio;
+    static float nearPlane;
+    static float farPlane;
 
     // Orthographic Projection Matrix components
 
 
 public:
+    static void initCamera(int wWidth = 800, int wHeight = 800); // static constructor
+
     static glm::mat4 getView(); // returns the View Matrix based on camera info
+    static glm::mat4 getProjection(); // return the Projection Matrix
 
 };
 

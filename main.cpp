@@ -4,23 +4,28 @@
 #include "include/Debug.h"
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
-#include "include/control/modules/ManualMov.h"
+#include "include/Camera.h"
 
+// Global Variables
+std::string windowTitle = "Trabalho 2";
+int windowHeight = 1600;
+int windowWidth = 1600;
 
 int main() {
     // boot-up
     Application app = Application::getInstance();
-    Window window(1600, 1600, "Hello World");
+    Window window(windowWidth, windowHeight, windowTitle);
     Renderer ren;
     app.bindRenderer(ren);
     app.bindWindow(window);
     app.showWindow();
+    Camera::initCamera(windowWidth,windowHeight);
 
     // shader and texture loading
     ren.compileShaders();
     ren.loadTextures();
 
-// creating object from file
+    // creating object from file
     GObject skull = GObjectFactory::genObjectFromFile("skull", "skull.jpg");
     GObject penguin = GObjectFactory::genObjectFromFile("penguin", "penguin.png");
     GObject head = GObjectFactory::genObjectFromFile("head", "head.jpg");
