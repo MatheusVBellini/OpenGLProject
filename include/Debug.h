@@ -18,4 +18,8 @@ inline void warnDebug(const char* fname, int line) {
     std::cout << "DEBUG: " << fname << ":" << line << std::endl;
 }
 
+inline void printvec3(const glm::vec3 vec) {
+    std::cout << "( " << vec.x << " , " << vec.y << " , " << vec.z << " )" << std::endl;
+}
+
 #define DEBUG() warnDebug(__FILE__, __LINE__)
