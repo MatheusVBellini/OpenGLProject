@@ -15,6 +15,7 @@ private:
     static std::string name; // name of the object to be produced
     static std::vector<glm::vec3> vertex_data;
     static std::vector<unsigned int> index_data;
+    static std::vector<glm::vec3> normal_data;
     static std::vector<ComposedCoord> composed_data; // vertex + texture + normal data
     static std::string texture_filename;
     static std::string shader_name;

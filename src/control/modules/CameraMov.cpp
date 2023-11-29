@@ -6,10 +6,10 @@ CameraMov::CameraMov() {
     last_y = 0.0f;
     yaw = -90.0f;
     pitch = 0.0f;
-    sensitivity = 0.5f;
+    sensitivity = 0.1f;
 
     // keyboard
-    speed = 0.5f;
+    speed = 0.1f;
 
     defFuncs();
 

@@ -7,6 +7,7 @@ GObjectFactory::STATE GObjectFactory::state = IDLE;
 std::string GObjectFactory::name;
 std::vector<glm::vec3> GObjectFactory::vertex_data;
 std::vector<unsigned int> GObjectFactory::index_data;
+std::vector<glm::vec3> GObjectFactory::normal_data;
 std::vector<ComposedCoord> GObjectFactory::composed_data;
 std::string GObjectFactory::texture_filename;
 std::string GObjectFactory::shader_name;
@@ -65,6 +66,7 @@ void GObjectFactory::setNormals(std::vector<glm::vec3> &data) {
     }
 
     state = INDEX;
+    normal_data = data;
 
 }
 
