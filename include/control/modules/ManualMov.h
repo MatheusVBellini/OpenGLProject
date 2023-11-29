@@ -17,18 +17,18 @@ private:
     void defFuncs();
 
     // wasd movement
-    std::function<void(int,int,int,int,GObject*)> moveLeft;
-    std::function<void(int,int,int,int,GObject*)> moveRight;
-    std::function<void(int,int,int,int,GObject*)> moveUp;
-    std::function<void(int,int,int,int,GObject*)> moveDown;
-    std::function<void(int,int,int,int,GObject*)> moveAway;
-    std::function<void(int,int,int,int,GObject*)> moveCloser;
+    std::function<void(KEY_ARGS)> moveLeft;
+    std::function<void(KEY_ARGS)> moveRight;
+    std::function<void(KEY_ARGS)> moveUp;
+    std::function<void(KEY_ARGS)> moveDown;
+    std::function<void(KEY_ARGS)> moveAway;
+    std::function<void(KEY_ARGS)> moveCloser;
 
     // rotation with arrows
-    std::function<void(int,int,int,int,GObject*)> rotateXACW;
-    std::function<void(int,int,int,int,GObject*)> rotateXCW;
-    std::function<void(int,int,int,int,GObject*)> rotateYACW;
-    std::function<void(int,int,int,int,GObject*)> rotateYCW;
+    std::function<void(KEY_ARGS)> rotateXACW;
+    std::function<void(KEY_ARGS)> rotateXCW;
+    std::function<void(KEY_ARGS)> rotateYACW;
+    std::function<void(KEY_ARGS)> rotateYCW;
 
     // scale
     std::function<void(int,int,int,int,GObject*)> grow;

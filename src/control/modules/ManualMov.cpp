@@ -46,84 +46,84 @@ bool ManualMov::checkBoundaries(const glm::mat4& mat, const GObject* obj) {
 
 void ManualMov::defFuncs() {
 
-    moveLeft = [this](int key, int, int action, int, GObject* object) {
+    moveLeft = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(-v,0,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    moveRight = [this](int key, int, int action, int, GObject* object) {
+    moveRight = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(v,0,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    moveUp = [this](int key, int, int action, int, GObject* object) {
+    moveUp = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(0,v,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    moveDown = [this](int key, int, int action, int, GObject* object) {
+    moveDown = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(0,-v,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    moveAway = [this](int key, int, int action, int, GObject* object) {
+    moveAway = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(0,0,-v));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    moveCloser = [this](int key, int, int action, int, GObject* object) {
+    moveCloser = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::translate(object->getMovement(), glm::vec3(0,0,v));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    rotateXACW = [this](int key, int, int action, int, GObject* object) {
+    rotateXACW = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::rotate(object->getMovement(), t, glm::vec3(1,0,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    rotateXCW = [this](int key, int, int action, int, GObject* object) {
+    rotateXCW = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::rotate(object->getMovement(), -t, glm::vec3(1,0,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    rotateYACW = [this](int key, int, int action, int, GObject* object) {
+    rotateYACW = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::rotate(object->getMovement(), -t, glm::vec3(0,1,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    rotateYCW = [this](int key, int, int action, int, GObject* object) {
+    rotateYCW = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::rotate(object->getMovement(), t, glm::vec3(0,1,0));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    grow = [this](int key, int, int action, int, GObject* object) {
+    grow = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::scale(object->getMovement(), glm::vec3(1.1,1.1,1.1));
         if (checkBoundaries(mat,object))
             object->setMovement(mat);
     };
 
-    shrink = [this](int key, int, int action, int, GObject* object) {
+    shrink = [this](KEY_ARGS) {
         if (!action) return;
         glm::mat4 mat = glm::scale(object->getMovement(), glm::vec3(0.9,0.9,0.9));
         if (checkBoundaries(mat,object))

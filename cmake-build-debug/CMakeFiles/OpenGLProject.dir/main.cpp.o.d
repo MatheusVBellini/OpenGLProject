@@ -362,4 +362,5 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/FuncModule.h \
- /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Camera.h
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Camera.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h
