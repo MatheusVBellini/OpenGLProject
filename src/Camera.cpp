@@ -11,6 +11,8 @@ float Camera::fov;
 float Camera::aspectRatio;
 float Camera::nearPlane;
 float Camera::farPlane;
+glm::mat4 Camera::viewMat;
+glm::mat4 Camera::projectionMat;
 
 void Camera::initCamera(int wWidth, int wHeight) {
     std::cout << "<Camera> Camera initialized successfully!" << std::endl;
@@ -26,14 +28,18 @@ void Camera::initCamera(int wWidth, int wHeight) {
     nearPlane = 0.1f;
     farPlane = 1.0f;
 
+    // defining matrices
+    viewMat = glm::lookAt(cameraPosition,cameraTarget,cameraUp);
+    projectionMat = glm::perspective(fov,aspectRatio,nearPlane,farPlane);
+
 }
 
 glm::mat4 Camera::getView() {
-    return glm::lookAt(cameraPosition,cameraTarget,cameraUp);
+    return viewMat;
 }
 
 glm::mat4 Camera::getProjection() {
-    return glm::perspective(fov,aspectRatio,nearPlane,farPlane);
+    return projectionMat;
 }
 
 

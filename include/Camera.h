@@ -15,11 +15,15 @@ private:
     static glm::vec3 cameraTarget;
     static glm::vec3 cameraUp;
 
+    static glm::mat4 viewMat;
+
     // Perspective Projection Matrix components
     static float fov;
     static float aspectRatio;
     static float nearPlane;
     static float farPlane;
+
+    static glm::mat4 projectionMat;
 
     // Orthographic Projection Matrix components
 

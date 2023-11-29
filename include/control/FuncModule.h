@@ -4,6 +4,10 @@
 #include <functional>
 #include "../GObject.h"
 
+#define KEY_ARGS int key, int scancode, int action, int mods, GObject* object
+#define MOUSE_BUTTON_ARGS int button, int action, int mods, GObject* object
+#define MOUSE_POS_ARGS double xpos, double ypos, GObject* object
+
 class FuncModule {
 protected:
     std::vector<std::pair<std::string,std::function<void(int,int,int,int,GObject*)>>> key_func;
