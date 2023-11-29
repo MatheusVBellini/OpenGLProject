@@ -10,7 +10,7 @@ uniform mat4 view;
 uniform mat4 projection;
 
 void main() {
-    mat4 mvp = model;
+    mat4 mvp = view * model;
     gl_Position = mvp * vec4(position, 1.0);
     out_texture = vec2(texture_coord);
 }

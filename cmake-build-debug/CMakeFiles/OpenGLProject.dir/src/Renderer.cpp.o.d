@@ -344,6 +344,7 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Window.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Camera.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \

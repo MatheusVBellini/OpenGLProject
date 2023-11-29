@@ -1,7 +1,7 @@
 #include "../include/Renderer.h"
 #include "../include/Debug.h"
 #include "../include/AppConstants.h"
-#include <glm/gtc/matrix_transform.hpp>
+#include "../include/Camera.h"
 
 Renderer::Renderer() = default;
 
@@ -93,6 +93,7 @@ void Renderer::draw(GObject& object) {
     shader.setUniform4f("color", {0,0,0,1});
     shader.setUniform1i("samplerTexture", slot);
     shader.setUniformMatrix4fv("model", object.getMovement());
+    shader.setUniformMatrix4fv("view", Camera::getView());
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

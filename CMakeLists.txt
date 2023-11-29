@@ -42,5 +42,7 @@ add_executable(OpenGLProject main.cpp
         include/control/FuncModule.h
         src/control/modules/ManualMov.cpp
         include/control/modules/ManualMov.h
+        src/Camera.cpp
+        include/Camera.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})
