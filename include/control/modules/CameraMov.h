@@ -30,5 +30,9 @@ public:
     // camera movement with keyboard
     std::function<void(KEY_ARGS)> moveForward;
     std::function<void(KEY_ARGS)> moveBack;
+    std::function<void(KEY_ARGS)> moveRight;
+    std::function<void(KEY_ARGS)> moveLeft;
+    std::function<void(KEY_ARGS)> moveUp;
+    std::function<void(KEY_ARGS)> moveDown;
 
 };

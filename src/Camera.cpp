@@ -36,6 +36,10 @@ glm::vec3 Camera::getPosition() {
     return camera_position;
 }
 
+glm::vec3 Camera::getCameraUp() {
+    return camera_up;
+}
+
 glm::mat4 Camera::getView() {
     return glm::lookAt(camera_position, camera_target, camera_up);
 }
@@ -51,6 +55,8 @@ void Camera::updateTarget(const glm::vec3& target) {
 void Camera::updatePosition(const glm::vec3& position) {
     camera_position = position;
 }
+
+
 
 
 

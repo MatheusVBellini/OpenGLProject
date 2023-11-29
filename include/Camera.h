@@ -29,6 +29,7 @@ public:
 
     static glm::vec3 getPosition(); // returns current position
     static glm::vec3 getTarget(); // returns current target
+    static glm::vec3 getCameraUp(); // returns up reference
     static glm::mat4 getView(); // returns the View Matrix based on camera info
     static glm::mat4 getProjection(); // return the Projection Matrix
 

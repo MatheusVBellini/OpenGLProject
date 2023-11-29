@@ -16,6 +16,10 @@ CameraMov::CameraMov() {
     mouse_pos_func.push_back(mouseControl);
     key_func.emplace_back("w",moveForward);
     key_func.emplace_back("s",moveBack);
+    key_func.emplace_back("d",moveRight);
+    key_func.emplace_back("a",moveLeft);
+    key_func.emplace_back("space",moveUp);
+    key_func.emplace_back("left_shift",moveDown);
 
 }
 
@@ -72,6 +76,34 @@ void CameraMov::defFuncs() {
         if (!action) return;
         glm::vec3 target = cam.getTarget();
         glm::vec3 position = cam.getPosition() - ((float)speed) * target;
+        cam.updatePosition(position);
+    };
+
+    moveRight = [this](KEY_ARGS) {
+        if (!action) return;
+        glm::vec3 target = glm::normalize(glm::cross(cam.getTarget(),cam.getCameraUp()));
+        glm::vec3 position = cam.getPosition() + ((float)speed) * target;
+        cam.updatePosition(position);
+    };
+
+    moveLeft = [this](KEY_ARGS) {
+        if (!action) return;
+        glm::vec3 target = glm::normalize(glm::cross(cam.getCameraUp(),cam.getTarget()));
+        glm::vec3 position = cam.getPosition() + ((float)speed) * target;
+        cam.updatePosition(position);
+    };
+
+    moveUp = [this](KEY_ARGS) {
+        if (!action) return;
+        glm::vec3 target = cam.getCameraUp();
+        glm::vec3 position = cam.getPosition() + ((float)speed) * target;
+        cam.updatePosition(position);
+    };
+
+    moveDown = [this](KEY_ARGS) {
+        if (!action) return;
+        glm::vec3 target = -cam.getCameraUp();
+        glm::vec3 position = cam.getPosition() + ((float)speed) * target;
         cam.updatePosition(position);
     };
 

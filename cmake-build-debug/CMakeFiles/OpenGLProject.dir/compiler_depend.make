@@ -5905,8 +5905,7 @@ CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o: /home/matheusv
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/AppStructs.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Texture.h \
   /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/vendor/stb_image.h \
-  /usr/include/c++/11/stdlib.h \
-  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h
+  /usr/include/c++/11/stdlib.h
 
 CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o: /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp \
   /usr/include/stdc-predef.h \
