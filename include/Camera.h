@@ -11,19 +11,19 @@ class Camera {
 private:
 
     // View Matrix components
-    static glm::vec3 cameraPosition;
-    static glm::vec3 cameraTarget;
-    static glm::vec3 cameraUp;
+    static glm::vec3 camera_position;
+    static glm::vec3 camera_target;
+    static glm::vec3 camera_up;
 
-    static glm::mat4 viewMat;
+    static glm::mat4 view_mat;
 
     // Perspective Projection Matrix components
     static float fov;
-    static float aspectRatio;
-    static float nearPlane;
-    static float farPlane;
+    static float aspect_ratio;
+    static float near_plane;
+    static float far_plane;
 
-    static glm::mat4 projectionMat;
+    static glm::mat4 projection_mat;
 
     // Orthographic Projection Matrix components
 

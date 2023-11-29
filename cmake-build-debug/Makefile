@@ -465,6 +465,30 @@ src/control/FuncModule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.s
 .PHONY : src/control/FuncModule.cpp.s
 
+src/control/modules/CameraMov.o: src/control/modules/CameraMov.cpp.o
+.PHONY : src/control/modules/CameraMov.o
+
+# target to build an object file
+src/control/modules/CameraMov.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o
+.PHONY : src/control/modules/CameraMov.cpp.o
+
+src/control/modules/CameraMov.i: src/control/modules/CameraMov.cpp.i
+.PHONY : src/control/modules/CameraMov.i
+
+# target to preprocess a source file
+src/control/modules/CameraMov.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.i
+.PHONY : src/control/modules/CameraMov.cpp.i
+
+src/control/modules/CameraMov.s: src/control/modules/CameraMov.cpp.s
+.PHONY : src/control/modules/CameraMov.s
+
+# target to generate assembly for a file
+src/control/modules/CameraMov.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.s
+.PHONY : src/control/modules/CameraMov.cpp.s
+
 src/control/modules/ManualMov.o: src/control/modules/ManualMov.cpp.o
 .PHONY : src/control/modules/ManualMov.o
 
@@ -540,6 +564,9 @@ help:
 	@echo "... src/control/FuncModule.o"
 	@echo "... src/control/FuncModule.i"
 	@echo "... src/control/FuncModule.s"
+	@echo "... src/control/modules/CameraMov.o"
+	@echo "... src/control/modules/CameraMov.i"
+	@echo "... src/control/modules/CameraMov.s"
 	@echo "... src/control/modules/ManualMov.o"
 	@echo "... src/control/modules/ManualMov.i"
 	@echo "... src/control/modules/ManualMov.s"

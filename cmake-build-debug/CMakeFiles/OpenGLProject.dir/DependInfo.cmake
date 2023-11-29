@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Window.cpp" "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Window.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/Controller.cpp" "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/Controller.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/FuncModule.cpp" "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/CameraMov.cpp" "CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp" "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o.d"
   )
 

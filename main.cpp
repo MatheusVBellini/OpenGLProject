@@ -5,6 +5,7 @@
 #include "include/GObjectFactory.h"
 #include "include/control/Controller.h"
 #include "include/Camera.h"
+#include "include/control/modules/CameraMov.h"
 
 // Global Variables
 std::string windowTitle = "Trabalho 2";
@@ -38,6 +39,10 @@ int main() {
     // Project's first part
     //ManualMov module;
     //con.loadModule(module);
+
+    // Project's second part
+    CameraMov camModule;
+    con.loadModule(camModule);
 
     /* PROJECT FUNCTIONS */
 
