@@ -6,7 +6,7 @@ CameraMov::CameraMov() {
     last_y = 0.0f;
     yaw = -90.0f;
     pitch = 0.0f;
-    sensitivity = 0.1f;
+    sensitivity = 0.5f;
 
     // keyboard
     speed = 0.1f;
@@ -19,7 +19,7 @@ CameraMov::CameraMov() {
     key_func.emplace_back("d",moveRight);
     key_func.emplace_back("a",moveLeft);
     key_func.emplace_back("space",moveUp);
-    key_func.emplace_back("left_shift",moveDown);
+    key_func.emplace_back("c",moveDown);
 
 }
 
