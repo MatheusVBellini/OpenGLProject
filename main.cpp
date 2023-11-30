@@ -9,8 +9,8 @@
 
 // Global Variables
 std::string windowTitle = "Trabalho 2";
-int windowHeight = 1600;
-int windowWidth = 1600;
+int windowHeight = 800;
+int windowWidth = 800;
 
 int main() {
     // boot-up
@@ -32,6 +32,7 @@ int main() {
     GObject head = GObjectFactory::genObjectFromFile("head", "head.jpg");
     GObject steve = GObjectFactory::genObjectFromFile("Steve", "Steve.jpg");
     GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
+    GObject skybox = GObjectFactory::genObjectFromFile("skybox", "skybox.png");
 
     // controller instantiation
     Controller con;
@@ -42,9 +43,12 @@ int main() {
 
     // Project's second part
     CameraMov camModule;
-    con.loadModule(camModule);
+    //con.loadModule(camModule);
 
     /* PROJECT FUNCTIONS */
+
+    // skybox setting
+    window.attachObject(skybox);
 
     // show Nth object when key N is pressed
     std::array<GObject*,5> objects = {&skull, &penguin, &head, &steve, &elephant};
