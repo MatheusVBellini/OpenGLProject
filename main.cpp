@@ -43,12 +43,15 @@ int main() {
 
     // Project's second part
     CameraMov camModule;
-    //con.loadModule(camModule);
+    con.loadModule(camModule);
 
     /* PROJECT FUNCTIONS */
 
     // skybox setting
     window.attachObject(skybox);
+    float skybox_scale = 5;
+    glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale));
+    skybox.setMovement(skybox_model); // scaling skybox
 
     // show Nth object when key N is pressed
     std::array<GObject*,5> objects = {&skull, &penguin, &head, &steve, &elephant};

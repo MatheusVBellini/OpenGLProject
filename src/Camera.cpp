@@ -24,7 +24,7 @@ void Camera::initCamera(int wWidth, int wHeight) {
     fov = glm::radians(45.0f);
     aspect_ratio = ((float)wWidth) / ((float)wHeight);
     near_plane = 0.1f;
-    far_plane = 10.0f;
+    far_plane = 20.0f;
 
 }
 
