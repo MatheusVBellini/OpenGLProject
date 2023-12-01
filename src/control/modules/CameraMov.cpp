@@ -46,7 +46,7 @@ void CameraMov::defFuncs() {
 
         // change yaw and pitch
         yaw += x_offset;
-        pitch += y_offset;
+        pitch -= y_offset;
 
         // check bounds
         pitch = (pitch >= 89.5f) ? 89.5f : pitch;

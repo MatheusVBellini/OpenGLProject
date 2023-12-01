@@ -41,7 +41,7 @@ glm::vec3 Camera::getCameraUp() {
 }
 
 glm::mat4 Camera::getView() {
-    return glm::lookAt(camera_position, camera_target, camera_up);
+    return glm::lookAt(camera_position, camera_position + camera_target, camera_up);
 }
 
 glm::mat4 Camera::getProjection() {

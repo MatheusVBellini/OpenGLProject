@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.23"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "OpenGLProject::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-OpenGLProject-Debug-cc1498cd2a4df4fe298e.json",
+					"jsonFile" : "target-OpenGLProject-2111d9a20595fe6a1783.json",
 					"name" : "OpenGLProject",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug",
-		"source" : "/Users/matheusbellini/Desktop/USP/CompGraf/OpenGLProject"
+		"build" : "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/cmake-build-debug",
+		"source" : "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 6
 	}
 }
