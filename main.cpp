@@ -44,16 +44,18 @@ int main() {
 
     // light source instantiation
     Lamp lamp;
-    lamp.setCoeff({1.0,1.0});
+    lamp.setCoeff({1.0,1.0,1.0});
+    lamp.setSpecExp(1);
     ren.attachLamp(lamp);
 
     /* PROJECT FUNCTIONS */
 
     // skybox setting
     window.attachObject(skybox);
-    float skybox_scale = 5;
-    glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale));
-    skybox.setMovement(skybox_model); // scaling skybox
+    float skybox_scale = 100;
+    glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale)); // scale the skybox
+    skybox_model = glm::translate(skybox_model, {0,0,0.5}); // center skybox on camera's spawn position
+    skybox.setMovement(skybox_model);
 
     // show Nth object when key N is pressed
     std::array<GObject*,5> objects = {&skull, &penguin, &head, &steve, &elephant};

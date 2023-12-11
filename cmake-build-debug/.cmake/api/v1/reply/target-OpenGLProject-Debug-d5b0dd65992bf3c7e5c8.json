@@ -369,7 +369,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/control/modules/LampMov.h",
+			"path" : "include/control/modules/LampControl.h",
 			"sourceGroupIndex" : 1
 		}
 	],

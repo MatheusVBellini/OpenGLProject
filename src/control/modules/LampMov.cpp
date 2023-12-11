@@ -1,8 +1,8 @@
-#include "../../../include/control/modules/LampMov.h"
+#include "../../../include/control/modules/LampControl.h"
 
-LampMov::LampMov() {
+LampControl::LampControl() {
     speed = 1.0f;
 
 }
 
-LampMov::~LampMov() = default;
+LampControl::~LampControl() = default;

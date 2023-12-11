@@ -23,8 +23,8 @@ void Camera::initCamera(int wWidth, int wHeight) {
     // Perspective Projection Matrix components
     fov = glm::radians(45.0f);
     aspect_ratio = ((float)wWidth) / ((float)wHeight);
-    near_plane = 0.1f;
-    far_plane = 20.0f;
+    near_plane = 0.5f;
+    far_plane = 1000.0f;
 
 }
 

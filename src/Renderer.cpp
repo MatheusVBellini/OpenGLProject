@@ -104,8 +104,8 @@ void Renderer::draw(GObject& object) {
     float ks = light_source->getCoeff().at(2);
     float ns = light_source->getSpecExp();
     shader.setUniform3f("lightPos", light_source->getPos()); // light position
-    shader.setUniform1f("ka", ka); // ambient coefficient
-    shader.setUniform1f("kd", kd); // diffusion coefficient
+    shader.setUniform1f("Ia", ka); // ambient coefficient
+    shader.setUniform1f("Il", kd); // diffusion coefficient
     shader.setUniform3f("viewPos", Camera::getPosition()); // view position
     shader.setUniform1f("ks", ks); // specular coefficient
     shader.setUniform1f("ns", ns); // specular exponent

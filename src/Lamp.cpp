@@ -2,8 +2,8 @@
 
 Lamp::Lamp() {
     pos = {0.0,1.0,0.0};
-    ka = 1;
-    kd = 0;
+    Ia = 1;
+    Il = 0;
     ks = 1;
     ns = 10;
 }
@@ -15,7 +15,7 @@ glm::vec3 Lamp::getPos() {
 }
 
 std::array<float, 3> Lamp::getCoeff() {
-    return {ka, kd, ks};
+    return {Ia, Il, ks};
 }
 
 float Lamp::getSpecExp() {
@@ -27,8 +27,8 @@ void Lamp::setPos(glm::vec3 pos) {
 }
 
 void Lamp::setCoeff(const std::array<float, 3> &coeff) {
-    ka = coeff.at(0);
-    kd = coeff.at(1);
+    Ia = coeff.at(0);
+    Il = coeff.at(1);
     ks = coeff.at(2);
 }
 

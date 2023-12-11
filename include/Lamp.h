@@ -7,12 +7,10 @@
 class Lamp {
 private:
     glm::vec3 pos;  // light source position
-    float ka;  // ambient light coefficient
-    float kd;  // diffuse reflection coefficient
+    float Ia;  // ambient light intensity
+    float Il;  // light source intensity
     float ks;  // specular reflection coefficient
     float ns;  // specular reflection exponent
-
-    std::string name;  // string identifier for the light source
 
 public:
     Lamp();

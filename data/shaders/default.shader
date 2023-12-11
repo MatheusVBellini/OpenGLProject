@@ -34,20 +34,20 @@ uniform sampler2D samplerTexture;
 vec3 lightColor = vec3(1.0,1.0,1.0);
 uniform vec3 lightPos;
 uniform vec3 viewPos;
-uniform float ka;
-uniform float kd;
+uniform float Ia;
+uniform float Il;
 uniform float ks;
 uniform float ns;
 
 out vec4 fragColor;
 
 void main() {
-    vec3 ambient = ka * lightColor;
+    vec3 ambient = Ia * lightColor;
 
     vec3 norm = normalize(out_normal);
     vec3 lightDir = normalize(lightPos - out_fragPos);
     float diff = max(dot(norm,lightDir), 0.0);
-    vec3 diffuse = kd * diff * lightColor;
+    vec3 diffuse = Il * diff * lightColor;
 
     vec3 viewDir = normalize(viewPos - out_fragPos);
     vec3 reflectDir = normalize(reflect(-lightDir,norm));

@@ -114,7 +114,7 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/CameraMov.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/LampMov.h">
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/LampControl.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h">
