@@ -24,4 +24,5 @@ public:
     void attachObject(GObject& object);
     void detachObject(GObject& object);
 
+
 };

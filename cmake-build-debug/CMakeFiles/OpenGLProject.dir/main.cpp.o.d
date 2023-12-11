@@ -352,6 +352,7 @@ CMakeFiles/OpenGLProject.dir/main.cpp.o: \
  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/fs_dir.h \
  /usr/include/c++/11/bits/fs_ops.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Shader.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Lamp.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/Debug.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/GObjectFactory.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/Controller.h \

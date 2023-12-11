@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/Lamp.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/Lamp.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o"

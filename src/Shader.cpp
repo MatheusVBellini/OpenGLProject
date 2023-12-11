@@ -80,8 +80,8 @@ void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &a
     glUniform4f(getUniform(name), array.at(0), array.at(1), array.at(2), array.at(3));
 }
 
-void Shader::setUniform3f(const std::string &name, const std::array<float, 3> &array) {
-    glUniform3f(getUniform(name), array.at(0), array.at(1), array.at(2));
+void Shader::setUniform3f(const std::string &name, const glm::vec3& vec) {
+    glUniform3f(getUniform(name), vec.x, vec.y, vec.z);
 }
 
 void Shader::setUniform1i(const std::string &name, int value) {

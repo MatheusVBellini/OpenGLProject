@@ -3,7 +3,10 @@
 #include "../include/AppConstants.h"
 #include "../include/Camera.h"
 
-Renderer::Renderer() = default;
+Renderer::Renderer() {
+    default_light = Lamp();
+    light_source = &default_light;
+};
 
 Renderer::~Renderer() = default;
 
@@ -89,15 +92,18 @@ void Renderer::draw(GObject& object) {
     ib.bind();
     texture.bind(slot);
 
-    // set uniforms
+    // set MVP uniforms
     shader.setUniform1i("samplerTexture", slot); // texture slot
     shader.setUniformMatrix4fv("model", object.getMovement()); // model matrix
     shader.setUniformMatrix4fv("view", Camera::getView()); // view matrix
     shader.setUniformMatrix4fv("projection", Camera::getProjection()); // projection matrix
 
-    shader.setUniform3f("lightPos", {0,0.5,0}); // light position
-    shader.setUniform1f("ka", 0.5); // ambient
-    shader.setUniform1f("kd", 0.5); // diffusion
+    // set light uniforms
+    float ka = light_source->getCoeff().at(0);
+    float kd = light_source->getCoeff().at(1);
+    shader.setUniform3f("lightPos", light_source->getPos()); // light position
+    shader.setUniform1f("ka", ka); // ambient
+    shader.setUniform1f("kd", kd); // diffusion
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());
@@ -111,9 +117,19 @@ void Renderer::draw(GObject& object) {
 
 }
 
+void Renderer::attachLamp(Lamp &lamp) {
+    light_source = &lamp;
+}
+
+void Renderer::detachLamp(Lamp &lamp) {
+    light_source = &default_light;
+}
+
 Texture& Renderer::fetchTexture(const std::string& texture_name) {
     return textures.at(texture_name).second;
 }
+
+
 
 
 

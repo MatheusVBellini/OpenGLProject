@@ -342,6 +342,7 @@ CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o: \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/vendor/stb_image.h \
  /usr/include/c++/11/stdlib.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Window.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Lamp.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Debug.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/AppConstants.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Camera.h \

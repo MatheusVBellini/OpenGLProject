@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/FileParser.cpp" "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/FileParser.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObject.cpp" "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/GObject.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/GObjectFactory.cpp" "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/GObjectFactory.cpp.o.d"
+  "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Lamp.cpp" "CMakeFiles/OpenGLProject.dir/src/Lamp.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Lamp.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Renderer.cpp" "CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Renderer.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Shader.cpp" "CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Shader.cpp.o.d"
   "/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/Texture.cpp" "CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o" "gcc" "CMakeFiles/OpenGLProject.dir/src/Texture.cpp.o.d"

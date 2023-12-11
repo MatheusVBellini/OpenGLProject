@@ -26,7 +26,7 @@ public:
 
     void setUniformMatrix4fv(const std::string& name, const glm::mat4& matrix);
     void setUniform4f(const std::string& name, const std::array<float,4>& array);
-    void setUniform3f(const std::string& name, const std::array<float,3>& array);
+    void setUniform3f(const std::string& name, const glm::vec3& vec);
     void setUniform1i(const std::string& name, int value);
     void setUniform1f(const std::string& name, float value);
 

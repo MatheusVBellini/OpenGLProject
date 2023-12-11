@@ -6,6 +6,7 @@
 #include "include/control/Controller.h"
 #include "include/Camera.h"
 #include "include/control/modules/CameraMov.h"
+#include "include/Lamp.h"
 
 // Global Variables
 std::string windowTitle = "Trabalho 2";
@@ -37,13 +38,15 @@ int main() {
     // controller instantiation
     Controller con;
 
-    // Project's first part
-    //ManualMov module;
-    //con.loadModule(module);
-
-    // Project's second part
+    // controller modules instantiation
     CameraMov camModule;
     con.loadModule(camModule);
+
+    // light source instantiation
+    Lamp lamp;
+    lamp.setCoeff({1.0,0.0});
+    ren.attachLamp(lamp);
+
 
     /* PROJECT FUNCTIONS */
 

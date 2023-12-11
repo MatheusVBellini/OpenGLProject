@@ -40,3 +40,5 @@ void Window::detachObject(GObject &object) {
     objects.erase(object.getName());
 }
 
+
+

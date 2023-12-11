@@ -343,6 +343,7 @@ CMakeFiles/OpenGLProject.dir/src/Application.cpp.o: \
  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/fs_dir.h \
  /usr/include/c++/11/bits/fs_ops.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Shader.h \
+ /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/Lamp.h \
  /home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/../include/control/Controller.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/bits/stl_algo.h \
