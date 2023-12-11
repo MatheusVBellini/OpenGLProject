@@ -90,11 +90,14 @@ void Renderer::draw(GObject& object) {
     texture.bind(slot);
 
     // set uniforms
-    shader.setUniform4f("color", {0,0,0,1});
-    shader.setUniform1i("samplerTexture", slot);
-    shader.setUniformMatrix4fv("model", object.getMovement());
-    shader.setUniformMatrix4fv("view", Camera::getView());
-    shader.setUniformMatrix4fv("projection", Camera::getProjection());
+    shader.setUniform1i("samplerTexture", slot); // texture slot
+    shader.setUniformMatrix4fv("model", object.getMovement()); // model matrix
+    shader.setUniformMatrix4fv("view", Camera::getView()); // view matrix
+    shader.setUniformMatrix4fv("projection", Camera::getProjection()); // projection matrix
+
+    shader.setUniform3f("lightPos", {0,0.5,0}); // light position
+    shader.setUniform1f("ka", 0.5); // ambient
+    shader.setUniform1f("kd", 0.5); // diffusion
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

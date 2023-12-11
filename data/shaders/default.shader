@@ -39,6 +39,14 @@ vec3 lightColor = vec3(1.0,1.0,1.0);
 out vec4 fragColor;
 
 void main() {
+    vec3 ambient = ka * lightColor;
+
+    vec3 norm = normalize(out_normal);
+    vec3 lightDir = normalize(lightPos - out_fragPos);
+    float diff = max(dot(norm,lightDir), 0.0);
+    vec3 diffuse = kd * diff * lightColor;
+
     vec4 tex = texture(samplerTexture, out_texture);
-    fragColor = tex;
+    vec4 result = vec4((ambient + diffuse), 1.0) * tex;
+    fragColor = result;
 }

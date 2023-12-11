@@ -9,8 +9,8 @@
 
 // Global Variables
 std::string windowTitle = "Trabalho 2";
-int windowHeight = 800;
-int windowWidth = 800;
+int windowHeight = 1600;
+int windowWidth = 1600;
 
 int main() {
     // boot-up
