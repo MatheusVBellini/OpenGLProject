@@ -39,12 +39,16 @@ void VertexBuffer::attachVertexData(const std::vector<ComposedCoord> &data) {
     glBufferData(GL_ARRAY_BUFFER, size * sizeof(ComposedCoord), data.data(), GL_DYNAMIC_DRAW);
 
     // bind vertex coordinates
-    glVertexAttribPointer(VERTEX_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)0);
+    glVertexAttribPointer(VERTEX_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)(offsetof(ComposedCoord, vertex_coord)));
     glEnableVertexAttribArray(VERTEX_SLOT);
 
     // bind texture coordinates
-    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)(sizeof(glm::vec3)));
+    glVertexAttribPointer(TEXTURE_SLOT, 2, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)(offsetof(ComposedCoord, texture_coord)));
     glEnableVertexAttribArray(TEXTURE_SLOT);
+
+    // bind normal coordinates
+    glVertexAttribPointer(NORMAL_SLOT, 3, GL_FLOAT, GL_FALSE, sizeof(ComposedCoord), (GLvoid*)(offsetof(ComposedCoord, normal_coord)));
+    glEnableVertexAttribArray(NORMAL_SLOT);
 
 }
 
