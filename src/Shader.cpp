@@ -76,10 +76,6 @@ void Shader::setUniformMatrix4fv(const std::string &name, const glm::mat4& matri
     glUniformMatrix4fv(getUniform(name),1,GL_FALSE, glm::value_ptr(matrix));
 }
 
-void Shader::setUniform4f(const std::string &name, const std::array<float, 4> &array) {
-    glUniform4f(getUniform(name), array.at(0), array.at(1), array.at(2), array.at(3));
-}
-
 void Shader::setUniform3f(const std::string &name, const glm::vec3& vec) {
     glUniform3f(getUniform(name), vec.x, vec.y, vec.z);
 }

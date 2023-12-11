@@ -30,11 +30,14 @@ in vec3 out_fragPos;
 in vec3 out_normal;
 
 uniform sampler2D samplerTexture;
-uniform vec3 lightPos;
-uniform float ka;
-uniform float kd;
 
 vec3 lightColor = vec3(1.0,1.0,1.0);
+uniform vec3 lightPos;
+uniform vec3 viewPos;
+uniform float ka;
+uniform float kd;
+uniform float ks;
+uniform float ns;
 
 out vec4 fragColor;
 
@@ -46,7 +49,12 @@ void main() {
     float diff = max(dot(norm,lightDir), 0.0);
     vec3 diffuse = kd * diff * lightColor;
 
+    vec3 viewDir = normalize(viewPos - out_fragPos);
+    vec3 reflectDir = normalize(reflect(-lightDir,norm));
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), ns);
+    vec3 specular = ks * spec * lightColor;
+
     vec4 tex = texture(samplerTexture, out_texture);
-    vec4 result = vec4((ambient + diffuse), 1.0) * tex;
+    vec4 result = vec4((ambient + diffuse + specular), 1.0) * tex;
     fragColor = result;
 }

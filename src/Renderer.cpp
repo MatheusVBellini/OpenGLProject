@@ -102,8 +102,11 @@ void Renderer::draw(GObject& object) {
     float ka = light_source->getCoeff().at(0);
     float kd = light_source->getCoeff().at(1);
     shader.setUniform3f("lightPos", light_source->getPos()); // light position
-    shader.setUniform1f("ka", ka); // ambient
-    shader.setUniform1f("kd", kd); // diffusion
+    shader.setUniform1f("ka", ka); // ambient coefficient
+    shader.setUniform1f("kd", kd); // diffusion coefficient
+    shader.setUniform3f("viewPos", Camera::getPosition()); // view position
+    shader.setUniform1f("ks", 1); // specular coefficient
+    shader.setUniform1f("ns", 100); // specular exponent
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

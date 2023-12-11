@@ -44,9 +44,8 @@ int main() {
 
     // light source instantiation
     Lamp lamp;
-    lamp.setCoeff({1.0,0.0});
+    lamp.setCoeff({1.0,1.0});
     ren.attachLamp(lamp);
-
 
     /* PROJECT FUNCTIONS */
 
