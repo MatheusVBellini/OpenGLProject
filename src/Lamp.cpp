@@ -1,40 +1,41 @@
 #include "../include/Lamp.h"
 
-int Lamp::light_sources = 0;
-
 Lamp::Lamp() {
     pos = {0.0,1.0,0.0};
     ka = 1;
     kd = 0;
-
-    name = std::to_string(light_sources);
-    light_sources++;
+    ks = 1;
+    ns = 10;
 }
 
-Lamp::~Lamp() {
-
-}
+Lamp::~Lamp() = default;
 
 glm::vec3 Lamp::getPos() {
     return pos;
 }
 
-std::array<float, 2> Lamp::getCoeff() {
-    return {ka, kd};
+std::array<float, 3> Lamp::getCoeff() {
+    return {ka, kd, ks};
 }
 
-std::string Lamp::getName() {
-    return name;
+float Lamp::getSpecExp() {
+    return ns;
 }
 
 void Lamp::setPos(glm::vec3 pos) {
     this->pos = pos;
 }
 
-void Lamp::setCoeff(const std::array<float, 2> &coeff) {
+void Lamp::setCoeff(const std::array<float, 3> &coeff) {
     ka = coeff.at(0);
     kd = coeff.at(1);
+    ks = coeff.at(2);
 }
+
+void Lamp::setSpecExp(float ns) {
+    this->ns = ns;
+}
+
 
 
 

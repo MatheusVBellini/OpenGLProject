@@ -6,11 +6,11 @@
 // illumination object
 class Lamp {
 private:
-    static int light_sources; // counter to be used as identifier
-
-    glm::vec3 pos; // light source position
+    glm::vec3 pos;  // light source position
     float ka;  // ambient light coefficient
     float kd;  // diffuse reflection coefficient
+    float ks;  // specular reflection coefficient
+    float ns;  // specular reflection exponent
 
     std::string name;  // string identifier for the light source
 
@@ -20,12 +20,13 @@ public:
 
     // getters
     glm::vec3 getPos();
-    std::array<float,2> getCoeff();
-    std::string getName();
+    std::array<float,3> getCoeff();
+    float getSpecExp();
 
     // setters
     void setPos(glm::vec3 pos);
-    void setCoeff(const std::array<float,2>& coeff);
+    void setCoeff(const std::array<float,3>& coeff);
+    void setSpecExp(float ns);
 
 };
 
