@@ -27,7 +27,8 @@ void Application::bindWindow(Window& window_to_bind) {
         std::cerr << "ERROR:: GLEW could not be initialized" << std::endl;
         exit(1);
     }
-    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST); // test for depth and overlay
+    glfwSetInputMode(window->getWindowRef(), GLFW_CURSOR, GLFW_CURSOR_DISABLED); // traps mouse inside window
 
     std::cout << "<Application> GLEW initialized successfully!" << std::endl;
 }

@@ -48,23 +48,23 @@ int main() {
     lamp.setSpecExp(1);
     ren.attachLamp(lamp);
 
-    /* PROJECT FUNCTIONS */
-
-    // skybox setting
+    // skybox configuration
     window.attachObject(skybox);
     float skybox_scale = 100;
     glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale)); // scale the skybox
     skybox_model = glm::translate(skybox_model, {0,0,0.5}); // center skybox on camera's spawn position
     skybox.setMovement(skybox_model);
 
+    /* PROJECT FUNCTIONS */
+
     // show Nth object when key N is pressed
     std::array<GObject*,5> objects = {&skull, &penguin, &head, &steve, &elephant};
     for (int i = 0; i < objects.size(); i++) {
-        con.setKeyFunc(std::to_string(i+1), [&window, &con, &objects, i](int,int,int action,int,GObject* previous){
+        con.setKeyFunc(std::to_string(i+1), [&window, &con, &objects, i](KEY_ARGS){
             if (!action) return;
 
-            // remove previous object
-            window.detachObject(*previous);
+            // remove object object
+            window.detachObject(*object);
             con.detachObject();
 
             // attach object
@@ -74,14 +74,14 @@ int main() {
     }
 
     // toggle textures in current object
-    con.setKeyFunc("p",[&ren](int,int,int action,int,GObject* object){
+    con.setKeyFunc("p",[&ren](KEY_ARGS){
         if (!action) return;
         ren.fetchTexture(object->getTextureFilename()).toggle();
     });
 
     // toggle texture magnification algorithm
     bool linear = true;
-    con.setKeyFunc("v",[&ren, &linear](int,int,int action,int,GObject* object){
+    con.setKeyFunc("v",[&ren, &linear](KEY_ARGS){
         if (!action) return;
         Texture& tex = ren.fetchTexture(object->getTextureFilename());
 
@@ -92,6 +92,18 @@ int main() {
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR) :
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
         tex.unbind();
+    });
+
+    // toggle mouse in the window
+    auto windowref = window.getWindowRef();
+    bool cursor = true;
+    con.setMouseButtonFunc("right", [&windowref, &cursor](MOUSE_BUTTON_ARGS) {
+        if (!action) return;
+
+        if (cursor) glfwSetInputMode(windowref, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+        else glfwSetInputMode(windowref, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+        cursor = !cursor;
     });
 
     /**********    ***********/
