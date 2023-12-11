@@ -44,9 +44,11 @@ int main() {
 
     // light source instantiation
     Lamp lamp;
-    lamp.setCoeff({1.0,1.0,1.0});
-    lamp.setSpecExp(1);
+    lamp.setCoeff({1.0,1.0});
     ren.attachLamp(lamp);
+
+    // object reflection configuration
+    elephant.setIllumination({0,1,10}); // specular-only
 
     // skybox configuration
     window.attachObject(skybox);

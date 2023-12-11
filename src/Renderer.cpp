@@ -99,16 +99,15 @@ void Renderer::draw(GObject& object) {
     shader.setUniformMatrix4fv("projection", Camera::getProjection()); // projection matrix
 
     // set light uniforms
-    float ka = light_source->getCoeff().at(0);
-    float kd = light_source->getCoeff().at(1);
-    float ks = light_source->getCoeff().at(2);
-    float ns = light_source->getSpecExp();
+    float Ia = light_source->getCoeff().at(0);
+    float Il = light_source->getCoeff().at(1);
+    glm::vec3 obj_illum = object.getIllumination();
     shader.setUniform3f("lightPos", light_source->getPos()); // light position
-    shader.setUniform1f("Ia", ka); // ambient coefficient
-    shader.setUniform1f("Il", kd); // diffusion coefficient
+    shader.setUniform1f("Ia", Ia); // ambient coefficient
+    shader.setUniform1f("Il", Il * obj_illum.x); // diffusion coefficient
     shader.setUniform3f("viewPos", Camera::getPosition()); // view position
-    shader.setUniform1f("ks", ks); // specular coefficient
-    shader.setUniform1f("ns", ns); // specular exponent
+    shader.setUniform1f("ks",  Il* obj_illum.y); // specular coefficient
+    shader.setUniform1f("ns", obj_illum.z); // specular exponent
 
     // draw on screen
     glPolygonMode(GL_FRONT_AND_BACK, texture.getDrawType());

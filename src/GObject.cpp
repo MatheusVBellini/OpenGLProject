@@ -2,6 +2,7 @@
 
 GObject::GObject() {
     movement = glm::mat4(1.0f);
+    kd = ks = ns = 1;
 };
 
 GObject::~GObject() = default;
@@ -60,6 +61,16 @@ void GObject::setHitbox(const std::array<glm::vec3, 8>& hitbox) {
 
 std::array<glm::vec3, 8> GObject::getHitbox() const {
     return hitbox;
+}
+
+void GObject::setIllumination(const glm::vec3 &coeff) {
+    kd = coeff.x;
+    ks = coeff.y;
+    ns = coeff.z;
+}
+
+glm::vec3 GObject::getIllumination() const {
+    return {kd, ks, ns};
 }
 
 

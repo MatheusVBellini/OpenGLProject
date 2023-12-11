@@ -20,6 +20,11 @@ private:
     glm::mat4 movement;
     std::array<glm::vec3,8> hitbox;
 
+    // illumination response
+    float kd;
+    float ks;
+    float ns;
+
 public:
     explicit GObject();
     ~GObject();
@@ -32,6 +37,7 @@ public:
     void setMovement(glm::mat4& movement);
     void setName(const std::string& name);
     void setHitbox(const std::array<glm::vec3,8>& hitbox);
+    void setIllumination(const glm::vec3& coeff);
 
     glm::mat4 getMovement();
     std::string getName();
@@ -42,7 +48,7 @@ public:
     std::string& getTextureFilename();
 
     std::array<glm::vec3,8> getHitbox() const;
-
+    glm::vec3 getIllumination() const;
 
 
 };
