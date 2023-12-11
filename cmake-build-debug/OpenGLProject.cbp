@@ -114,6 +114,9 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/CameraMov.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/LampMov.h">
+			<Option target="OpenGLProject"/>
+		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/include/control/modules/ManualMov.h">
 			<Option target="OpenGLProject"/>
 		</Unit>
@@ -166,6 +169,9 @@
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/CameraMov.cpp">
+			<Option target="OpenGLProject"/>
+		</Unit>
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/LampMov.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp">

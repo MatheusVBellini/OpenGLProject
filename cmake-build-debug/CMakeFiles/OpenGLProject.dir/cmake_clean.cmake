@@ -31,6 +31,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLProject.dir/src/control/FuncModule.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.o.d"
+  "CMakeFiles/OpenGLProject.dir/src/control/modules/LampMov.cpp.o"
+  "CMakeFiles/OpenGLProject.dir/src/control/modules/LampMov.cpp.o.d"
   "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o"
   "CMakeFiles/OpenGLProject.dir/src/control/modules/ManualMov.cpp.o.d"
   "OpenGLProject"
