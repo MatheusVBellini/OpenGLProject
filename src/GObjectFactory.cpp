@@ -54,7 +54,7 @@ void GObjectFactory::setTexture(const std::string& filename) {
         return;
     }
 
-    state = NORMAL;
+    state = INDEX;
     texture_filename = filename;
 
 }
@@ -139,7 +139,6 @@ GObject GObjectFactory::genObjectFromFile(const std::string& obj_name, const std
     initProduction(obj_name, true);
     setComposedBuffer(info.composed_coords);
     setTexture(texture_name);
-    setNormals(info.normal_coords);
     setIndexBuffer(info.indexes);
     setShader("default");
 
