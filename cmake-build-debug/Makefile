@@ -513,29 +513,29 @@ src/control/modules/CameraMov.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/CameraMov.cpp.s
 .PHONY : src/control/modules/CameraMov.cpp.s
 
-src/control/modules/LampMov.o: src/control/modules/LampMov.cpp.o
-.PHONY : src/control/modules/LampMov.o
+src/control/modules/LampControl.o: src/control/modules/LampControl.cpp.o
+.PHONY : src/control/modules/LampControl.o
 
 # target to build an object file
-src/control/modules/LampMov.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampMov.cpp.o
-.PHONY : src/control/modules/LampMov.cpp.o
+src/control/modules/LampControl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampControl.cpp.o
+.PHONY : src/control/modules/LampControl.cpp.o
 
-src/control/modules/LampMov.i: src/control/modules/LampMov.cpp.i
-.PHONY : src/control/modules/LampMov.i
+src/control/modules/LampControl.i: src/control/modules/LampControl.cpp.i
+.PHONY : src/control/modules/LampControl.i
 
 # target to preprocess a source file
-src/control/modules/LampMov.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampMov.cpp.i
-.PHONY : src/control/modules/LampMov.cpp.i
+src/control/modules/LampControl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampControl.cpp.i
+.PHONY : src/control/modules/LampControl.cpp.i
 
-src/control/modules/LampMov.s: src/control/modules/LampMov.cpp.s
-.PHONY : src/control/modules/LampMov.s
+src/control/modules/LampControl.s: src/control/modules/LampControl.cpp.s
+.PHONY : src/control/modules/LampControl.s
 
 # target to generate assembly for a file
-src/control/modules/LampMov.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampMov.cpp.s
-.PHONY : src/control/modules/LampMov.cpp.s
+src/control/modules/LampControl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/control/modules/LampControl.cpp.s
+.PHONY : src/control/modules/LampControl.cpp.s
 
 src/control/modules/ManualMov.o: src/control/modules/ManualMov.cpp.o
 .PHONY : src/control/modules/ManualMov.o
@@ -618,9 +618,9 @@ help:
 	@echo "... src/control/modules/CameraMov.o"
 	@echo "... src/control/modules/CameraMov.i"
 	@echo "... src/control/modules/CameraMov.s"
-	@echo "... src/control/modules/LampMov.o"
-	@echo "... src/control/modules/LampMov.i"
-	@echo "... src/control/modules/LampMov.s"
+	@echo "... src/control/modules/LampControl.o"
+	@echo "... src/control/modules/LampControl.i"
+	@echo "... src/control/modules/LampControl.s"
 	@echo "... src/control/modules/ManualMov.o"
 	@echo "... src/control/modules/ManualMov.i"
 	@echo "... src/control/modules/ManualMov.s"

@@ -171,7 +171,7 @@
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/CameraMov.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
-		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/LampMov.cpp">
+		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/LampControl.cpp">
 			<Option target="OpenGLProject"/>
 		</Unit>
 		<Unit filename="/home/matheusvb/Desktop/USP/CompGraf/OpenGLProject/src/control/modules/ManualMov.cpp">

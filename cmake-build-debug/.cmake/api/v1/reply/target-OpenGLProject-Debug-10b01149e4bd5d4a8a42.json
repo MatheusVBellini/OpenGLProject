@@ -364,7 +364,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/control/modules/LampMov.cpp",
+			"path" : "src/control/modules/LampControl.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

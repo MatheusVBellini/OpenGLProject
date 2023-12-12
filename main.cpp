@@ -7,6 +7,7 @@
 #include "include/Camera.h"
 #include "include/control/modules/CameraMov.h"
 #include "include/Lamp.h"
+#include "include/control/modules/LampControl.h"
 
 // Global Variables
 std::string windowTitle = "Trabalho 2";
@@ -35,13 +36,6 @@ int main() {
     GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
     GObject skybox = GObjectFactory::genObjectFromFile("skybox", "skybox.png");
 
-    // controller instantiation
-    Controller con;
-
-    // controller modules instantiation
-    CameraMov camModule;
-    con.loadModule(camModule);
-
     // light source instantiation
     Lamp lamp;
     lamp.setCoeff({1.0,1.0});
@@ -49,6 +43,15 @@ int main() {
 
     // object reflection configuration
     elephant.setIllumination({0,1,10}); // specular-only
+
+    // controller instantiation
+    Controller con;
+
+    // controller modules instantiation
+    CameraMov camModule;
+    LampControl lampModule(&lamp);
+    con.loadModule(camModule);
+    con.loadModule(lampModule);
 
     // skybox configuration
     window.attachObject(skybox);

@@ -48,7 +48,7 @@ add_executable(OpenGLProject main.cpp
         include/control/modules/CameraMov.h
         src/Lamp.cpp
         include/Lamp.h
-        src/control/modules/LampMov.cpp
+        src/control/modules/LampControl.cpp
         include/control/modules/LampControl.h
 )
 target_link_libraries(OpenGLProject ${OpenGlLinkers})
