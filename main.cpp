@@ -49,7 +49,8 @@ int main() {
     ren.attachLamp(lamp);
 
     // object reflection configuration
-    elephant.setIllumination({0,1,10}); // specular-only
+    penguin.setIllumination({1,0,0}); // diffusion-only
+    elephant.setIllumination({0,1,10}); // specular-only (ns = 10)
 
     // controller instantiation
     Controller con;

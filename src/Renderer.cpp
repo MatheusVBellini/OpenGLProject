@@ -99,8 +99,7 @@ void Renderer::draw(GObject& object) {
     shader.setUniformMatrix4fv("projection", Camera::getProjection()); // projection matrix
 
     // set light uniforms
-    float Ia = light_source->getCoeff().at(0);
-    float Il = light_source->getCoeff().at(1);
+    auto [Ia, Il] = light_source->getCoeff();
     glm::vec3 obj_illum = object.getIllumination();
     shader.setUniform3f("lightPos", light_source->getPos()); // light position
     shader.setUniform1f("Ia", Ia); // ambient coefficient
