@@ -34,7 +34,7 @@ int main() {
     GObject head = GObjectFactory::genObjectFromFile("head", "head.jpg");
     GObject steve = GObjectFactory::genObjectFromFile("Steve", "Steve.jpg");
     GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
-    GObject skybox = GObjectFactory::genObjectFromFile("skybox", "skybox.png");
+    GObject skybox = GObjectFactory::genObjectFromFile("skybox", "blue-sky.jpg");
 
     // light source instantiation
     Lamp lamp;
