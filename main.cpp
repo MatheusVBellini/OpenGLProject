@@ -49,6 +49,7 @@ int main() {
     ren.attachLamp(lamp);
 
     // object reflection configuration
+    steve.setIllumination({0,0,1}); // no reflection
     penguin.setIllumination({1,0,0}); // diffusion-only
     elephant.setIllumination({0,1,10}); // specular-only (ns = 10)
 

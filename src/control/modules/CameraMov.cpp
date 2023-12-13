@@ -10,7 +10,7 @@ CameraMov::CameraMov(float skybox_size) {
     boundary = 0.5f * skybox_size;
 
     // keyboard
-    speed = 1.0f;
+    speed = 0.1f;
 
     defFuncs();
 
@@ -21,6 +21,8 @@ CameraMov::CameraMov(float skybox_size) {
     key_func.emplace_back("a",moveLeft);
     key_func.emplace_back("space",moveUp);
     key_func.emplace_back("c",moveDown);
+    key_func.emplace_back("r",speedUp);
+    key_func.emplace_back("f",speedDown);
 
 }
 
@@ -112,6 +114,18 @@ void CameraMov::defFuncs() {
         glm::vec3 position = cam.getPosition() + ((float)speed) * target;
         if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
             cam.updatePosition(position);
+    };
+
+    speedUp = [this](KEY_ARGS) {
+        if (!action) return;
+        double new_speed = speed + 0.1f;
+        if (new_speed <= 10) speed = new_speed;
+    };
+
+    speedDown = [this](KEY_ARGS) {
+        if (!action) return;
+        double new_speed = speed - 0.1f;
+        if (new_speed >= 0.1) speed = new_speed;
     };
 
 }

@@ -36,4 +36,8 @@ public:
     std::function<void(KEY_ARGS)> moveUp;
     std::function<void(KEY_ARGS)> moveDown;
 
+    // speed control
+    std::function<void(KEY_ARGS)> speedUp;
+    std::function<void(KEY_ARGS)> speedDown;
+
 };
