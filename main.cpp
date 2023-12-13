@@ -36,6 +36,13 @@ int main() {
     GObject elephant = GObjectFactory::genObjectFromFile("elephant", "elephant.png");
     GObject skybox = GObjectFactory::genObjectFromFile("skybox", "blue-sky.jpg");
 
+    // skybox configuration
+    window.attachObject(skybox);
+    float skybox_scale = 1000;
+    glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale)); // scale the skybox
+    skybox_model = glm::translate(skybox_model, {0,0,0}); // center skybox on camera's spawn position
+    skybox.setMovement(skybox_model);
+
     // light source instantiation
     Lamp lamp;
     lamp.setCoeff({1.0,1.0});
@@ -48,17 +55,10 @@ int main() {
     Controller con;
 
     // controller modules instantiation
-    CameraMov camModule;
+    CameraMov camModule(skybox_scale);
     LampControl lampModule(&lamp);
     con.loadModule(camModule);
     con.loadModule(lampModule);
-
-    // skybox configuration
-    window.attachObject(skybox);
-    float skybox_scale = 100;
-    glm::mat4 skybox_model = glm::scale(skybox.getMovement(),glm::vec3(skybox_scale)); // scale the skybox
-    skybox_model = glm::translate(skybox_model, {0,0,0.5}); // center skybox on camera's spawn position
-    skybox.setMovement(skybox_model);
 
     /* PROJECT FUNCTIONS */
 

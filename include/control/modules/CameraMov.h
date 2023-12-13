@@ -14,12 +14,13 @@ private:
     double yaw; // xz-plane rotation
     double pitch; // yz-pane rotation
     double sensitivity; // mouse sensitivity
+    double boundary; // space boundaries
 
     // keyboard movement variables
     double speed;
 
 public:
-    CameraMov();
+    CameraMov(float skybox_size = 100);
     ~CameraMov();
 
     void defFuncs();

@@ -1,15 +1,16 @@
 #include "../../../include/control/modules/CameraMov.h"
 
-CameraMov::CameraMov() {
+CameraMov::CameraMov(float skybox_size) {
     // mouse
     last_x = 0.0f;
     last_y = 0.0f;
     yaw = -90.0f;
     pitch = 0.0f;
     sensitivity = 0.1f;
+    boundary = 0.5f * skybox_size;
 
     // keyboard
-    speed = 0.1f;
+    speed = 1.0f;
 
     defFuncs();
 
@@ -69,42 +70,48 @@ void CameraMov::defFuncs() {
         if (!action) return;
         glm::vec3 target = cam.getTarget();
         glm::vec3 position = cam.getPosition() + ((float)speed) * target;
-        cam.updatePosition(position);
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);
     };
 
     moveBack = [this](KEY_ARGS) {
         if (!action) return;
         glm::vec3 target = cam.getTarget();
         glm::vec3 position = cam.getPosition() - ((float)speed) * target;
-        cam.updatePosition(position);
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);;
     };
 
     moveRight = [this](KEY_ARGS) {
         if (!action) return;
         glm::vec3 target = glm::normalize(glm::cross(cam.getTarget(),cam.getCameraUp()));
         glm::vec3 position = cam.getPosition() + ((float)speed) * target;
-        cam.updatePosition(position);
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);
     };
 
     moveLeft = [this](KEY_ARGS) {
         if (!action) return;
         glm::vec3 target = glm::normalize(glm::cross(cam.getCameraUp(),cam.getTarget()));
-        glm::vec3 position = cam.getPosition() + ((float)speed) * target;
-        cam.updatePosition(position);
+        glm::vec3 position =  cam.getPosition() + ((float)speed) * target;\
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);
     };
 
     moveUp = [this](KEY_ARGS) {
         if (!action) return;
         glm::vec3 target = cam.getCameraUp();
         glm::vec3 position = cam.getPosition() + ((float)speed) * target;
-        cam.updatePosition(position);
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);
     };
 
     moveDown = [this](KEY_ARGS) {
         if (!action) return;
         glm::vec3 target = -cam.getCameraUp();
         glm::vec3 position = cam.getPosition() + ((float)speed) * target;
-        cam.updatePosition(position);
+        if ((abs(position.x) < boundary) && (abs(position.y) < boundary) && (abs(position.z) < boundary))
+            cam.updatePosition(position);
     };
 
 }
