@@ -1,3 +1,23 @@
+/*********************************************
+ *
+ * Author:
+ * Matheus Violaro Bellini
+ *
+ * Controls:
+ * wasd + c + space -> camera control
+ * f -> camera speed down
+ * r -> camera speed up
+ * k -> reflection intensity down
+ * i -> reflection intensity up
+ * l -> ambient illumination down
+ * o -> ambient illumination up
+ * p -> toggle texture
+ * rmb -> move light source to camera target
+ * lmb -> toggle mouse cursor
+ *
+ *********************************************/
+
+
 #include <glm/gtc/matrix_transform.hpp>
 #include "include/Application.h"
 #include "include/Renderer.h"
