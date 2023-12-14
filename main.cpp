@@ -69,7 +69,9 @@ int main() {
     ren.attachLamp(lamp);
 
     // object reflection configuration
+    head.setIllumination({0,0,1}); // no reflection
     steve.setIllumination({0,0,1}); // no reflection
+    skull.setIllumination({1,1,20}); // diffusion + specular (ns = 20)
     penguin.setIllumination({1,0,1}); // diffusion-only
     elephant.setIllumination({0,1,10}); // specular-only (ns = 10)
 
@@ -85,7 +87,7 @@ int main() {
     /* PROJECT FUNCTIONS */
 
     // show Nth object when key N is pressed
-    std::array<GObject*,5> objects = {&skull, &penguin, &head, &steve, &elephant};
+    std::array<GObject*,5> objects = {&head, &steve, &skull, &penguin, &elephant};
     for (int i = 0; i < objects.size(); i++) {
         con.setKeyFunc(std::to_string(i+1), [&window, &con, &objects, i](KEY_ARGS){
             if (!action) return;
